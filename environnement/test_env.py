@@ -6,7 +6,7 @@ from env import Env
 env = Env(1)
 
 def test_env():
-    action = torch.tensor([[0,0]])
+    action = torch.tensor([[1,1]])
     state = env.reset()
     X = []
     Y = []

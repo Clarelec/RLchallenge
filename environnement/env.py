@@ -5,20 +5,20 @@ class Env :
     
     def __init__(self, 
                  batch_size, 
-                 max_safran = 20, 
-                 max_hull = 20, 
+                 max_safran = pi/16, 
+                 max_sail = pi/16, 
                  checkpoint_radius = 10,
                  mass = 1000,
                  drag = 100,
                  sail = 100,
                  dt = 1,
-                 reactivity = 45,
+                 reactivity = pi/8,
                  max_steps = 200):
         """
         Args:
             batch_size (int) : number of agents
             max_safran (float) : maximum angle change of the safran
-            max_hull (float) : maximum angle change of the hull
+            max_sail (float) : maximum angle change of the sail
             checkpoint_radius (float) : radius of the checkpoint
             mass (float) : mass of the boat
             drag (float) : drag coefficient
@@ -31,7 +31,7 @@ class Env :
         self.state_dim = 10
         self.action_dim = 2
         self.max_safran = max_safran
-        self.max_hull = max_hull
+        self.max_sail = max_sail
         self.checkpoint_radius = checkpoint_radius
         self.mass = mass
         self.drag = drag
@@ -73,35 +73,35 @@ class Env :
         #We extract the different features
         pos = state[:,:2]
         speed = state[:,2:4]
-        hull = state[:,4:6]
+        sail = state[:,4:6]
         safran = state[:,6:8]
         wind = state[:,8:10]
         
-        #We update the change in angle of the boat (hull and safran turn with the boat)
+        #We update the change in angle of the boat (sail and safran turn with the boat)
         w_boat = self.reactivity * self.sin_angle(safran, speed)
         new_speed = self.rotation(speed, self.dt*w_boat)
         new_safran = self.rotation(safran, self.dt*w_boat)
-        new_hull = self.rotation(hull, self.dt*w_boat)
+        new_sail = self.rotation(sail, self.dt*w_boat)
         
         #We compute the new position
         new_pos = pos + new_speed * self.dt
         
         #We extract the actions
         safran_action = action[:,0]
-        hull_action = action[:,1]
+        sail_action = action[:,1]
         
         #We scale the actions
         safran_action = (2*safran_action-1)* self.max_safran
-        hull_action = (2*hull_action-1)* self.max_hull
+        sail_action = (2*sail_action-1)* self.max_sail
         
-        #We update the hull and safran angle
-        new_hull = self.rotation(new_hull, hull_action)
+        #We update the sail and safran angle
+        new_sail = self.rotation(new_sail, sail_action)
         new_safran = self.rotation(new_safran, safran_action)
         
         
         #We compute the force applied by the wind
         v_relat = new_speed - wind
-        force = self.sail * torch.sum(new_hull * v_relat, dim=1) * self.rotation(new_hull, torch.ones(self.batch_size)*(-pi/2))
+        force = self.sail * torch.sum(new_sail * v_relat, dim=1) * self.rotation(new_sail, torch.ones(self.batch_size)*(-pi/2))
         
         #We project the force on the speed direction
         force = torch.sum(force * new_speed, dim=1) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
@@ -114,7 +114,7 @@ class Env :
         new_speed = new_speed + (force + drag) / self.mass * self.dt
         
         #We concatenate all the features
-        real_new_state = torch.cat((new_pos, new_speed, new_hull, new_safran, wind), dim=1)
+        real_new_state = torch.cat((new_pos, new_speed, new_sail, new_safran, wind), dim=1)
         
         #We compute the reward
         reward = self.reward(state, action)
@@ -149,14 +149,14 @@ class Env :
         pos = torch.rand((self.batch_size, 2)) * 200 - 100
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
         speed = torch.rand((self.batch_size, 2)) * 10
-        hull = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
+        sail = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         safran = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         
         #We encode angles with cos and sin to avoid the discontinuity at -pi and pi
         wind = torch.cat((torch.cos(wind), torch.sin(wind)), dim=1)
         
         #We concatenate all the features
-        state = torch.cat((pos, speed, hull, safran, wind), dim=1)
+        state = torch.cat((pos, speed, sail, safran, wind), dim=1)
         
         return state
         
