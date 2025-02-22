@@ -1,7 +1,7 @@
 import torch
 from math import pi
 
-class env :
+class Env :
     
     def __init__(self, 
                  batch_size, 
@@ -9,8 +9,8 @@ class env :
                  max_hull = 20, 
                  checkpoint_radius = 10,
                  mass = 1000,
-                 drag = 0.1,
-                 sail = 0.1,
+                 drag = 100,
+                 sail = 100,
                  dt = 1,
                  reactivity = 45,
                  max_steps = 200):
@@ -98,15 +98,14 @@ class env :
         new_hull = self.rotation(new_hull, hull_action)
         new_safran = self.rotation(new_safran, safran_action)
         
-        w_boat = self.reactivity * self.sin_angle(safran, speed)
-        new_speed = self.rotation(speed, self.dt*w_boat)
         
         #We compute the force applied by the wind
         v_relat = new_speed - wind
-        force = self.sail * torch.sum(new_hull * v_relat, dim=1) * self.rotation(new_hull, pi/2)
+        force = self.sail * torch.sum(new_hull * v_relat, dim=1) * self.rotation(new_hull, torch.ones(self.batch_size)*(-pi/2))
         
         #We project the force on the speed direction
         force = torch.sum(force * new_speed, dim=1) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
+        print(force)
         
         #we compute the drag 
         drag = -self.drag * new_speed
@@ -147,15 +146,13 @@ class env :
         """
         
         #We generate random initial states
-        pos = torch.rand((self.batch_size, self.state_dim)) * 200 - 100
-        hull = pos.clone()
-        safran = -pos.clone()
+        pos = torch.rand((self.batch_size, 2)) * 200 - 100
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
-        speed = torch.zeros((self.batch_size, 2))
+        speed = torch.rand((self.batch_size, 2)) * 10
+        hull = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
+        safran = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         
         #We encode angles with cos and sin to avoid the discontinuity at -pi and pi
-        safran = torch.cat((torch.cos(safran), torch.sin(safran)), dim=1)
-        hull = torch.cat((torch.cos(hull), torch.sin(hull)), dim=1)
         wind = torch.cat((torch.cos(wind), torch.sin(wind)), dim=1)
         
         #We concatenate all the features
@@ -173,13 +170,10 @@ class env :
         Outputs:
             reward (tensor (batch_size) ) : reward at this step
         """
-        
+        #Reward = 100 if the agent is in the checkpoint, -1 otherwise
         dist = self.distance(state[:,:2], state[:,8:10])
-        if dist < self.checkpoint_radius:
-            return 100
-        else:
-            return -1
-        
+        reward = (dist < self.checkpoint_radius)*101 - 1
+        return reward
     
     def rotation(self, vector, angle):
         """
@@ -190,9 +184,11 @@ class env :
         Outputs:
             rotated_vector (tensor (batch_size,2) ) : rotated vector
         """
-        c, s = torch.cos(angle), torch.sin(angle)
-        R = torch.tensor([[c, -s], [s, c]])
-        return torch.matmul(R,vector)
+        cos_angle = torch.cos(angle)
+        sin_angle = torch.sin(angle)
+        rotation_matrix = torch.stack([cos_angle, -sin_angle, sin_angle, cos_angle], dim=1).view(-1, 2, 2)
+        rotated_vector = torch.bmm(rotation_matrix, vector.unsqueeze(2)).squeeze(2)
+        return rotated_vector
     
     def distance(self,pos1, pos2):
         """
@@ -206,6 +202,14 @@ class env :
         return torch.norm(pos1 - pos2, dim=1)
         
     def sin_angle(self,A, B):
+        """
+        Args:
+            A (tensor (batch_size,2) ): vector A
+            B (tensor (batch_size,2) ): vector B
+            
+        Outputs:
+            sin_angle (tensor (batch_size) ) : sin of the angle between A and B
+        """
         cross_prod = torch.abs(A[:, 0] * B[:, 1] - A[:, 1] * B[:, 0])
         norm_A = torch.norm(A, dim=1)
         norm_B = torch.norm(B, dim=1)
