@@ -139,15 +139,15 @@ class RENDER_ENV:
                                 fill='blue', arrow=tk.LAST, width=2)
         
         # Dessiner le vecteur de la voile (en vert)
-        sail_end = (  sail[0] * self.vector_length,
-                      sail[1] * self.vector_length )
+        sail_end = ( pos[0]+ sail[0] * self.vector_length,
+                      pos[1] +sail[1] * self.vector_length )
         self.canvas.create_line(boat_canvas[0], boat_canvas[1],
                                 *self.to_canvas_coords(sail_end[0], sail_end[1]),
                                 fill='green', arrow=tk.LAST, width=2)
         
         # Dessiner le vecteur du safran (en orange)
-        safran_end = ( safran[0] * self.vector_length,
-                        safran[1] * self.vector_length )
+        safran_end = ( pos[0]+safran[0] * self.vector_length,
+                        pos[1] + safran[1] * self.vector_length )
         self.canvas.create_line(boat_canvas[0], boat_canvas[1],
                                 *self.to_canvas_coords(safran_end[0], safran_end[1]),
                                 fill='orange', arrow=tk.LAST, width=2)
