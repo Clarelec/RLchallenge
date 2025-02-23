@@ -14,7 +14,10 @@ class Env :
                  sail = 100,
                  dt = 1,
                  reactivity = pi/8,
-                 max_steps = 200):
+                 max_steps = 200,
+                 render_width = 800,
+                 render_height= 400
+                 ):
         """
         Args:
             batch_size (int) : number of agents
@@ -27,7 +30,8 @@ class Env :
             dt (float) : time step
             reactivity (float) : reactivity of the boat (speed angle change per dt if the safran is orthogonal to the speed)
             max_steps (int) : maximum number of steps before truncation
-            
+            render_width (int) : width of the canvas for the visualization
+            render_height (int) : height of the canvas for the visualization
         """
         self.state_dim = 10
         self.action_dim = 2
@@ -47,7 +51,11 @@ class Env :
         
         self.steps = torch.zeros(batch_size)
  
-        self._renderer = RENDER_ENV()
+        self._renderer = RENDER_ENV(
+            width=render_width, 
+            height=render_height,
+            checkpoint_radius=checkpoint_radius
+        )
     
     def step(self, state, action):
         """
@@ -219,11 +227,11 @@ class Env :
         
         
         
-    def render(self,state):
+    def render(self,state: torch.Tensor, agent_index : int = 0):
         """
         Args:
             state (tensor (batch_size,state_dim) ): state of the agent
-            
+            agent_index (int) : if batch_size>0, number of the agent to render
         Outputs:
             None
             
