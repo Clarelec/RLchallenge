@@ -1,5 +1,6 @@
 import torch
 from math import pi
+from render import RENDER_ENV
 
 class Env :
     
@@ -46,6 +47,7 @@ class Env :
         
         self.steps = torch.zeros(batch_size)
  
+        self._renderer = RENDER_ENV()
     
     def step(self, state, action):
         """
@@ -217,5 +219,16 @@ class Env :
         
         
         
-        
+    def render(self,state):
+        """
+        Args:
+            state (tensor (batch_size,state_dim) ): state of the agent
+            
+        Outputs:
+            None
+            
+        The function displays the state of the agent
+        """
+        self._renderer.afficher_etat(state, self.checkpoint)
+            
         
