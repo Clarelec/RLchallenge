@@ -1,6 +1,6 @@
 import logging
 import os
-from utils import LOG_DIR
+from environnement.utils import LOG_DIR
 import torch
 import math
 
