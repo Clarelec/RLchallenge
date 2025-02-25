@@ -1,6 +1,6 @@
 
 
-LOG_DIR = r"C:\Users\clare\Documents\polytechnique\INF\INF568\projet\RLchallenge\logs"
+LOG_DIR = r"./logs"
 
 
 def state_to_dict(state):

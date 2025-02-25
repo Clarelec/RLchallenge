@@ -3,6 +3,7 @@ import os
 from utils import LOG_DIR
 import torch
 import math
+import tkinter as tk 
 
 LOG_ADRESS = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0]+'.log')
 logger = logging.getLogger(__name__)    
@@ -11,8 +12,6 @@ logging.basicConfig(level=logging.INFO,
                     datefmt='%d-%b-%y %H:%M:%S',
                     filename= LOG_ADRESS,
                     filemode='w')
-
-import tkinter as tk 
 
 logger.debug("Libraries imported")
 

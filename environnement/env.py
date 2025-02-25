@@ -11,7 +11,8 @@ class Env :
                  checkpoint_radius = 10,
                  mass = 1000,
                  drag = 100,
-                 sail = 100,
+                 sail = 5000,
+                 wind = 100,
                  dt = 1,
                  reactivity = pi/8,
                  max_steps = 200,
@@ -27,6 +28,7 @@ class Env :
             mass (float) : mass of the boat
             drag (float) : drag coefficient
             sail (float) : sail coefficient (force applied by the sail)
+            wind (float) : wind speed
             dt (float) : time step
             reactivity (float) : reactivity of the boat (speed angle change per dt if the safran is orthogonal to the speed)
             max_steps (int) : maximum number of steps before truncation
@@ -41,6 +43,7 @@ class Env :
         self.mass = mass
         self.drag = drag
         self.sail = sail
+        self.wind = wind
         self.batch_size = batch_size
         self.dt = dt
         self.reactivity = reactivity
@@ -88,7 +91,7 @@ class Env :
         wind = state[:,8:10]
         
         #We update the change in angle of the boat (sail and safran turn with the boat)
-        w_boat = self.reactivity * self.sin_angle(safran, speed)
+        w_boat = - self.reactivity * self.sin_angle(safran, speed)
         new_speed = self.rotation(speed, self.dt*w_boat)
         new_safran = self.rotation(safran, self.dt*w_boat)
         new_sail = self.rotation(sail, self.dt*w_boat)
@@ -105,20 +108,48 @@ class Env :
         sail_action = (2*sail_action-1)* self.max_sail
         
         #We update the sail and safran angle
-        new_sail = self.rotation(new_sail, sail_action)
-        new_safran = self.rotation(new_safran, safran_action)
+        new_sail2 = self.rotation(new_sail, sail_action)
+        new_safran2 = self.rotation(new_safran, safran_action)
         
+        # We only allow actions that keep both safran and sail in the opposite direction of the boat
+        mask = (new_sail2 * new_speed).sum(dim=1) < 0
+        new_sail[mask] = new_sail2[mask]
+        
+        mask = (new_safran2 * new_speed).sum(dim=1) < 0
+        new_safran[mask] = new_safran2[mask]
         
         #We compute the force applied by the wind
-        v_relat = new_speed - wind
-        force = self.sail * torch.sum(new_sail * v_relat, dim=1) * self.rotation(new_sail, torch.ones(self.batch_size)*(-pi/2))
+        v_relat = self.wind * wind - new_speed
+        new_speed_normal = self.rotation(new_speed, torch.ones(self.batch_size)*(pi/2))
+        
+        # The following lines change the sail direction if the wind is in the opposite direction
+        # Result of the sail change is stored in the variable reflected_sail
+        speed_norm = torch.nn.functional.normalize(new_speed, dim=1)
+        projection = (new_sail * speed_norm).sum(dim=1, keepdim=True) * speed_norm
+        reflected_sail = 2 * projection - new_sail
+        
+        # We check if a sail change is needed
+        dot_product = (v_relat * new_speed_normal).sum(dim=1)
+        wind_orientation = dot_product * new_speed_normal
+        dot_product2 = (wind_orientation * new_sail).sum(dim=1)
+        
+        # We apply the sail change if needed
+        mask = dot_product2 < 0
+        new_sail[mask] = reflected_sail[mask]
+        
+        new_sail_normal = self.rotation(new_sail, torch.ones(self.batch_size)*(-pi/2))
+        
+        # We compute the force applied by the sail
+        force = self.sail * torch.sum(new_sail_normal * v_relat, dim=1) * new_sail_normal
         
         #We project the force on the speed direction
         force = torch.sum(force * new_speed, dim=1) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
-        print(force)
         
         #we compute the drag 
         drag = -self.drag * new_speed
+        
+        print(force)
+        print(drag)
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
