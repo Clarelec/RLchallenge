@@ -1,150 +1,1005 @@
-25-Feb-25 18:10:58 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:58 - render - INFO - Boat angles : -155.97400525217105 -155.97400525217105
-25-Feb-25 18:10:58 - render - INFO - Boat coordinates : (332.26806640625, 109.64478302001953)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -145.16295934812993 -145.16295934812993
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (333.1080322265625, 109.46107482910156)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -134.77399730728627 -134.77399730728627
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (335.30687713623047, 109.0146713256836)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -124.7740309833636 -124.7740309833636
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (339.5174255371094, 108.2551040649414)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -115.1150252514063 -115.1150252514063
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (345.930419921875, 107.2812271118164)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -105.73583167165032 -105.73583167165032
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (354.1409721374512, 106.30738067626953)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -107.81456078104644 -107.81456078104644
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (363.38538360595703, 105.54971313476562)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -109.89329055226911 -109.89329055226911
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (373.2118377685547, 105.10234069824219)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -111.97202004344248 -111.97202004344248
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (383.35194969177246, 105.00889587402344)
-25-Feb-25 18:10:59 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:10:59 - render - INFO - Boat angles : -114.05074841039055 -114.05074841039055
-25-Feb-25 18:10:59 - render - INFO - Boat coordinates : (393.64165210723877, 105.28746032714844)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -116.1294768119075 -116.1294768119075
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (403.9762182235718, 105.9429931640625)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -118.20820624281721 -118.20820624281721
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (414.28475761413574, 106.9734115600586)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -120.28693555418711 -120.28693555418711
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (424.51579666137695, 108.37251281738281)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -122.36566650794657 -122.36566650794657
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (434.62916564941406, 110.13133239746094)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -124.44439639758073 -124.44439639758073
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (444.5914611816406, 112.23877716064453)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : -126.52312268269286 -126.52312268269286
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (454.3735466003418, 114.68191528320312)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : 96.39816482085783 -128.60185302221535
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (463.94918060302734, 117.44611358642578)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : 94.31943530756958 -130.6805813957411
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (473.3773956298828, 120.54241180419922)
-25-Feb-25 18:11:00 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:00 - render - INFO - Boat angles : 92.24070601196989 -132.75931012452213
-25-Feb-25 18:11:00 - render - INFO - Boat coordinates : (482.71825408935547, 123.99015808105469)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 90.1619769094698 -134.83803665930571
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (491.99302673339844, 127.80121612548828)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 88.08324753705554 -136.91676500374342
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (501.2013244628906, 131.98153686523438)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 86.00451814544103 -138.9954971100856
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (510.3308410644531, 136.5324478149414)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 83.92578846419434 -141.07422651365832
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (519.36279296875, 141.45155715942383)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 81.84706028572634 -143.15295685764394
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (528.2751007080078, 146.73340606689453)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 79.76833174693657 -145.23168580207707
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (537.044189453125, 152.3699073791504)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 77.68960316777076 -147.3104126005417
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (545.6460266113281, 158.35065841674805)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 75.61087366196429 -149.3891414276329
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (554.0568237304688, 164.66316986083984)
-25-Feb-25 18:11:01 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:01 - render - INFO - Boat angles : 73.53214331683685 -151.4678708276619
-25-Feb-25 18:11:01 - render - INFO - Boat coordinates : (562.2534332275391, 171.29304313659668)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 71.45341468506301 -153.54659896492862
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (570.213623046875, 178.22410011291504)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 69.3746863691716 -155.62532904797195
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (577.9162902832031, 185.43852043151855)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 67.2959570894658 -157.70405781767533
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (585.3416442871094, 192.91695308685303)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 65.21722724548329 -159.78278776221367
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (592.4713134765625, 200.63863611221313)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 63.13849831340586 -161.86151664622548
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (599.2884521484375, 208.5815143585205)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 61.05976702659572 -163.94024599996538
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (605.7778472900391, 216.7223606109619)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 58.98103685645316 -166.01897482305864
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (611.926025390625, 225.0368995666504)
-25-Feb-25 18:11:02 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:02 - render - INFO - Boat angles : 56.90231068711282 -168.09770359568978
-25-Feb-25 18:11:02 - render - INFO - Boat coordinates : (617.7212982177734, 233.49994277954102)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 54.82358270962147 -170.17643271482257
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (623.1538238525391, 242.08551788330078)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 52.74485258368658 -172.2551618923679
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (628.2156677246094, 250.76700592041016)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 50.6661227927566 -174.33389168723363
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (632.9008636474609, 259.5172805786133)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 48.587393282887795 -176.41262055461954
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (637.2054138183594, 268.30885314941406)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 46.508663533261974 -178.49134984203295
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (641.1273193359375, 277.11402130126953)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 44.42993414043297 179.42992105542393
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (644.6666107177734, 285.9050064086914)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 42.351205366118016 177.35119252495323
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (647.8253173828125, 294.65411376953125)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 40.2724760258097 175.2724633592841
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (650.6074829101562, 303.33385467529297)
-25-Feb-25 18:11:03 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:03 - render - INFO - Boat angles : 38.193747595177584 173.1937343075589
-25-Feb-25 18:11:03 - render - INFO - Boat coordinates : (653.0191192626953, 311.9171142578125)
-25-Feb-25 18:11:04 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:04 - render - INFO - Boat angles : 36.115016946193315 171.11500579576554
-25-Feb-25 18:11:04 - render - INFO - Boat coordinates : (655.0681915283203, 320.3772888183594)
-25-Feb-25 18:11:04 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:04 - render - INFO - Boat angles : 34.03628581947501 169.03627605110646
-25-Feb-25 18:11:04 - render - INFO - Boat coordinates : (656.7645874023438, 328.68841552734375)
-25-Feb-25 18:11:04 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:04 - render - INFO - Boat angles : 31.957554723709393 166.95754766516637
-25-Feb-25 18:11:04 - render - INFO - Boat coordinates : (658.1200561523438, 336.8253173828125)
-25-Feb-25 18:11:04 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:04 - render - INFO - Boat angles : 29.878827175371057 164.87881859226127
-25-Feb-25 18:11:04 - render - INFO - Boat coordinates : (659.1481018066406, 344.76373291015625)
-25-Feb-25 18:11:04 - render - INFO - Checkpoint coordinates : (400.0, 200.0)
-25-Feb-25 18:11:04 - render - INFO - Boat angles : 27.8000963859238 162.80008958417906
-25-Feb-25 18:11:04 - render - INFO - Boat coordinates : (659.8639831542969, 352.48045349121094)
+26-Feb-25 13:07:58 - agent.DQN.DQN - INFO - device is cuda
+26-Feb-25 13:07:58 - numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+26-Feb-25 13:07:59 - __main__ - INFO - Libraries imported
+26-Feb-25 13:07:59 - __main__ - INFO - Device: cuda
+26-Feb-25 13:07:59 - __main__ - INFO - Starting training of DQN2 agent
+26-Feb-25 13:07:59 - __main__ - INFO - Environment initialized
+26-Feb-25 13:07:59 - __main__ - INFO - Starting epoch 1
+26-Feb-25 13:07:59 - agent.DQN.DQN - INFO - QNetwork initialized with 10 observations and 9 actions
+26-Feb-25 13:07:59 - agent.DQN.DQN - INFO - QNetwork initialized with 10 observations and 9 actions
+26-Feb-25 13:07:59 - __main__ - INFO - Q-Networks initialized and synchronized
+26-Feb-25 13:08:01 - __main__ - INFO - Optimizer, LR scheduler, and loss function initialized
+26-Feb-25 13:08:01 - __main__ - INFO - Epsilon-greedy strategy initialized
+26-Feb-25 13:08:01 - __main__ - INFO - Replay buffer initialized
+26-Feb-25 13:08:01 - __main__ - INFO - Training DQN2 agent
+26-Feb-25 13:08:02 - agent.DQN.DQN - INFO - episode 1 step 128 reward tensor([-1], device='cuda:0') loss 2107.2724609375 epsilon 0.82
+26-Feb-25 13:08:02 - agent.DQN.DQN - INFO - episode 1 step 129 reward tensor([-1], device='cuda:0') loss 511.0234069824219 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 130 reward tensor([-1], device='cuda:0') loss 288.25775146484375 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 131 reward tensor([-1], device='cuda:0') loss 349.0706787109375 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 132 reward tensor([-1], device='cuda:0') loss 259.3325500488281 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 133 reward tensor([-1], device='cuda:0') loss 142.36331176757812 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 134 reward tensor([-1], device='cuda:0') loss 109.99447631835938 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 135 reward tensor([-1], device='cuda:0') loss 119.66817474365234 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 136 reward tensor([-1], device='cuda:0') loss 98.04959869384766 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 137 reward tensor([-1], device='cuda:0') loss 106.2347412109375 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 138 reward tensor([-1], device='cuda:0') loss 103.37590026855469 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 139 reward tensor([-1], device='cuda:0') loss 91.69898986816406 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 140 reward tensor([-1], device='cuda:0') loss 82.960205078125 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 141 reward tensor([-1], device='cuda:0') loss 55.6331672668457 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 142 reward tensor([-1], device='cuda:0') loss 36.36446762084961 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 143 reward tensor([-1], device='cuda:0') loss 25.957847595214844 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 144 reward tensor([-1], device='cuda:0') loss 20.530040740966797 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 145 reward tensor([-1], device='cuda:0') loss 26.53565216064453 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 146 reward tensor([-1], device='cuda:0') loss 32.86669158935547 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 147 reward tensor([-1], device='cuda:0') loss 37.90333938598633 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 148 reward tensor([-1], device='cuda:0') loss 34.301116943359375 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 149 reward tensor([-1], device='cuda:0') loss 31.748945236206055 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 150 reward tensor([-1], device='cuda:0') loss 22.383350372314453 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 151 reward tensor([-1], device='cuda:0') loss 10.954148292541504 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 152 reward tensor([-1], device='cuda:0') loss 6.674748420715332 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 153 reward tensor([-1], device='cuda:0') loss 7.355422019958496 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 154 reward tensor([-1], device='cuda:0') loss 8.684690475463867 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 155 reward tensor([-1], device='cuda:0') loss 11.017721176147461 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 156 reward tensor([-1], device='cuda:0') loss 11.18770694732666 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 157 reward tensor([-1], device='cuda:0') loss 11.59650707244873 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 158 reward tensor([-1], device='cuda:0') loss 9.810543060302734 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 159 reward tensor([-1], device='cuda:0') loss 8.457026481628418 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 160 reward tensor([-1], device='cuda:0') loss 7.2060980796813965 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 161 reward tensor([-1], device='cuda:0') loss 5.6959686279296875 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 162 reward tensor([-1], device='cuda:0') loss 3.8411312103271484 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 163 reward tensor([-1], device='cuda:0') loss 3.926262140274048 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 164 reward tensor([-1], device='cuda:0') loss 4.159030437469482 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 165 reward tensor([-1], device='cuda:0') loss 4.1303629875183105 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 166 reward tensor([-1], device='cuda:0') loss 4.3806257247924805 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 167 reward tensor([-1], device='cuda:0') loss 4.414244174957275 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 168 reward tensor([-1], device='cuda:0') loss 4.203865051269531 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 169 reward tensor([-1], device='cuda:0') loss 3.1204442977905273 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 170 reward tensor([-1], device='cuda:0') loss 2.7072887420654297 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 171 reward tensor([-1], device='cuda:0') loss 2.796231508255005 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 172 reward tensor([-1], device='cuda:0') loss 2.3567967414855957 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 173 reward tensor([-1], device='cuda:0') loss 2.0412001609802246 epsilon 0.82
+26-Feb-25 13:08:03 - agent.DQN.DQN - INFO - episode 1 step 174 reward tensor([-1], device='cuda:0') loss 1.885610580444336 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 175 reward tensor([-1], device='cuda:0') loss 1.903219223022461 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 176 reward tensor([-1], device='cuda:0') loss 2.027477979660034 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 177 reward tensor([-1], device='cuda:0') loss 2.125481367111206 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 178 reward tensor([-1], device='cuda:0') loss 1.7987418174743652 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 179 reward tensor([-1], device='cuda:0') loss 2.1183767318725586 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 180 reward tensor([-1], device='cuda:0') loss 1.8614757061004639 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 181 reward tensor([-1], device='cuda:0') loss 25.9235782623291 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 182 reward tensor([-1], device='cuda:0') loss 20.369232177734375 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 183 reward tensor([-1], device='cuda:0') loss 13.99991226196289 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 184 reward tensor([-1], device='cuda:0') loss 6.647375583648682 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 185 reward tensor([-1], device='cuda:0') loss 3.6732702255249023 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 186 reward tensor([-1], device='cuda:0') loss 3.2387075424194336 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 187 reward tensor([-1], device='cuda:0') loss 4.939459323883057 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 188 reward tensor([-1], device='cuda:0') loss 7.135197639465332 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 189 reward tensor([-1], device='cuda:0') loss 7.322517395019531 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 190 reward tensor([-1], device='cuda:0') loss 7.414582252502441 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 191 reward tensor([-1], device='cuda:0') loss 6.462324142456055 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 192 reward tensor([-1], device='cuda:0') loss 5.098920822143555 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 193 reward tensor([-1], device='cuda:0') loss 3.9467732906341553 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 194 reward tensor([-1], device='cuda:0') loss 3.147881269454956 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 195 reward tensor([-1], device='cuda:0') loss 2.809816837310791 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 196 reward tensor([-1], device='cuda:0') loss 2.9444327354431152 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 197 reward tensor([-1], device='cuda:0') loss 3.043397903442383 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 198 reward tensor([-1], device='cuda:0') loss 3.0312957763671875 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 199 reward tensor([-1], device='cuda:0') loss 2.83669376373291 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 200 reward tensor([-1], device='cuda:0') loss 2.785165309906006 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 201 reward tensor([-1], device='cuda:0') loss 2.338670253753662 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 202 reward tensor([-1], device='cuda:0') loss 2.026272773742676 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 203 reward tensor([-1], device='cuda:0') loss 1.6581220626831055 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 204 reward tensor([-1], device='cuda:0') loss 1.4873749017715454 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 205 reward tensor([-1], device='cuda:0') loss 1.3308727741241455 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 206 reward tensor([-1], device='cuda:0') loss 1.3414289951324463 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 207 reward tensor([-1], device='cuda:0') loss 1.2549500465393066 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 208 reward tensor([-1], device='cuda:0') loss 1.3505573272705078 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 209 reward tensor([-1], device='cuda:0') loss 1.1440198421478271 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 210 reward tensor([-1], device='cuda:0') loss 0.8428716659545898 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 211 reward tensor([-1], device='cuda:0') loss 25.597427368164062 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 212 reward tensor([-1], device='cuda:0') loss 24.20091438293457 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 213 reward tensor([-1], device='cuda:0') loss 19.141937255859375 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 214 reward tensor([-1], device='cuda:0') loss 14.105152130126953 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 215 reward tensor([-1], device='cuda:0') loss 7.707978248596191 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 216 reward tensor([-1], device='cuda:0') loss 4.905921936035156 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 217 reward tensor([-1], device='cuda:0') loss 2.6244940757751465 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 218 reward tensor([-1], device='cuda:0') loss 1.7775708436965942 epsilon 0.82
+26-Feb-25 13:08:04 - agent.DQN.DQN - INFO - episode 1 step 219 reward tensor([-1], device='cuda:0') loss 1.8729450702667236 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 220 reward tensor([-1], device='cuda:0') loss 2.2832937240600586 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 221 reward tensor([-1], device='cuda:0') loss 3.758331775665283 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 222 reward tensor([-1], device='cuda:0') loss 4.33608341217041 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 223 reward tensor([-1], device='cuda:0') loss 4.997079849243164 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 224 reward tensor([-1], device='cuda:0') loss 4.890172481536865 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 225 reward tensor([-1], device='cuda:0') loss 5.112783432006836 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 226 reward tensor([-1], device='cuda:0') loss 4.303436279296875 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 227 reward tensor([-1], device='cuda:0') loss 3.4546639919281006 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 228 reward tensor([-1], device='cuda:0') loss 2.898529291152954 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 229 reward tensor([-1], device='cuda:0') loss 2.5155887603759766 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 230 reward tensor([-1], device='cuda:0') loss 1.9937090873718262 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 231 reward tensor([-1], device='cuda:0') loss 1.6370272636413574 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 232 reward tensor([-1], device='cuda:0') loss 1.5083585977554321 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 233 reward tensor([-1], device='cuda:0') loss 1.3407588005065918 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 234 reward tensor([-1], device='cuda:0') loss 1.2749712467193604 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 235 reward tensor([-1], device='cuda:0') loss 1.3997225761413574 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 236 reward tensor([-1], device='cuda:0') loss 1.3321022987365723 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 237 reward tensor([-1], device='cuda:0') loss 1.2576537132263184 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 238 reward tensor([-1], device='cuda:0') loss 1.2172762155532837 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 239 reward tensor([-1], device='cuda:0') loss 1.245588779449463 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 240 reward tensor([-1], device='cuda:0') loss 1.3147742748260498 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 241 reward tensor([-1], device='cuda:0') loss 27.766040802001953 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 242 reward tensor([-1], device='cuda:0') loss 25.079708099365234 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 243 reward tensor([-1], device='cuda:0') loss 22.85662841796875 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 244 reward tensor([-1], device='cuda:0') loss 19.727066040039062 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 245 reward tensor([-1], device='cuda:0') loss 17.256484985351562 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 246 reward tensor([-1], device='cuda:0') loss 15.165729522705078 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 247 reward tensor([-1], device='cuda:0') loss 10.012528419494629 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 248 reward tensor([-1], device='cuda:0') loss 6.168148994445801 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 249 reward tensor([-1], device='cuda:0') loss 4.612681865692139 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 250 reward tensor([-1], device='cuda:0') loss 3.3271636962890625 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 251 reward tensor([-1], device='cuda:0') loss 2.244075298309326 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 252 reward tensor([-1], device='cuda:0') loss 1.9079774618148804 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 253 reward tensor([-1], device='cuda:0') loss 1.7769317626953125 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 254 reward tensor([-1], device='cuda:0') loss 2.1082091331481934 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 255 reward tensor([-1], device='cuda:0') loss 3.030205249786377 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 256 reward tensor([-1], device='cuda:0') loss 2.9472098350524902 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 257 reward tensor([-1], device='cuda:0') loss 2.5554213523864746 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 258 reward tensor([-1], device='cuda:0') loss 2.8533897399902344 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 259 reward tensor([-1], device='cuda:0') loss 4.571959495544434 epsilon 0.82
+26-Feb-25 13:08:05 - agent.DQN.DQN - INFO - episode 1 step 260 reward tensor([-1], device='cuda:0') loss 3.467513084411621 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 261 reward tensor([-1], device='cuda:0') loss 4.73920202255249 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 262 reward tensor([-1], device='cuda:0') loss 5.993643760681152 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 263 reward tensor([-1], device='cuda:0') loss 6.055389404296875 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 264 reward tensor([-1], device='cuda:0') loss 2.9648208618164062 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 265 reward tensor([-1], device='cuda:0') loss 3.4664864540100098 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 266 reward tensor([-1], device='cuda:0') loss 3.160069465637207 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 267 reward tensor([-1], device='cuda:0') loss 3.2964396476745605 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 268 reward tensor([-1], device='cuda:0') loss 3.0108814239501953 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 269 reward tensor([-1], device='cuda:0') loss 2.078948974609375 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 270 reward tensor([-1], device='cuda:0') loss 1.6961861848831177 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 271 reward tensor([-1], device='cuda:0') loss 27.33954429626465 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 272 reward tensor([-1], device='cuda:0') loss 23.02450942993164 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 273 reward tensor([-1], device='cuda:0') loss 23.112743377685547 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 274 reward tensor([-1], device='cuda:0') loss 23.293434143066406 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 275 reward tensor([-1], device='cuda:0') loss 18.56414031982422 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 276 reward tensor([-1], device='cuda:0') loss 17.418954849243164 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 277 reward tensor([-1], device='cuda:0') loss 13.566248893737793 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 278 reward tensor([-1], device='cuda:0') loss 11.481806755065918 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 279 reward tensor([-1], device='cuda:0') loss 7.855490207672119 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 280 reward tensor([-1], device='cuda:0') loss 6.286910533905029 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 281 reward tensor([-1], device='cuda:0') loss 4.355567455291748 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 282 reward tensor([-1], device='cuda:0') loss 3.5622687339782715 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 283 reward tensor([-1], device='cuda:0') loss 2.8414876461029053 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 284 reward tensor([-1], device='cuda:0') loss 2.767481803894043 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 285 reward tensor([-1], device='cuda:0') loss 3.0495331287384033 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 286 reward tensor([-1], device='cuda:0') loss 4.1414666175842285 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 287 reward tensor([-1], device='cuda:0') loss 3.747129440307617 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 288 reward tensor([-1], device='cuda:0') loss 4.995428085327148 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 289 reward tensor([-1], device='cuda:0') loss 3.990344762802124 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 290 reward tensor([-1], device='cuda:0') loss 4.354584693908691 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 291 reward tensor([-1], device='cuda:0') loss 5.513897895812988 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 292 reward tensor([-1], device='cuda:0') loss 5.4955291748046875 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 293 reward tensor([-1], device='cuda:0') loss 4.809812545776367 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 294 reward tensor([-1], device='cuda:0') loss 4.258386611938477 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 295 reward tensor([-1], device='cuda:0') loss 4.141034126281738 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 296 reward tensor([-1], device='cuda:0') loss 3.2656149864196777 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 297 reward tensor([-1], device='cuda:0') loss 3.156796932220459 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 298 reward tensor([-1], device='cuda:0') loss 2.386406898498535 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 299 reward tensor([-1], device='cuda:0') loss 1.943183422088623 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 300 reward tensor([-1], device='cuda:0') loss 1.8272861242294312 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 1 step 301 reward tensor([-1], device='cuda:0') loss 64.79524993896484 epsilon 0.82
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 2 step 0 reward tensor([-1], device='cuda:0') loss 67.60450744628906 epsilon 0.79335
+26-Feb-25 13:08:06 - agent.DQN.DQN - INFO - episode 2 step 1 reward tensor([-1], device='cuda:0') loss 58.62919998168945 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 2 reward tensor([-1], device='cuda:0') loss 58.5789794921875 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 3 reward tensor([-1], device='cuda:0') loss 22.435165405273438 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 4 reward tensor([-1], device='cuda:0') loss 47.767765045166016 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 5 reward tensor([-1], device='cuda:0') loss 11.667930603027344 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 6 reward tensor([-1], device='cuda:0') loss 39.23461151123047 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 7 reward tensor([-1], device='cuda:0') loss 32.94038391113281 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 8 reward tensor([-1], device='cuda:0') loss 3.6912546157836914 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 9 reward tensor([-1], device='cuda:0') loss 3.21039080619812 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 10 reward tensor([-1], device='cuda:0') loss 3.45082950592041 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 11 reward tensor([-1], device='cuda:0') loss 2.1910037994384766 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 12 reward tensor([-1], device='cuda:0') loss 3.645190715789795 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 13 reward tensor([-1], device='cuda:0') loss 24.981454849243164 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 14 reward tensor([-1], device='cuda:0') loss 4.080266952514648 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 15 reward tensor([-1], device='cuda:0') loss 5.263657093048096 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 16 reward tensor([-1], device='cuda:0') loss 26.56256675720215 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 17 reward tensor([-1], device='cuda:0') loss 25.080272674560547 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 18 reward tensor([-1], device='cuda:0') loss 7.258044242858887 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 19 reward tensor([-1], device='cuda:0') loss 23.741485595703125 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 20 reward tensor([-1], device='cuda:0') loss 6.310178279876709 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 21 reward tensor([-1], device='cuda:0') loss 9.156635284423828 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 22 reward tensor([-1], device='cuda:0') loss 25.928234100341797 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 23 reward tensor([-1], device='cuda:0') loss 4.608094215393066 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 24 reward tensor([-1], device='cuda:0') loss 6.859971046447754 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 25 reward tensor([-1], device='cuda:0') loss 2.480036735534668 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 26 reward tensor([-1], device='cuda:0') loss 21.306217193603516 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 27 reward tensor([-1], device='cuda:0') loss 2.6194584369659424 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 28 reward tensor([-1], device='cuda:0') loss 20.715116500854492 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 29 reward tensor([-1], device='cuda:0') loss 19.88572883605957 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 30 reward tensor([-1], device='cuda:0') loss 36.812538146972656 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 31 reward tensor([-1], device='cuda:0') loss 20.575607299804688 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 32 reward tensor([-1], device='cuda:0') loss 37.08661651611328 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 33 reward tensor([-1], device='cuda:0') loss 32.82590103149414 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 34 reward tensor([-1], device='cuda:0') loss 28.981382369995117 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 35 reward tensor([-1], device='cuda:0') loss 11.187908172607422 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 36 reward tensor([-1], device='cuda:0') loss 23.600852966308594 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 37 reward tensor([-1], device='cuda:0') loss 7.724596977233887 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 38 reward tensor([-1], device='cuda:0') loss 21.634845733642578 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 39 reward tensor([-1], device='cuda:0') loss 3.8960301876068115 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 40 reward tensor([-1], device='cuda:0') loss 16.342575073242188 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 41 reward tensor([-1], device='cuda:0') loss 2.6892666816711426 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 42 reward tensor([-1], device='cuda:0') loss 1.815474510192871 epsilon 0.79335
+26-Feb-25 13:08:07 - agent.DQN.DQN - INFO - episode 2 step 43 reward tensor([-1], device='cuda:0') loss 15.106999397277832 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 44 reward tensor([-1], device='cuda:0') loss 15.07314682006836 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 45 reward tensor([-1], device='cuda:0') loss 4.675006866455078 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 46 reward tensor([-1], device='cuda:0') loss 16.563365936279297 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 47 reward tensor([-1], device='cuda:0') loss 5.563190937042236 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 48 reward tensor([-1], device='cuda:0') loss 6.682974338531494 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 49 reward tensor([-1], device='cuda:0') loss 5.413519382476807 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 50 reward tensor([-1], device='cuda:0') loss 7.551755428314209 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 51 reward tensor([-1], device='cuda:0') loss 16.241504669189453 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 52 reward tensor([-1], device='cuda:0') loss 13.237278938293457 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 53 reward tensor([-1], device='cuda:0') loss 4.039737701416016 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 54 reward tensor([-1], device='cuda:0') loss 7.754282474517822 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 55 reward tensor([-1], device='cuda:0') loss 2.890019655227661 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 56 reward tensor([-1], device='cuda:0') loss 5.33029842376709 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 57 reward tensor([-1], device='cuda:0') loss 4.799333095550537 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 58 reward tensor([-1], device='cuda:0') loss 1.6814905405044556 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 59 reward tensor([-1], device='cuda:0') loss 13.10306167602539 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 60 reward tensor([-1], device='cuda:0') loss 14.655923843383789 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 61 reward tensor([-1], device='cuda:0') loss 15.264616966247559 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 62 reward tensor([-1], device='cuda:0') loss 13.904662132263184 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 63 reward tensor([-1], device='cuda:0') loss 24.006317138671875 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 64 reward tensor([-1], device='cuda:0') loss 9.58456039428711 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 65 reward tensor([-1], device='cuda:0') loss 9.051220893859863 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 66 reward tensor([-1], device='cuda:0') loss 9.064092636108398 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 67 reward tensor([-1], device='cuda:0') loss 17.23680305480957 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 68 reward tensor([-1], device='cuda:0') loss 4.685842514038086 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 69 reward tensor([-1], device='cuda:0') loss 5.151123046875 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 70 reward tensor([-1], device='cuda:0') loss 14.740400314331055 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 71 reward tensor([-1], device='cuda:0') loss 13.785032272338867 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 72 reward tensor([-1], device='cuda:0') loss 3.200840950012207 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 73 reward tensor([-1], device='cuda:0') loss 2.1821534633636475 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 74 reward tensor([-1], device='cuda:0') loss 2.9807939529418945 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 75 reward tensor([-1], device='cuda:0') loss 3.224832057952881 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 76 reward tensor([-1], device='cuda:0') loss 2.3185598850250244 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 77 reward tensor([-1], device='cuda:0') loss 1.8515677452087402 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 78 reward tensor([-1], device='cuda:0') loss 2.1649913787841797 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 79 reward tensor([-1], device='cuda:0') loss 3.145618438720703 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 80 reward tensor([-1], device='cuda:0') loss 3.953629970550537 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 81 reward tensor([-1], device='cuda:0') loss 10.412477493286133 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 82 reward tensor([-1], device='cuda:0') loss 2.4632649421691895 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 83 reward tensor([-1], device='cuda:0') loss 2.524989366531372 epsilon 0.79335
+26-Feb-25 13:08:08 - agent.DQN.DQN - INFO - episode 2 step 84 reward tensor([-1], device='cuda:0') loss 10.605172157287598 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 85 reward tensor([-1], device='cuda:0') loss 11.188511848449707 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 86 reward tensor([-1], device='cuda:0') loss 2.2118232250213623 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 87 reward tensor([-1], device='cuda:0') loss 1.8802149295806885 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 88 reward tensor([-1], device='cuda:0') loss 2.0128517150878906 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 89 reward tensor([-1], device='cuda:0') loss 14.469392776489258 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 90 reward tensor([-1], device='cuda:0') loss 18.771217346191406 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 91 reward tensor([-1], device='cuda:0') loss 17.944080352783203 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 92 reward tensor([-1], device='cuda:0') loss 9.762130737304688 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 93 reward tensor([-1], device='cuda:0') loss 15.77206039428711 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 94 reward tensor([-1], device='cuda:0') loss 8.876432418823242 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 95 reward tensor([-1], device='cuda:0') loss 6.930968761444092 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 96 reward tensor([-1], device='cuda:0') loss 6.838125228881836 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 97 reward tensor([-1], device='cuda:0') loss 4.949456691741943 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 98 reward tensor([-1], device='cuda:0') loss 6.458225727081299 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 99 reward tensor([-1], device='cuda:0') loss 3.023367404937744 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 100 reward tensor([-1], device='cuda:0') loss 3.271367073059082 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 101 reward tensor([-1], device='cuda:0') loss 2.383246421813965 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 102 reward tensor([-1], device='cuda:0') loss 7.928962707519531 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 103 reward tensor([-1], device='cuda:0') loss 1.6048952341079712 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 104 reward tensor([-1], device='cuda:0') loss 2.4593403339385986 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 105 reward tensor([-1], device='cuda:0') loss 2.023602247238159 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 106 reward tensor([-1], device='cuda:0') loss 2.4189021587371826 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 107 reward tensor([-1], device='cuda:0') loss 2.1669979095458984 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 108 reward tensor([-1], device='cuda:0') loss 8.702448844909668 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 109 reward tensor([-1], device='cuda:0') loss 6.421807289123535 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 110 reward tensor([-1], device='cuda:0') loss 4.287212371826172 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 111 reward tensor([-1], device='cuda:0') loss 7.66366720199585 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 112 reward tensor([-1], device='cuda:0') loss 1.8353832960128784 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 113 reward tensor([-1], device='cuda:0') loss 3.5522384643554688 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 114 reward tensor([-1], device='cuda:0') loss 1.83209228515625 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 115 reward tensor([-1], device='cuda:0') loss 2.615555763244629 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 116 reward tensor([-1], device='cuda:0') loss 6.624788284301758 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 117 reward tensor([-1], device='cuda:0') loss 2.0401370525360107 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 118 reward tensor([-1], device='cuda:0') loss 1.4907171726226807 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 119 reward tensor([-1], device='cuda:0') loss 14.365997314453125 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 120 reward tensor([-1], device='cuda:0') loss 10.84560775756836 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 121 reward tensor([-1], device='cuda:0') loss 12.453033447265625 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 122 reward tensor([-1], device='cuda:0') loss 7.395671367645264 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 123 reward tensor([-1], device='cuda:0') loss 11.803866386413574 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 124 reward tensor([-1], device='cuda:0') loss 10.07703685760498 epsilon 0.79335
+26-Feb-25 13:08:09 - agent.DQN.DQN - INFO - episode 2 step 125 reward tensor([-1], device='cuda:0') loss 7.0313873291015625 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 126 reward tensor([-1], device='cuda:0') loss 4.352425575256348 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 127 reward tensor([-1], device='cuda:0') loss 5.404029846191406 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 128 reward tensor([-1], device='cuda:0') loss 3.6747636795043945 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 129 reward tensor([-1], device='cuda:0') loss 7.924290657043457 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 130 reward tensor([-1], device='cuda:0') loss 5.841670036315918 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 131 reward tensor([-1], device='cuda:0') loss 4.727339267730713 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 132 reward tensor([-1], device='cuda:0') loss 1.8052685260772705 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 133 reward tensor([-1], device='cuda:0') loss 1.543320655822754 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 134 reward tensor([-1], device='cuda:0') loss 1.2554196119308472 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 135 reward tensor([-1], device='cuda:0') loss 3.8220062255859375 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 136 reward tensor([-1], device='cuda:0') loss 1.7956936359405518 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 137 reward tensor([-1], device='cuda:0') loss 3.0174400806427 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 138 reward tensor([-1], device='cuda:0') loss 2.1484150886535645 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 139 reward tensor([-1], device='cuda:0') loss 2.1510818004608154 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 140 reward tensor([-1], device='cuda:0') loss 3.400611400604248 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 141 reward tensor([-1], device='cuda:0') loss 4.815976142883301 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 142 reward tensor([-1], device='cuda:0') loss 1.576531171798706 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 143 reward tensor([-1], device='cuda:0') loss 3.884718418121338 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 144 reward tensor([-1], device='cuda:0') loss 3.603909492492676 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 145 reward tensor([-1], device='cuda:0') loss 1.3314671516418457 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 146 reward tensor([-1], device='cuda:0') loss 1.7124261856079102 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 147 reward tensor([-1], device='cuda:0') loss 4.144493579864502 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 148 reward tensor([-1], device='cuda:0') loss 1.413465142250061 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 149 reward tensor([-1], device='cuda:0') loss 7.075649738311768 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 150 reward tensor([-1], device='cuda:0') loss 7.85078239440918 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 151 reward tensor([-1], device='cuda:0') loss 10.413786888122559 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 152 reward tensor([-1], device='cuda:0') loss 8.996328353881836 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 153 reward tensor([-1], device='cuda:0') loss 8.341995239257812 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 154 reward tensor([-1], device='cuda:0') loss 9.022598266601562 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 155 reward tensor([-1], device='cuda:0') loss 5.535890579223633 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 156 reward tensor([-1], device='cuda:0') loss 4.276706695556641 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 157 reward tensor([-1], device='cuda:0') loss 5.747894287109375 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 158 reward tensor([-1], device='cuda:0') loss 3.0388576984405518 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 159 reward tensor([-1], device='cuda:0') loss 4.51036262512207 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 160 reward tensor([-1], device='cuda:0') loss 2.0282466411590576 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 161 reward tensor([-1], device='cuda:0') loss 2.2367429733276367 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 162 reward tensor([-1], device='cuda:0') loss 3.193267822265625 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 163 reward tensor([-1], device='cuda:0') loss 2.8640942573547363 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 164 reward tensor([-1], device='cuda:0') loss 1.495168685913086 epsilon 0.79335
+26-Feb-25 13:08:10 - agent.DQN.DQN - INFO - episode 2 step 165 reward tensor([-1], device='cuda:0') loss 2.8441381454467773 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 166 reward tensor([-1], device='cuda:0') loss 2.41182541847229 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 167 reward tensor([-1], device='cuda:0') loss 2.8049468994140625 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 168 reward tensor([-1], device='cuda:0') loss 1.1804790496826172 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 169 reward tensor([-1], device='cuda:0') loss 1.1036595106124878 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 170 reward tensor([-1], device='cuda:0') loss 1.4840807914733887 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 171 reward tensor([-1], device='cuda:0') loss 1.0312241315841675 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 172 reward tensor([-1], device='cuda:0') loss 2.4166250228881836 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 173 reward tensor([-1], device='cuda:0') loss 1.0552399158477783 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 174 reward tensor([-1], device='cuda:0') loss 1.2146494388580322 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 175 reward tensor([-1], device='cuda:0') loss 1.3370087146759033 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 176 reward tensor([-1], device='cuda:0') loss 3.942662239074707 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 177 reward tensor([-1], device='cuda:0') loss 1.3977282047271729 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 178 reward tensor([-1], device='cuda:0') loss 1.4396402835845947 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 179 reward tensor([-1], device='cuda:0') loss 6.910370826721191 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 180 reward tensor([-1], device='cuda:0') loss 6.493075847625732 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 181 reward tensor([-1], device='cuda:0') loss 4.910914897918701 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 182 reward tensor([-1], device='cuda:0') loss 4.765260696411133 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 183 reward tensor([-1], device='cuda:0') loss 5.206341743469238 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 184 reward tensor([-1], device='cuda:0') loss 5.918600559234619 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 185 reward tensor([-1], device='cuda:0') loss 4.2331223487854 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 186 reward tensor([-1], device='cuda:0') loss 4.2667388916015625 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 187 reward tensor([-1], device='cuda:0') loss 3.538691520690918 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 188 reward tensor([-1], device='cuda:0') loss 3.240072727203369 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 189 reward tensor([-1], device='cuda:0') loss 2.3147573471069336 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 190 reward tensor([-1], device='cuda:0') loss 2.723782777786255 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 191 reward tensor([-1], device='cuda:0') loss 1.6388111114501953 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 192 reward tensor([-1], device='cuda:0') loss 2.8247151374816895 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 193 reward tensor([-1], device='cuda:0') loss 1.346107006072998 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 194 reward tensor([-1], device='cuda:0') loss 1.2921154499053955 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 195 reward tensor([-1], device='cuda:0') loss 1.225678563117981 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 196 reward tensor([-1], device='cuda:0') loss 2.4484024047851562 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 197 reward tensor([-1], device='cuda:0') loss 2.194472551345825 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 198 reward tensor([-1], device='cuda:0') loss 1.9482827186584473 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 199 reward tensor([-1], device='cuda:0') loss 2.2111525535583496 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 200 reward tensor([-1], device='cuda:0') loss 1.257077693939209 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 201 reward tensor([-1], device='cuda:0') loss 2.085068941116333 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 202 reward tensor([-1], device='cuda:0') loss 1.0020756721496582 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 203 reward tensor([-1], device='cuda:0') loss 2.1620779037475586 epsilon 0.79335
+26-Feb-25 13:08:11 - agent.DQN.DQN - INFO - episode 2 step 204 reward tensor([-1], device='cuda:0') loss 1.9094573259353638 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 205 reward tensor([-1], device='cuda:0') loss 2.7856929302215576 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 206 reward tensor([-1], device='cuda:0') loss 0.9077736735343933 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 207 reward tensor([-1], device='cuda:0') loss 1.0428086519241333 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 208 reward tensor([-1], device='cuda:0') loss 1.7152653932571411 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 209 reward tensor([-1], device='cuda:0') loss 6.684348106384277 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 210 reward tensor([-1], device='cuda:0') loss 4.916047096252441 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 211 reward tensor([-1], device='cuda:0') loss 5.255809307098389 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 212 reward tensor([-1], device='cuda:0') loss 4.5655059814453125 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 213 reward tensor([-1], device='cuda:0') loss 5.408451557159424 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 214 reward tensor([-1], device='cuda:0') loss 4.7329020500183105 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 215 reward tensor([-1], device='cuda:0') loss 4.593361854553223 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 216 reward tensor([-1], device='cuda:0') loss 4.459664821624756 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 217 reward tensor([-1], device='cuda:0') loss 3.597170829772949 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 218 reward tensor([-1], device='cuda:0') loss 2.656221389770508 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 219 reward tensor([-1], device='cuda:0') loss 3.246551036834717 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 220 reward tensor([-1], device='cuda:0') loss 2.4010040760040283 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 221 reward tensor([-1], device='cuda:0') loss 1.5625640153884888 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 222 reward tensor([-1], device='cuda:0') loss 1.5105047225952148 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 223 reward tensor([-1], device='cuda:0') loss 1.4742271900177002 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 224 reward tensor([-1], device='cuda:0') loss 2.1556856632232666 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 225 reward tensor([-1], device='cuda:0') loss 1.1543142795562744 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 226 reward tensor([-1], device='cuda:0') loss 1.1427953243255615 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 227 reward tensor([-1], device='cuda:0') loss 0.7979226112365723 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 228 reward tensor([-1], device='cuda:0') loss 2.0330650806427 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 229 reward tensor([-1], device='cuda:0') loss 1.0673478841781616 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 230 reward tensor([-1], device='cuda:0') loss 0.7830666899681091 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 231 reward tensor([-1], device='cuda:0') loss 1.0397133827209473 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 232 reward tensor([-1], device='cuda:0') loss 0.9261505603790283 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 233 reward tensor([-1], device='cuda:0') loss 1.0451065301895142 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 234 reward tensor([-1], device='cuda:0') loss 0.971005380153656 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 235 reward tensor([-1], device='cuda:0') loss 0.965774655342102 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 236 reward tensor([-1], device='cuda:0') loss 0.9779191017150879 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 237 reward tensor([-1], device='cuda:0') loss 1.3036112785339355 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 238 reward tensor([-1], device='cuda:0') loss 0.8767087459564209 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 239 reward tensor([-1], device='cuda:0') loss 4.345919132232666 epsilon 0.79335
+26-Feb-25 13:08:12 - agent.DQN.DQN - INFO - episode 2 step 240 reward tensor([-1], device='cuda:0') loss 4.625946044921875 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 241 reward tensor([-1], device='cuda:0') loss 3.991297960281372 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 242 reward tensor([-1], device='cuda:0') loss 4.510462760925293 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 243 reward tensor([-1], device='cuda:0') loss 4.157558917999268 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 244 reward tensor([-1], device='cuda:0') loss 3.1344144344329834 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 245 reward tensor([-1], device='cuda:0') loss 3.3202176094055176 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 246 reward tensor([-1], device='cuda:0') loss 2.5873641967773438 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 247 reward tensor([-1], device='cuda:0') loss 3.3962671756744385 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 248 reward tensor([-1], device='cuda:0') loss 2.416673421859741 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 249 reward tensor([-1], device='cuda:0') loss 2.245574474334717 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 250 reward tensor([-1], device='cuda:0') loss 1.8934094905853271 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 251 reward tensor([-1], device='cuda:0') loss 2.3155152797698975 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 252 reward tensor([-1], device='cuda:0') loss 1.4286677837371826 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 253 reward tensor([-1], device='cuda:0') loss 1.237151861190796 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 254 reward tensor([-1], device='cuda:0') loss 1.5327447652816772 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 255 reward tensor([-1], device='cuda:0') loss 2.2664527893066406 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 256 reward tensor([-1], device='cuda:0') loss 2.072457790374756 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 257 reward tensor([-1], device='cuda:0') loss 1.0181231498718262 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 258 reward tensor([-1], device='cuda:0') loss 1.1934410333633423 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 259 reward tensor([-1], device='cuda:0') loss 1.1710529327392578 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 260 reward tensor([-1], device='cuda:0') loss 1.9101169109344482 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 261 reward tensor([-1], device='cuda:0') loss 0.8940513134002686 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 262 reward tensor([-1], device='cuda:0') loss 1.5187420845031738 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 263 reward tensor([-1], device='cuda:0') loss 0.8638918995857239 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 264 reward tensor([-1], device='cuda:0') loss 2.1200881004333496 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 265 reward tensor([-1], device='cuda:0') loss 1.0716285705566406 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 266 reward tensor([-1], device='cuda:0') loss 0.9977465867996216 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 267 reward tensor([-1], device='cuda:0') loss 1.2891284227371216 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 268 reward tensor([-1], device='cuda:0') loss 1.0808796882629395 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 269 reward tensor([-1], device='cuda:0') loss 3.5473148822784424 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 270 reward tensor([-1], device='cuda:0') loss 3.6669397354125977 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 271 reward tensor([-1], device='cuda:0') loss 4.618141174316406 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 272 reward tensor([-1], device='cuda:0') loss 3.5326337814331055 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 273 reward tensor([-1], device='cuda:0') loss 3.39235258102417 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 274 reward tensor([-1], device='cuda:0') loss 3.0727920532226562 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 275 reward tensor([-1], device='cuda:0') loss 3.032714366912842 epsilon 0.79335
+26-Feb-25 13:08:13 - agent.DQN.DQN - INFO - episode 2 step 276 reward tensor([-1], device='cuda:0') loss 2.473888397216797 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 277 reward tensor([-1], device='cuda:0') loss 2.404308795928955 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 278 reward tensor([-1], device='cuda:0') loss 2.0845093727111816 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 279 reward tensor([-1], device='cuda:0') loss 2.324587345123291 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 280 reward tensor([-1], device='cuda:0') loss 1.7721643447875977 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 281 reward tensor([-1], device='cuda:0') loss 1.7904462814331055 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 282 reward tensor([-1], device='cuda:0') loss 1.919021725654602 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 283 reward tensor([-1], device='cuda:0') loss 1.205635905265808 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 284 reward tensor([-1], device='cuda:0') loss 1.8766813278198242 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 285 reward tensor([-1], device='cuda:0') loss 1.2146942615509033 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 286 reward tensor([-1], device='cuda:0') loss 1.0743956565856934 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 287 reward tensor([-1], device='cuda:0') loss 1.102662205696106 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 288 reward tensor([-1], device='cuda:0') loss 1.8102664947509766 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 289 reward tensor([-1], device='cuda:0') loss 1.829904556274414 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 290 reward tensor([-1], device='cuda:0') loss 1.7982878684997559 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 291 reward tensor([-1], device='cuda:0') loss 0.9844663143157959 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 292 reward tensor([-1], device='cuda:0') loss 1.6872789859771729 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 293 reward tensor([-1], device='cuda:0') loss 1.1382346153259277 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 294 reward tensor([-1], device='cuda:0') loss 1.8798742294311523 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 295 reward tensor([-1], device='cuda:0') loss 0.9356046319007874 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 296 reward tensor([-1], device='cuda:0') loss 1.132357120513916 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 297 reward tensor([-1], device='cuda:0') loss 1.0121289491653442 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 298 reward tensor([-1], device='cuda:0') loss 0.850866436958313 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 299 reward tensor([-1], device='cuda:0') loss 4.1637187004089355 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 300 reward tensor([-1], device='cuda:0') loss 4.462306022644043 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 2 step 301 reward tensor([-1], device='cuda:0') loss 3.6914286613464355 epsilon 0.79335
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 0 reward tensor([-1], device='cuda:0') loss 3.678415298461914 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 1 reward tensor([-1], device='cuda:0') loss 3.0347657203674316 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 2 reward tensor([-1], device='cuda:0') loss 2.5077903270721436 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 3 reward tensor([-1], device='cuda:0') loss 2.5125646591186523 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 4 reward tensor([-1], device='cuda:0') loss 8.994482040405273 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 5 reward tensor([-1], device='cuda:0') loss 2.5111639499664307 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 6 reward tensor([-1], device='cuda:0') loss 1.9189982414245605 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 7 reward tensor([-1], device='cuda:0') loss 2.2457969188690186 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 8 reward tensor([-1], device='cuda:0') loss 2.0164403915405273 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 9 reward tensor([-1], device='cuda:0') loss 1.2329974174499512 epsilon 0.767566125
+26-Feb-25 13:08:14 - agent.DQN.DQN - INFO - episode 3 step 10 reward tensor([-1], device='cuda:0') loss 1.585639238357544 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 11 reward tensor([-1], device='cuda:0') loss 7.091174602508545 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 12 reward tensor([-1], device='cuda:0') loss 1.9369101524353027 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 13 reward tensor([-1], device='cuda:0') loss 1.7096918821334839 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 14 reward tensor([-1], device='cuda:0') loss 1.814004898071289 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 15 reward tensor([-1], device='cuda:0') loss 7.404635429382324 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 16 reward tensor([-1], device='cuda:0') loss 6.464422702789307 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 17 reward tensor([-1], device='cuda:0') loss 5.886373519897461 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 18 reward tensor([-1], device='cuda:0') loss 6.026037216186523 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 19 reward tensor([-1], device='cuda:0') loss 1.7206449508666992 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 20 reward tensor([-1], device='cuda:0') loss 5.208215713500977 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 21 reward tensor([-1], device='cuda:0') loss 1.9818074703216553 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 22 reward tensor([-1], device='cuda:0') loss 1.3480182886123657 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 23 reward tensor([-1], device='cuda:0') loss 1.2988650798797607 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 24 reward tensor([-1], device='cuda:0') loss 2.1282830238342285 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 25 reward tensor([-1], device='cuda:0') loss 1.2243517637252808 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 26 reward tensor([-1], device='cuda:0') loss 2.2152233123779297 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 27 reward tensor([-1], device='cuda:0') loss 3.0838732719421387 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 28 reward tensor([-1], device='cuda:0') loss 6.33104944229126 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 29 reward tensor([-1], device='cuda:0') loss 3.599360942840576 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 30 reward tensor([-1], device='cuda:0') loss 2.364687204360962 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 31 reward tensor([-1], device='cuda:0') loss 2.66965651512146 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 32 reward tensor([-1], device='cuda:0') loss 1.92169189453125 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 33 reward tensor([-1], device='cuda:0') loss 2.6387648582458496 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 34 reward tensor([-1], device='cuda:0') loss 5.685098648071289 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 35 reward tensor([-1], device='cuda:0') loss 1.724056601524353 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 36 reward tensor([-1], device='cuda:0') loss 1.9980379343032837 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 37 reward tensor([-1], device='cuda:0') loss 2.144129514694214 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 38 reward tensor([-1], device='cuda:0') loss 4.81296443939209 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 39 reward tensor([-1], device='cuda:0') loss 1.687354326248169 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 40 reward tensor([-1], device='cuda:0') loss 1.6266636848449707 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 41 reward tensor([-1], device='cuda:0') loss 1.1295838356018066 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 42 reward tensor([-1], device='cuda:0') loss 1.3715049028396606 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 43 reward tensor([-1], device='cuda:0') loss 1.0421242713928223 epsilon 0.767566125
+26-Feb-25 13:08:15 - agent.DQN.DQN - INFO - episode 3 step 44 reward tensor([-1], device='cuda:0') loss 1.1674654483795166 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 45 reward tensor([-1], device='cuda:0') loss 1.2323628664016724 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 46 reward tensor([-1], device='cuda:0') loss 1.589768409729004 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 47 reward tensor([-1], device='cuda:0') loss 0.9614340662956238 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 48 reward tensor([-1], device='cuda:0') loss 1.1512290239334106 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 49 reward tensor([-1], device='cuda:0') loss 1.2907910346984863 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 50 reward tensor([-1], device='cuda:0') loss 1.204972267150879 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 51 reward tensor([-1], device='cuda:0') loss 0.9280474185943604 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 52 reward tensor([-1], device='cuda:0') loss 0.9112151265144348 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 53 reward tensor([-1], device='cuda:0') loss 1.0358585119247437 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 54 reward tensor([-1], device='cuda:0') loss 5.340943813323975 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 55 reward tensor([-1], device='cuda:0') loss 1.298703670501709 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 56 reward tensor([-1], device='cuda:0') loss 0.9531333446502686 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 57 reward tensor([-1], device='cuda:0') loss 2.658379077911377 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 58 reward tensor([-1], device='cuda:0') loss 2.3620445728302 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 59 reward tensor([-1], device='cuda:0') loss 2.7729005813598633 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 60 reward tensor([-1], device='cuda:0') loss 2.1503090858459473 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 61 reward tensor([-1], device='cuda:0') loss 6.196176528930664 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 62 reward tensor([-1], device='cuda:0') loss 5.49019718170166 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 63 reward tensor([-1], device='cuda:0') loss 1.8041410446166992 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 64 reward tensor([-1], device='cuda:0') loss 1.6731035709381104 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 65 reward tensor([-1], device='cuda:0') loss 1.754591941833496 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 66 reward tensor([-1], device='cuda:0') loss 1.6471097469329834 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 67 reward tensor([-1], device='cuda:0') loss 1.7511050701141357 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 68 reward tensor([-1], device='cuda:0') loss 4.313838005065918 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 69 reward tensor([-1], device='cuda:0') loss 1.3990814685821533 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 70 reward tensor([-1], device='cuda:0') loss 1.045186996459961 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 71 reward tensor([-1], device='cuda:0') loss 1.3261247873306274 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 72 reward tensor([-1], device='cuda:0') loss 1.0125120878219604 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 73 reward tensor([-1], device='cuda:0') loss 1.1537222862243652 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 74 reward tensor([-1], device='cuda:0') loss 0.8565919995307922 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 75 reward tensor([-1], device='cuda:0') loss 0.8800030946731567 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 76 reward tensor([-1], device='cuda:0') loss 0.8340783715248108 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 77 reward tensor([-1], device='cuda:0') loss 1.012117862701416 epsilon 0.767566125
+26-Feb-25 13:08:16 - agent.DQN.DQN - INFO - episode 3 step 78 reward tensor([-1], device='cuda:0') loss 0.9691289067268372 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 79 reward tensor([-1], device='cuda:0') loss 0.9771440029144287 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 80 reward tensor([-1], device='cuda:0') loss 0.8918336033821106 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 81 reward tensor([-1], device='cuda:0') loss 0.8044067621231079 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 82 reward tensor([-1], device='cuda:0') loss 1.2296987771987915 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 83 reward tensor([-1], device='cuda:0') loss 0.7864662408828735 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 84 reward tensor([-1], device='cuda:0') loss 1.2392051219940186 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 85 reward tensor([-1], device='cuda:0') loss 4.457790374755859 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 86 reward tensor([-1], device='cuda:0') loss 0.8238204717636108 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 87 reward tensor([-1], device='cuda:0') loss 2.3141427040100098 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 88 reward tensor([-1], device='cuda:0') loss 1.9917571544647217 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 89 reward tensor([-1], device='cuda:0') loss 2.167491912841797 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 90 reward tensor([-1], device='cuda:0') loss 2.077877998352051 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 91 reward tensor([-1], device='cuda:0') loss 2.012756824493408 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 92 reward tensor([-1], device='cuda:0') loss 2.0641260147094727 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 93 reward tensor([-1], device='cuda:0') loss 2.029702663421631 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 94 reward tensor([-1], device='cuda:0') loss 1.7941645383834839 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 95 reward tensor([-1], device='cuda:0') loss 1.5802197456359863 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 96 reward tensor([-1], device='cuda:0') loss 1.282897710800171 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 97 reward tensor([-1], device='cuda:0') loss 4.454362869262695 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 98 reward tensor([-1], device='cuda:0') loss 1.1081489324569702 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 99 reward tensor([-1], device='cuda:0') loss 4.0744147300720215 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 100 reward tensor([-1], device='cuda:0') loss 1.007056713104248 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 101 reward tensor([-1], device='cuda:0') loss 1.007289171218872 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 102 reward tensor([-1], device='cuda:0') loss 1.013908863067627 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 103 reward tensor([-1], device='cuda:0') loss 1.0262997150421143 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 104 reward tensor([-1], device='cuda:0') loss 1.0383304357528687 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 105 reward tensor([-1], device='cuda:0') loss 1.372775673866272 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 106 reward tensor([-1], device='cuda:0') loss 0.932897686958313 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 107 reward tensor([-1], device='cuda:0') loss 0.8110110759735107 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 108 reward tensor([-1], device='cuda:0') loss 0.8181236386299133 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 109 reward tensor([-1], device='cuda:0') loss 0.9794741868972778 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 110 reward tensor([-1], device='cuda:0') loss 0.6572790145874023 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 111 reward tensor([-1], device='cuda:0') loss 1.2228718996047974 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 112 reward tensor([-1], device='cuda:0') loss 1.0395156145095825 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 113 reward tensor([-1], device='cuda:0') loss 0.8978825211524963 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 114 reward tensor([-1], device='cuda:0') loss 0.9847579598426819 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 115 reward tensor([-1], device='cuda:0') loss 1.1846150159835815 epsilon 0.767566125
+26-Feb-25 13:08:17 - agent.DQN.DQN - INFO - episode 3 step 116 reward tensor([-1], device='cuda:0') loss 0.8581657409667969 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 117 reward tensor([-1], device='cuda:0') loss 1.9856752157211304 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 118 reward tensor([-1], device='cuda:0') loss 2.01887845993042 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 119 reward tensor([-1], device='cuda:0') loss 4.5879364013671875 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 120 reward tensor([-1], device='cuda:0') loss 1.7883776426315308 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 121 reward tensor([-1], device='cuda:0') loss 1.5218868255615234 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 122 reward tensor([-1], device='cuda:0') loss 4.044044494628906 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 123 reward tensor([-1], device='cuda:0') loss 3.889286994934082 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 124 reward tensor([-1], device='cuda:0') loss 3.795140504837036 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 125 reward tensor([-1], device='cuda:0') loss 1.4994714260101318 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 126 reward tensor([-1], device='cuda:0') loss 3.640425205230713 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 127 reward tensor([-1], device='cuda:0') loss 1.2098578214645386 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 128 reward tensor([-1], device='cuda:0') loss 1.345302700996399 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 129 reward tensor([-1], device='cuda:0') loss 1.2989672422409058 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 130 reward tensor([-1], device='cuda:0') loss 0.9772510528564453 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 131 reward tensor([-1], device='cuda:0') loss 0.9453597068786621 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 132 reward tensor([-1], device='cuda:0') loss 1.1290290355682373 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 133 reward tensor([-1], device='cuda:0') loss 0.950654149055481 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 134 reward tensor([-1], device='cuda:0') loss 2.838074207305908 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 135 reward tensor([-1], device='cuda:0') loss 1.151442050933838 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 136 reward tensor([-1], device='cuda:0') loss 1.2510905265808105 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 137 reward tensor([-1], device='cuda:0') loss 2.5470614433288574 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 138 reward tensor([-1], device='cuda:0') loss 2.7454495429992676 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 139 reward tensor([-1], device='cuda:0') loss 1.2735464572906494 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 140 reward tensor([-1], device='cuda:0') loss 1.1961904764175415 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 141 reward tensor([-1], device='cuda:0') loss 1.1517417430877686 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 142 reward tensor([-1], device='cuda:0') loss 1.0305064916610718 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 143 reward tensor([-1], device='cuda:0') loss 1.4365496635437012 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 144 reward tensor([-1], device='cuda:0') loss 1.3663831949234009 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 145 reward tensor([-1], device='cuda:0') loss 1.009002685546875 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 146 reward tensor([-1], device='cuda:0') loss 0.8551075458526611 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 147 reward tensor([-1], device='cuda:0') loss 1.8346160650253296 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 148 reward tensor([-1], device='cuda:0') loss 1.50942862033844 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 149 reward tensor([-1], device='cuda:0') loss 1.6966159343719482 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 150 reward tensor([-1], device='cuda:0') loss 1.542017936706543 epsilon 0.767566125
+26-Feb-25 13:08:18 - agent.DQN.DQN - INFO - episode 3 step 151 reward tensor([-1], device='cuda:0') loss 1.4901517629623413 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 152 reward tensor([-1], device='cuda:0') loss 1.3695201873779297 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 153 reward tensor([-1], device='cuda:0') loss 1.440491795539856 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 154 reward tensor([-1], device='cuda:0') loss 1.1140066385269165 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 155 reward tensor([-1], device='cuda:0') loss 1.3020312786102295 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 156 reward tensor([-1], device='cuda:0') loss 1.3807969093322754 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 157 reward tensor([-1], device='cuda:0') loss 3.355804204940796 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 158 reward tensor([-1], device='cuda:0') loss 1.2294657230377197 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 159 reward tensor([-1], device='cuda:0') loss 1.1710879802703857 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 160 reward tensor([-1], device='cuda:0') loss 1.1882548332214355 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 161 reward tensor([-1], device='cuda:0') loss 1.4556105136871338 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 162 reward tensor([-1], device='cuda:0') loss 2.8419625759124756 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 163 reward tensor([-1], device='cuda:0') loss 1.4325942993164062 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 164 reward tensor([-1], device='cuda:0') loss 1.2965710163116455 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 165 reward tensor([-1], device='cuda:0') loss 1.1478208303451538 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 166 reward tensor([-1], device='cuda:0') loss 2.866363525390625 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 167 reward tensor([-1], device='cuda:0') loss 1.4492850303649902 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 168 reward tensor([-1], device='cuda:0') loss 1.0370604991912842 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 169 reward tensor([-1], device='cuda:0') loss 1.023831844329834 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 170 reward tensor([-1], device='cuda:0') loss 1.0996825695037842 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 171 reward tensor([-1], device='cuda:0') loss 0.9938231706619263 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 172 reward tensor([-1], device='cuda:0') loss 1.0201653242111206 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 173 reward tensor([-1], device='cuda:0') loss 1.432753086090088 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 174 reward tensor([-1], device='cuda:0') loss 2.7811439037323 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 175 reward tensor([-1], device='cuda:0') loss 2.87326717376709 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 176 reward tensor([-1], device='cuda:0') loss 0.936331033706665 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 177 reward tensor([-1], device='cuda:0') loss 1.49723219871521 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 178 reward tensor([-1], device='cuda:0') loss 1.4335699081420898 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 179 reward tensor([-1], device='cuda:0') loss 1.446881890296936 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 180 reward tensor([-1], device='cuda:0') loss 3.1356265544891357 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 181 reward tensor([-1], device='cuda:0') loss 1.8286585807800293 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 182 reward tensor([-1], device='cuda:0') loss 3.016268730163574 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 183 reward tensor([-1], device='cuda:0') loss 1.5651803016662598 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 184 reward tensor([-1], device='cuda:0') loss 1.3475792407989502 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 185 reward tensor([-1], device='cuda:0') loss 2.5114190578460693 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 186 reward tensor([-1], device='cuda:0') loss 1.5031819343566895 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 187 reward tensor([-1], device='cuda:0') loss 1.5234739780426025 epsilon 0.767566125
+26-Feb-25 13:08:19 - agent.DQN.DQN - INFO - episode 3 step 188 reward tensor([-1], device='cuda:0') loss 1.1595158576965332 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 189 reward tensor([-1], device='cuda:0') loss 1.30859375 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 190 reward tensor([-1], device='cuda:0') loss 0.9614094495773315 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 191 reward tensor([-1], device='cuda:0') loss 1.1403166055679321 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 192 reward tensor([-1], device='cuda:0') loss 1.534303903579712 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 193 reward tensor([-1], device='cuda:0') loss 1.425924301147461 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 194 reward tensor([-1], device='cuda:0') loss 1.513841986656189 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 195 reward tensor([-1], device='cuda:0') loss 1.3423898220062256 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 196 reward tensor([-1], device='cuda:0') loss 2.7101917266845703 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 197 reward tensor([-1], device='cuda:0') loss 2.747735023498535 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 198 reward tensor([-1], device='cuda:0') loss 0.7153980135917664 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 199 reward tensor([-1], device='cuda:0') loss 0.9726617336273193 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 200 reward tensor([-1], device='cuda:0') loss 1.1121494770050049 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 201 reward tensor([-1], device='cuda:0') loss 1.407880425453186 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 202 reward tensor([-1], device='cuda:0') loss 1.1095234155654907 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 203 reward tensor([-1], device='cuda:0') loss 1.4303324222564697 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 204 reward tensor([-1], device='cuda:0') loss 1.4933838844299316 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 205 reward tensor([-1], device='cuda:0') loss 1.5106639862060547 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 206 reward tensor([-1], device='cuda:0') loss 0.9411484003067017 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 207 reward tensor([-1], device='cuda:0') loss 1.6615631580352783 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 208 reward tensor([-1], device='cuda:0') loss 1.8037091493606567 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 209 reward tensor([-1], device='cuda:0') loss 3.3732714653015137 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 210 reward tensor([-1], device='cuda:0') loss 1.8759846687316895 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 211 reward tensor([-1], device='cuda:0') loss 1.322803258895874 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 212 reward tensor([-1], device='cuda:0') loss 1.5576410293579102 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 213 reward tensor([-1], device='cuda:0') loss 1.4977158308029175 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 214 reward tensor([-1], device='cuda:0') loss 1.3796591758728027 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 215 reward tensor([-1], device='cuda:0') loss 1.218367099761963 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 216 reward tensor([-1], device='cuda:0') loss 1.5207781791687012 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 217 reward tensor([-1], device='cuda:0') loss 1.2685282230377197 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 218 reward tensor([-1], device='cuda:0') loss 1.269540548324585 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 219 reward tensor([-1], device='cuda:0') loss 1.2593994140625 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 220 reward tensor([-1], device='cuda:0') loss 1.3024340867996216 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 221 reward tensor([-1], device='cuda:0') loss 1.6208324432373047 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 222 reward tensor([-1], device='cuda:0') loss 1.5393916368484497 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 223 reward tensor([-1], device='cuda:0') loss 1.2445151805877686 epsilon 0.767566125
+26-Feb-25 13:08:20 - agent.DQN.DQN - INFO - episode 3 step 224 reward tensor([-1], device='cuda:0') loss 1.1905666589736938 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 225 reward tensor([-1], device='cuda:0') loss 0.9615384340286255 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 226 reward tensor([-1], device='cuda:0') loss 1.5197993516921997 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 227 reward tensor([-1], device='cuda:0') loss 1.5369162559509277 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 228 reward tensor([-1], device='cuda:0') loss 1.2812321186065674 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 229 reward tensor([-1], device='cuda:0') loss 1.5972673892974854 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 230 reward tensor([-1], device='cuda:0') loss 1.143181324005127 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 231 reward tensor([-1], device='cuda:0') loss 2.909864902496338 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 232 reward tensor([-1], device='cuda:0') loss 3.1366426944732666 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 233 reward tensor([-1], device='cuda:0') loss 1.4706451892852783 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 234 reward tensor([-1], device='cuda:0') loss 1.4564564228057861 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 235 reward tensor([-1], device='cuda:0') loss 1.654884696006775 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 236 reward tensor([-1], device='cuda:0') loss 1.4686698913574219 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 237 reward tensor([-1], device='cuda:0') loss 1.8517767190933228 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 238 reward tensor([-1], device='cuda:0') loss 1.5388561487197876 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 239 reward tensor([-1], device='cuda:0') loss 1.5682718753814697 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 240 reward tensor([-1], device='cuda:0') loss 1.428328514099121 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 241 reward tensor([-1], device='cuda:0') loss 1.8073359727859497 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 242 reward tensor([-1], device='cuda:0') loss 1.4651916027069092 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 243 reward tensor([-1], device='cuda:0') loss 1.6203557252883911 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 244 reward tensor([-1], device='cuda:0') loss 1.5132814645767212 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 245 reward tensor([-1], device='cuda:0') loss 1.2217925786972046 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 246 reward tensor([-1], device='cuda:0') loss 2.646407127380371 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 247 reward tensor([-1], device='cuda:0') loss 1.2079229354858398 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 248 reward tensor([-1], device='cuda:0') loss 1.0535831451416016 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 249 reward tensor([-1], device='cuda:0') loss 1.2408270835876465 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 250 reward tensor([-1], device='cuda:0') loss 1.1582331657409668 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 251 reward tensor([-1], device='cuda:0') loss 1.325157642364502 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 252 reward tensor([-1], device='cuda:0') loss 1.410380482673645 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 253 reward tensor([-1], device='cuda:0') loss 2.3811161518096924 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 254 reward tensor([-1], device='cuda:0') loss 1.2922484874725342 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 255 reward tensor([-1], device='cuda:0') loss 1.008734941482544 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 256 reward tensor([-1], device='cuda:0') loss 1.2462518215179443 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 257 reward tensor([-1], device='cuda:0') loss 1.1201047897338867 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 258 reward tensor([-1], device='cuda:0') loss 1.0458871126174927 epsilon 0.767566125
+26-Feb-25 13:08:21 - agent.DQN.DQN - INFO - episode 3 step 259 reward tensor([-1], device='cuda:0') loss 0.9917201995849609 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 260 reward tensor([-1], device='cuda:0') loss 1.0700178146362305 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 261 reward tensor([-1], device='cuda:0') loss 1.1700232028961182 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 262 reward tensor([-1], device='cuda:0') loss 1.5878124237060547 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 263 reward tensor([-1], device='cuda:0') loss 2.2490124702453613 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 264 reward tensor([-1], device='cuda:0') loss 1.1736977100372314 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 265 reward tensor([-1], device='cuda:0') loss 0.9761450290679932 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 266 reward tensor([-1], device='cuda:0') loss 1.125533103942871 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 267 reward tensor([-1], device='cuda:0') loss 2.603118896484375 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 268 reward tensor([-1], device='cuda:0') loss 1.3152623176574707 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 269 reward tensor([-1], device='cuda:0') loss 1.3356668949127197 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 270 reward tensor([-1], device='cuda:0') loss 1.0821373462677002 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 271 reward tensor([-1], device='cuda:0') loss 2.580275535583496 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 272 reward tensor([-1], device='cuda:0') loss 2.594633102416992 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 273 reward tensor([-1], device='cuda:0') loss 1.0415815114974976 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 274 reward tensor([-1], device='cuda:0') loss 0.8402338027954102 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 275 reward tensor([-1], device='cuda:0') loss 0.9994451999664307 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 276 reward tensor([-1], device='cuda:0') loss 1.0407485961914062 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 277 reward tensor([-1], device='cuda:0') loss 2.1776351928710938 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 278 reward tensor([-1], device='cuda:0') loss 0.8526410460472107 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 279 reward tensor([-1], device='cuda:0') loss 0.9197786450386047 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 280 reward tensor([-1], device='cuda:0') loss 0.9651165008544922 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 281 reward tensor([-1], device='cuda:0') loss 0.8892555236816406 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 282 reward tensor([-1], device='cuda:0') loss 0.9071025848388672 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 283 reward tensor([-1], device='cuda:0') loss 1.10674250125885 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 284 reward tensor([-1], device='cuda:0') loss 0.8135195970535278 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 285 reward tensor([-1], device='cuda:0') loss 1.935965895652771 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 286 reward tensor([-1], device='cuda:0') loss 0.845285952091217 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 287 reward tensor([-1], device='cuda:0') loss 0.9025263786315918 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 288 reward tensor([-1], device='cuda:0') loss 2.0961251258850098 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 289 reward tensor([-1], device='cuda:0') loss 0.90389484167099 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 290 reward tensor([-1], device='cuda:0') loss 0.7358131408691406 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 291 reward tensor([-1], device='cuda:0') loss 0.8010973930358887 epsilon 0.767566125
+26-Feb-25 13:08:22 - agent.DQN.DQN - INFO - episode 3 step 292 reward tensor([-1], device='cuda:0') loss 0.7953919172286987 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 293 reward tensor([-1], device='cuda:0') loss 1.6772629022598267 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 294 reward tensor([-1], device='cuda:0') loss 0.6433960199356079 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 295 reward tensor([-1], device='cuda:0') loss 0.7882705926895142 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 296 reward tensor([-1], device='cuda:0') loss 0.6473631858825684 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 297 reward tensor([-1], device='cuda:0') loss 2.206526756286621 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 298 reward tensor([-1], device='cuda:0') loss 1.1619892120361328 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 299 reward tensor([-1], device='cuda:0') loss 1.1917355060577393 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 300 reward tensor([-1], device='cuda:0') loss 2.1642560958862305 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 3 step 301 reward tensor([-1], device='cuda:0') loss 0.9498587250709534 epsilon 0.767566125
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 0 reward tensor([-1], device='cuda:0') loss 1.1404600143432617 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 1 reward tensor([-1], device='cuda:0') loss 3.2250688076019287 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 2 reward tensor([-1], device='cuda:0') loss 1.0067511796951294 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 3 reward tensor([-1], device='cuda:0') loss 0.784090518951416 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 4 reward tensor([-1], device='cuda:0') loss 1.040500521659851 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 5 reward tensor([-1], device='cuda:0') loss 1.8804044723510742 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 6 reward tensor([-1], device='cuda:0') loss 0.8175678849220276 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 7 reward tensor([-1], device='cuda:0') loss 1.024222731590271 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 8 reward tensor([-1], device='cuda:0') loss 0.9074740409851074 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 9 reward tensor([-1], device='cuda:0') loss 3.3691868782043457 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 10 reward tensor([-1], device='cuda:0') loss 0.7713703513145447 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 11 reward tensor([-1], device='cuda:0') loss 0.8618637323379517 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 12 reward tensor([-1], device='cuda:0') loss 0.7211976647377014 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 13 reward tensor([-1], device='cuda:0') loss 1.530665397644043 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 14 reward tensor([-1], device='cuda:0') loss 1.7094151973724365 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 15 reward tensor([-1], device='cuda:0') loss 0.548311710357666 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 16 reward tensor([-1], device='cuda:0') loss 0.7245208024978638 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 17 reward tensor([-1], device='cuda:0') loss 0.6782581806182861 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 18 reward tensor([-1], device='cuda:0') loss 0.7526723146438599 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 19 reward tensor([-1], device='cuda:0') loss 2.668215274810791 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 20 reward tensor([-1], device='cuda:0') loss 1.49765944480896 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 21 reward tensor([-1], device='cuda:0') loss 2.5845303535461426 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 22 reward tensor([-1], device='cuda:0') loss 2.5928955078125 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 23 reward tensor([-1], device='cuda:0') loss 1.6527249813079834 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 24 reward tensor([-1], device='cuda:0') loss 0.7847815752029419 epsilon 0.7426202259375
+26-Feb-25 13:08:23 - agent.DQN.DQN - INFO - episode 4 step 25 reward tensor([-1], device='cuda:0') loss 1.0543437004089355 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 26 reward tensor([-1], device='cuda:0') loss 1.129934549331665 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 27 reward tensor([-1], device='cuda:0') loss 1.1320970058441162 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 28 reward tensor([-1], device='cuda:0') loss 1.0705819129943848 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 29 reward tensor([-1], device='cuda:0') loss 0.8909280300140381 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 30 reward tensor([-1], device='cuda:0') loss 0.9190946817398071 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 31 reward tensor([-1], device='cuda:0') loss 1.0928417444229126 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 32 reward tensor([-1], device='cuda:0') loss 0.7975888848304749 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 33 reward tensor([-1], device='cuda:0') loss 1.0079926252365112 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 34 reward tensor([-1], device='cuda:0') loss 2.2162797451019287 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 35 reward tensor([-1], device='cuda:0') loss 1.0096640586853027 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 36 reward tensor([-1], device='cuda:0') loss 0.7106227874755859 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 37 reward tensor([-1], device='cuda:0') loss 1.7614710330963135 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 38 reward tensor([-1], device='cuda:0') loss 0.6568166613578796 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 39 reward tensor([-1], device='cuda:0') loss 0.7739739418029785 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 40 reward tensor([-1], device='cuda:0') loss 1.4540880918502808 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 41 reward tensor([-1], device='cuda:0') loss 0.769379734992981 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 42 reward tensor([-1], device='cuda:0') loss 0.7792958617210388 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 43 reward tensor([-1], device='cuda:0') loss 0.5835555195808411 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 44 reward tensor([-1], device='cuda:0') loss 0.6161346435546875 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 45 reward tensor([-1], device='cuda:0') loss 1.29913330078125 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 46 reward tensor([-1], device='cuda:0') loss 0.6615251302719116 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 47 reward tensor([-1], device='cuda:0') loss 0.7477798461914062 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 48 reward tensor([-1], device='cuda:0') loss 0.6533127427101135 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 49 reward tensor([-1], device='cuda:0') loss 0.6400884389877319 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 50 reward tensor([-1], device='cuda:0') loss 0.7358501553535461 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 51 reward tensor([-1], device='cuda:0') loss 0.611065149307251 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 52 reward tensor([-1], device='cuda:0') loss 0.615060567855835 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 53 reward tensor([-1], device='cuda:0') loss 0.7216838002204895 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 54 reward tensor([-1], device='cuda:0') loss 1.256117343902588 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 55 reward tensor([-1], device='cuda:0') loss 2.3163681030273438 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 56 reward tensor([-1], device='cuda:0') loss 0.9662694931030273 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 57 reward tensor([-1], device='cuda:0') loss 0.8624532222747803 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 58 reward tensor([-1], device='cuda:0') loss 1.4964494705200195 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 59 reward tensor([-1], device='cuda:0') loss 0.7790871858596802 epsilon 0.7426202259375
+26-Feb-25 13:08:24 - agent.DQN.DQN - INFO - episode 4 step 60 reward tensor([-1], device='cuda:0') loss 2.6550984382629395 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 61 reward tensor([-1], device='cuda:0') loss 1.3419601917266846 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 62 reward tensor([-1], device='cuda:0') loss 0.7879818677902222 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 63 reward tensor([-1], device='cuda:0') loss 0.5856848955154419 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 64 reward tensor([-1], device='cuda:0') loss 0.8139891624450684 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 65 reward tensor([-1], device='cuda:0') loss 1.7630972862243652 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 66 reward tensor([-1], device='cuda:0') loss 0.7072848677635193 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 67 reward tensor([-1], device='cuda:0') loss 0.693604588508606 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 68 reward tensor([-1], device='cuda:0') loss 0.6657502055168152 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 69 reward tensor([-1], device='cuda:0') loss 0.75944584608078 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 70 reward tensor([-1], device='cuda:0') loss 1.5078072547912598 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 71 reward tensor([-1], device='cuda:0') loss 0.6126257181167603 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 72 reward tensor([-1], device='cuda:0') loss 1.5884708166122437 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 73 reward tensor([-1], device='cuda:0') loss 0.7664609551429749 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 74 reward tensor([-1], device='cuda:0') loss 0.74385005235672 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 75 reward tensor([-1], device='cuda:0') loss 0.6307843327522278 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 76 reward tensor([-1], device='cuda:0') loss 0.9966162443161011 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 77 reward tensor([-1], device='cuda:0') loss 0.9620193243026733 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 78 reward tensor([-1], device='cuda:0') loss 1.1125166416168213 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 79 reward tensor([-1], device='cuda:0') loss 0.6323059797286987 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 80 reward tensor([-1], device='cuda:0') loss 0.7346839904785156 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 81 reward tensor([-1], device='cuda:0') loss 0.6161882877349854 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 82 reward tensor([-1], device='cuda:0') loss 0.4816121459007263 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 83 reward tensor([-1], device='cuda:0') loss 0.4758182764053345 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 84 reward tensor([-1], device='cuda:0') loss 0.8021979928016663 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 85 reward tensor([-1], device='cuda:0') loss 0.8125439286231995 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 86 reward tensor([-1], device='cuda:0') loss 1.5564593076705933 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 87 reward tensor([-1], device='cuda:0') loss 1.0164506435394287 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 88 reward tensor([-1], device='cuda:0') loss 0.8956888318061829 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 89 reward tensor([-1], device='cuda:0') loss 0.7922701835632324 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 90 reward tensor([-1], device='cuda:0') loss 0.9248893857002258 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 91 reward tensor([-1], device='cuda:0') loss 0.7478567957878113 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 92 reward tensor([-1], device='cuda:0') loss 0.8706362247467041 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 93 reward tensor([-1], device='cuda:0') loss 0.7918180227279663 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 94 reward tensor([-1], device='cuda:0') loss 0.6865217685699463 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 95 reward tensor([-1], device='cuda:0') loss 1.4973068237304688 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 96 reward tensor([-1], device='cuda:0') loss 0.7438585758209229 epsilon 0.7426202259375
+26-Feb-25 13:08:25 - agent.DQN.DQN - INFO - episode 4 step 97 reward tensor([-1], device='cuda:0') loss 0.6126214265823364 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 98 reward tensor([-1], device='cuda:0') loss 1.7365397214889526 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 99 reward tensor([-1], device='cuda:0') loss 1.075273871421814 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 100 reward tensor([-1], device='cuda:0') loss 1.007383942604065 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 101 reward tensor([-1], device='cuda:0') loss 1.3215112686157227 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 102 reward tensor([-1], device='cuda:0') loss 0.6242520809173584 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 103 reward tensor([-1], device='cuda:0') loss 0.5609689950942993 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 104 reward tensor([-1], device='cuda:0') loss 0.4969820976257324 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 105 reward tensor([-1], device='cuda:0') loss 0.538245439529419 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 106 reward tensor([-1], device='cuda:0') loss 0.5053379535675049 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 107 reward tensor([-1], device='cuda:0') loss 0.6425843834877014 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 108 reward tensor([-1], device='cuda:0') loss 0.5293861031532288 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 109 reward tensor([-1], device='cuda:0') loss 0.5456774234771729 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 110 reward tensor([-1], device='cuda:0') loss 0.6990199089050293 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 111 reward tensor([-1], device='cuda:0') loss 0.5305184125900269 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 112 reward tensor([-1], device='cuda:0') loss 1.3962771892547607 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 113 reward tensor([-1], device='cuda:0') loss 0.534696102142334 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 114 reward tensor([-1], device='cuda:0') loss 0.43143486976623535 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 115 reward tensor([-1], device='cuda:0') loss 0.9527819156646729 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 116 reward tensor([-1], device='cuda:0') loss 0.8254152536392212 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 117 reward tensor([-1], device='cuda:0') loss 1.4185051918029785 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 118 reward tensor([-1], device='cuda:0') loss 0.8158555626869202 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 119 reward tensor([-1], device='cuda:0') loss 0.6658346056938171 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 120 reward tensor([-1], device='cuda:0') loss 0.7669525146484375 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 121 reward tensor([-1], device='cuda:0') loss 0.6233549118041992 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 122 reward tensor([-1], device='cuda:0') loss 0.6761314868927002 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 123 reward tensor([-1], device='cuda:0') loss 1.601468801498413 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 124 reward tensor([-1], device='cuda:0') loss 1.2025760412216187 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 125 reward tensor([-1], device='cuda:0') loss 0.6731082201004028 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 126 reward tensor([-1], device='cuda:0') loss 1.0084277391433716 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 127 reward tensor([-1], device='cuda:0') loss 0.47391781210899353 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 128 reward tensor([-1], device='cuda:0') loss 1.342909574508667 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 129 reward tensor([-1], device='cuda:0') loss 0.8599629998207092 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 130 reward tensor([-1], device='cuda:0') loss 0.6120224595069885 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 131 reward tensor([-1], device='cuda:0') loss 0.5809284448623657 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 132 reward tensor([-1], device='cuda:0') loss 0.48004016280174255 epsilon 0.7426202259375
+26-Feb-25 13:08:26 - agent.DQN.DQN - INFO - episode 4 step 133 reward tensor([-1], device='cuda:0') loss 1.3024184703826904 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 134 reward tensor([-1], device='cuda:0') loss 0.4023258090019226 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 135 reward tensor([-1], device='cuda:0') loss 0.5143795013427734 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 136 reward tensor([-1], device='cuda:0') loss 0.9781659841537476 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 137 reward tensor([-1], device='cuda:0') loss 0.9682791829109192 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 138 reward tensor([-1], device='cuda:0') loss 0.6069628596305847 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 139 reward tensor([-1], device='cuda:0') loss 0.6806915998458862 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 140 reward tensor([-1], device='cuda:0') loss 0.5167936682701111 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 141 reward tensor([-1], device='cuda:0') loss 0.5354300737380981 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 142 reward tensor([-1], device='cuda:0') loss 0.7812697291374207 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 143 reward tensor([-1], device='cuda:0') loss 0.5814999341964722 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 144 reward tensor([-1], device='cuda:0') loss 0.5507708191871643 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 145 reward tensor([-1], device='cuda:0') loss 1.3945870399475098 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 146 reward tensor([-1], device='cuda:0') loss 1.6719064712524414 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 147 reward tensor([-1], device='cuda:0') loss 0.7427008152008057 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 148 reward tensor([-1], device='cuda:0') loss 0.6671490669250488 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 149 reward tensor([-1], device='cuda:0') loss 1.2072739601135254 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 150 reward tensor([-1], device='cuda:0') loss 0.6818770170211792 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 151 reward tensor([-1], device='cuda:0') loss 1.0656241178512573 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 152 reward tensor([-1], device='cuda:0') loss 0.6352061629295349 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 153 reward tensor([-1], device='cuda:0') loss 1.3113605976104736 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 154 reward tensor([-1], device='cuda:0') loss 0.45792603492736816 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 155 reward tensor([-1], device='cuda:0') loss 0.6796541810035706 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 156 reward tensor([-1], device='cuda:0') loss 0.8857021331787109 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 157 reward tensor([-1], device='cuda:0') loss 0.6387993097305298 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 158 reward tensor([-1], device='cuda:0') loss 0.8506584167480469 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 159 reward tensor([-1], device='cuda:0') loss 0.9954813122749329 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 160 reward tensor([-1], device='cuda:0') loss 0.585420548915863 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 161 reward tensor([-1], device='cuda:0') loss 0.8005853891372681 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 162 reward tensor([-1], device='cuda:0') loss 0.5517075061798096 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 163 reward tensor([-1], device='cuda:0') loss 0.6139593720436096 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 164 reward tensor([-1], device='cuda:0') loss 0.5992584824562073 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 165 reward tensor([-1], device='cuda:0') loss 0.9225406646728516 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 166 reward tensor([-1], device='cuda:0') loss 0.4625053405761719 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 167 reward tensor([-1], device='cuda:0') loss 0.6108143925666809 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 168 reward tensor([-1], device='cuda:0') loss 0.8059431910514832 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 169 reward tensor([-1], device='cuda:0') loss 0.48558133840560913 epsilon 0.7426202259375
+26-Feb-25 13:08:27 - agent.DQN.DQN - INFO - episode 4 step 170 reward tensor([-1], device='cuda:0') loss 0.8354886174201965 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 171 reward tensor([-1], device='cuda:0') loss 0.5797128081321716 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 172 reward tensor([-1], device='cuda:0') loss 0.5894617438316345 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 173 reward tensor([-1], device='cuda:0') loss 0.42412567138671875 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 174 reward tensor([-1], device='cuda:0') loss 0.5458155274391174 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 175 reward tensor([-1], device='cuda:0') loss 1.3195509910583496 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 176 reward tensor([-1], device='cuda:0') loss 0.8589204549789429 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 177 reward tensor([-1], device='cuda:0') loss 0.8043258190155029 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 178 reward tensor([-1], device='cuda:0') loss 0.9872266054153442 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 179 reward tensor([-1], device='cuda:0') loss 0.7536630034446716 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 180 reward tensor([-1], device='cuda:0') loss 1.0368163585662842 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 181 reward tensor([-1], device='cuda:0') loss 0.7226569652557373 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 182 reward tensor([-1], device='cuda:0') loss 0.5337133407592773 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 183 reward tensor([-1], device='cuda:0') loss 0.5186722278594971 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 184 reward tensor([-1], device='cuda:0') loss 1.0039570331573486 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 185 reward tensor([-1], device='cuda:0') loss 0.5835446119308472 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 186 reward tensor([-1], device='cuda:0') loss 1.0952560901641846 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 187 reward tensor([-1], device='cuda:0') loss 0.9549916982650757 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 188 reward tensor([-1], device='cuda:0') loss 0.5457607507705688 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 189 reward tensor([-1], device='cuda:0') loss 0.6657971739768982 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 190 reward tensor([-1], device='cuda:0') loss 0.4762212038040161 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 191 reward tensor([-1], device='cuda:0') loss 0.8704479932785034 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 192 reward tensor([-1], device='cuda:0') loss 0.6786408424377441 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 193 reward tensor([-1], device='cuda:0') loss 0.7034816145896912 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 194 reward tensor([-1], device='cuda:0') loss 0.4761228561401367 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 195 reward tensor([-1], device='cuda:0') loss 0.3911139667034149 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 196 reward tensor([-1], device='cuda:0') loss 0.7613484263420105 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 197 reward tensor([-1], device='cuda:0') loss 0.5138974189758301 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 198 reward tensor([-1], device='cuda:0') loss 0.6891521215438843 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 199 reward tensor([-1], device='cuda:0') loss 0.5132235288619995 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 200 reward tensor([-1], device='cuda:0') loss 0.41439521312713623 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 201 reward tensor([-1], device='cuda:0') loss 0.4738028347492218 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 202 reward tensor([-1], device='cuda:0') loss 0.7924585342407227 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 203 reward tensor([-1], device='cuda:0') loss 0.667411208152771 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 204 reward tensor([-1], device='cuda:0') loss 0.41597169637680054 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 205 reward tensor([-1], device='cuda:0') loss 0.8792327642440796 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 206 reward tensor([-1], device='cuda:0') loss 0.8603286743164062 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 207 reward tensor([-1], device='cuda:0') loss 0.6070815324783325 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 208 reward tensor([-1], device='cuda:0') loss 0.7444909811019897 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 209 reward tensor([-1], device='cuda:0') loss 0.6283345222473145 epsilon 0.7426202259375
+26-Feb-25 13:08:28 - agent.DQN.DQN - INFO - episode 4 step 210 reward tensor([-1], device='cuda:0') loss 0.5871658325195312 epsilon 0.7426202259375
+26-Feb-25 13:08:29 - agent.DQN.DQN - INFO - episode 4 step 211 reward tensor([-1], device='cuda:0') loss 0.6556259393692017 epsilon 0.7426202259375
+26-Feb-25 13:08:29 - agent.DQN.DQN - INFO - episode 4 step 212 reward tensor([-1], device='cuda:0') loss 0.6580417156219482 epsilon 0.7426202259375
