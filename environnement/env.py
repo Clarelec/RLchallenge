@@ -1,6 +1,6 @@
 import torch
 from math import pi
-from render import RENDER_ENV
+from environnement.render import RENDER_ENV
 
 class Env :
     
@@ -17,7 +17,8 @@ class Env :
                  reactivity = pi/8,
                  max_steps = 200,
                  render_width = 800,
-                 render_height= 400
+                 render_height= 400,
+                 device = 'cpu'
                  ):
         """
         Args:
@@ -48,11 +49,11 @@ class Env :
         self.dt = dt
         self.reactivity = reactivity
         self.max_steps = max_steps
-        
+        self.device = device
         #The checkpoint is placed at the origin
-        self.checkpoint = torch.zeros((batch_size, 2))
+        self.checkpoint = torch.zeros((batch_size, 2)).to(self.device)
         
-        self.steps = torch.zeros(batch_size)
+        self.steps = torch.zeros(batch_size).to(self.device)
  
         self._renderer = RENDER_ENV(
             width=render_width, 
@@ -82,6 +83,11 @@ class Env :
         assert state.shape[1] == self.state_dim
         assert state.shape[0] == action.shape[0]
         assert state.shape[0] == self.batch_size
+        
+        state = state.to(self.device)
+        action = action.to(self.device)
+        
+        
         
         #We extract the different features
         pos = state[:,:2]
@@ -155,7 +161,7 @@ class Env :
         new_speed = new_speed + (force + drag) / self.mass * self.dt
         
         #We concatenate all the features
-        real_new_state = torch.cat((new_pos, new_speed, new_sail, new_safran, wind), dim=1)
+        real_new_state = torch.cat((new_pos, new_speed, new_sail, new_safran, wind), dim=1).to(self.device)
         
         #We compute the reward
         reward = self.reward(state, action)
@@ -164,13 +170,14 @@ class Env :
         terminated = reward > 0
         truncated = self.steps > self.max_steps
         
-        dones = (terminated | truncated).float()
+        dones = (terminated | truncated).float().to(self.device)
         
         #We update the steps
         self.steps = (self.steps + 1)*(1-dones)
         
         #We reset if needed
         new_state = real_new_state * (1-dones).unsqueeze(1) + self.reset() * dones.unsqueeze(1)
+        new_state = new_state.to(self.device)
         
         return new_state, real_new_state, reward, dones
         
@@ -197,7 +204,7 @@ class Env :
         wind = torch.cat((torch.cos(wind), torch.sin(wind)), dim=1)
         
         #We concatenate all the features
-        state = torch.cat((pos, speed, sail, safran, wind), dim=1)
+        state = torch.cat((pos, speed, sail, safran, wind), dim=1).to(self.device)
         
         return state
         
@@ -214,6 +221,7 @@ class Env :
         #Reward = 100 if the agent is in the checkpoint, -1 otherwise
         dist = self.distance(state[:,:2], state[:,8:10])
         reward = (dist < self.checkpoint_radius)*101 - 1
+        reward = reward.to(self.device)
         return reward
     
     def rotation(self, vector, angle):
@@ -227,7 +235,7 @@ class Env :
         """
         cos_angle = torch.cos(angle)
         sin_angle = torch.sin(angle)
-        rotation_matrix = torch.stack([cos_angle, -sin_angle, sin_angle, cos_angle], dim=1).view(-1, 2, 2)
+        rotation_matrix = torch.stack([cos_angle, -sin_angle, sin_angle, cos_angle], dim=1).view(-1, 2, 2).to(self.device)
         rotated_vector = torch.bmm(rotation_matrix, vector.unsqueeze(2)).squeeze(2)
         return rotated_vector
     
@@ -240,7 +248,7 @@ class Env :
         Outputs:
             distance (tensor (batch_size) ) : distance between pos1 and pos2
         """
-        return torch.norm(pos1 - pos2, dim=1)
+        return torch.norm(pos1 - pos2, dim=1).to(self.device)
         
     def sin_angle(self,A, B):
         """
@@ -254,7 +262,9 @@ class Env :
         cross_prod = torch.abs(A[:, 0] * B[:, 1] - A[:, 1] * B[:, 0])
         norm_A = torch.norm(A, dim=1)
         norm_B = torch.norm(B, dim=1)
-        return cross_prod / (norm_A * norm_B)
+        res =  cross_prod / (norm_A * norm_B)
+        res= res.to(self.device)
+        return res
         
         
         
