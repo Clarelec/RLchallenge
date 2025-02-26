@@ -53,20 +53,15 @@ class QNetwork(torch.nn.Module):
         Define the forward pass of the QNetwork.
     """
 
-    def __init__(self, n_observations: int, n_actions: int, nn_l1: int, nn_l2: int):
+    def __init__(self, n_observations: int =10, n_actions: int= 9, nn_l1: int = 128, nn_l2: int = 128):
         """
-        Initialize a new instance of QNetwork.
+        Initialize a new QNetwork instance.
 
-        Parameters
-        ----------
-        n_observations : int
-            The size of the observation space.
-        n_actions : int
-            The size of the action space.
-        nn_l1 : int
-            The number of neurons on the first layer.
-        nn_l2 : int
-            The number of neurons on the second layer.
+        Args:
+            n_observations (int, optional): Number of observations. Defaults to 10.
+            n_actions (int, optional): Number of actions. Defaults to 9.
+            nn_l1 (int, optional): size of hidden layer 1. Defaults to 128.
+            nn_l2 (int, optional): size of hidden layer 2. Defaults to 128.
         """
         super(QNetwork, self).__init__()
 
