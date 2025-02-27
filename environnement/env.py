@@ -154,9 +154,6 @@ class Env :
         #we compute the drag 
         drag = -self.drag * new_speed
         
-        print(force)
-        print(drag)
-        
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
         

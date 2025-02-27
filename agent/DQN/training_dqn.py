@@ -3,7 +3,7 @@ import os
 import sys
 
 
-sys.path.append(r'C:\Users\clare\Documents\polytechnique\INF\INF568\projet\RLchallenge')
+sys.path.append(r'.')
 from tqdm.notebook import tqdm
 import numpy as np
 from agent.DQN.DQN import QNetwork, ReplayBuffer, MinimumExponentialLR, EpsilonGreedy, train_dqn2_agent
@@ -14,8 +14,8 @@ from typing import List, Union
 import logging
 
 # Set up logging
-LOG_DIR = r"C:\Users\clare\Documents\polytechnique\INF\INF568\projet\RLchallenge\logs"
-MODEL_DIR = r"C:\Users\clare\Documents\polytechnique\INF\INF568\projet\RLchallenge\models"
+LOG_DIR = r".\logs"
+MODEL_DIR = r".\models"
 
 LOG_adress = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0] + '.log')
 print(LOG_adress)
