@@ -1,6 +1,6 @@
 import torch
 from math import pi
-from environnement.render import RENDER_ENV
+from render import RENDER_ENV
 
 class Env :
     
@@ -176,7 +176,7 @@ class Env :
         new_state = real_new_state * (1-dones).unsqueeze(1) + self.reset() * dones.unsqueeze(1)
         new_state = new_state.to(self.device)
         
-        return new_state, real_new_state, reward, dones
+        return new_state, real_new_state, reward, terminated, truncated
         
     
     def reset(self):

@@ -1,6 +1,6 @@
 import logging
 import os
-from environnement.utils import LOG_DIR
+from utils import LOG_DIR
 import torch
 import math
 import tkinter as tk 
