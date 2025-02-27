@@ -1,8 +1,6 @@
 import torch
-import matplotlib.pyplot as plt
 import time
 from env import Env
-import numpy as np
 env = Env(1, dt = 0.1)
 
 def test_env():
