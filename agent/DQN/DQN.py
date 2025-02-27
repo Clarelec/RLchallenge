@@ -409,9 +409,9 @@ def train_dqn2_agent(
             state = state.to(device)
             action = action.to(device)
             
-            next_state,_, reward, done = env.step(state=state, action=action)
+            next_state,_, reward, truncated, terminated = env.step(state=state, action=action)
            
-
+            done = (terminated | truncated).float().to(device)
             replay_buffer.add(state, action, float(reward), next_state, done)
 
             episode_reward += float(reward)
@@ -432,14 +432,11 @@ def train_dqn2_agent(
                 batch_actions_tensor = torch.tensor([[batch_actions[i][0][0]*3*2 + batch_actions[i][0][1]*2] for i in range(batch_actions.shape[0])], dtype=torch.long, device=device)   
                 # Compute the target Q values for the batch
                 with torch.no_grad():
-                    # next_state_q_values, best_action_index = TODO...
-                    
+                   
+                
                     next_state_q_values = target_q_network(batch_next_states_tensor)
-                    
-                    # targets = TODO...
-                    
                     targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=2).values * (1 - batch_dones_tensor)
-                # current_q_values = TODO...
+                # Compute Q_value
                
                 q_values = q_network(batch_states_tensor).squeeze(1)
                 
