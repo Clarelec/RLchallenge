@@ -18,7 +18,9 @@ class Env :
                  max_steps = 200,
                  render_width = 800,
                  render_height= 400,
-                 device = 'cpu'
+                 device = 'cpu',
+                 incentive = True,
+                 incentive_coeff = 0.01,
                  ):
         """
         Args:
@@ -50,6 +52,8 @@ class Env :
         self.reactivity = reactivity
         self.max_steps = max_steps
         self.device = device
+        self.incentive = incentive
+        self.incentive_coeff = incentive_coeff
         #The checkpoint is placed at the origin
         self.checkpoint = torch.zeros((batch_size, 2)).to(self.device)
         
@@ -219,6 +223,8 @@ class Env :
         dist = self.distance(state[:,:2], state[:,8:10])
         reward = (dist < self.checkpoint_radius)*101 - 1
         reward = reward.to(self.device)
+        if self.incentive:
+            reward = reward + self.incentive_coeff * torch.norm(state[:,:2], dim=1)
         return reward
     
     def rotation(self, vector, angle):
