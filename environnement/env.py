@@ -22,7 +22,7 @@ class Env :
                  ):
         """
         Args:
-            batch_size (int) : number of agents
+            batch_size (int) : number of envs to run in parallel
             max_safran (float) : maximum angle change of the safran
             max_sail (float) : maximum angle change of the sail
             checkpoint_radius (float) : radius of the checkpoint

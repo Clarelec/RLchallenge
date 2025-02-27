@@ -429,7 +429,6 @@ def train_dqn2_agent(
                 batch_dones_tensor = torch.tensor(batch_dones, dtype=torch.float32, device=device)
 
                 
-                
                 batch_actions_tensor = torch.tensor([[batch_actions[i][0][0]*3*2 + batch_actions[i][0][1]*2] for i in range(batch_actions.shape[0])], dtype=torch.long, device=device)   
                 # Compute the target Q values for the batch
                 with torch.no_grad():
