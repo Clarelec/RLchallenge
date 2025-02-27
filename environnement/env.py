@@ -224,7 +224,7 @@ class Env :
         reward = (dist < self.checkpoint_radius)*101 - 1
         reward = reward.to(self.device)
         if self.incentive:
-            reward = reward + self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
         return reward
     
     def rotation(self, vector, angle):
