@@ -26,7 +26,18 @@ logger.info(f"device is {device}")
 class QNetwork(torch.nn.Module):
     """
     A Q-Network implemented with PyTorch.
-
+    In the case of this environnement, to transform the output into the action space, we will use the following transformation:
+    output = [output//3, output%3] /2
+    0 -> [0,0]
+    1 -> [0,0.5]
+    2 -> [0,1]
+    3 -> [0.5,0]
+    4 -> [0.5,0.5]
+    5 -> [0.5,1]
+    6 -> [1,0]
+    7 -> [1,0.5]
+    8 -> [1,1]
+    
     Attributes
     ----------
     layer1 : torch.nn.Linear
@@ -42,20 +53,15 @@ class QNetwork(torch.nn.Module):
         Define the forward pass of the QNetwork.
     """
 
-    def __init__(self, n_observations: int, n_actions: int, nn_l1: int, nn_l2: int):
+    def __init__(self, n_observations: int =10, n_actions: int= 9, nn_l1: int = 128, nn_l2: int = 128):
         """
-        Initialize a new instance of QNetwork.
+        Initialize a new QNetwork instance.
 
-        Parameters
-        ----------
-        n_observations : int
-            The size of the observation space.
-        n_actions : int
-            The size of the action space.
-        nn_l1 : int
-            The number of neurons on the first layer.
-        nn_l2 : int
-            The number of neurons on the second layer.
+        Args:
+            n_observations (int, optional): Number of observations. Defaults to 10.
+            n_actions (int, optional): Number of actions. Defaults to 9.
+            nn_l1 (int, optional): size of hidden layer 1. Defaults to 128.
+            nn_l2 (int, optional): size of hidden layer 2. Defaults to 128.
         """
         super(QNetwork, self).__init__()
 
@@ -84,7 +90,7 @@ class QNetwork(torch.nn.Module):
         x = torch.nn.functional.relu(self.layer2(x))
         output_tensor= self.layer3(x)
         
-
+        
         return output_tensor
     
 class EpsilonGreedy:
@@ -173,7 +179,7 @@ class EpsilonGreedy:
                 q_values = self.q_network(state_tensor)
                 
                 output = torch.argmax(q_values, dim=1).item()
-                
+                # transform the output to the action space
                 action = torch.Tensor([[output//3, output%3]])/2
                 
         return action
@@ -457,7 +463,7 @@ def train_dqn2_agent(
                 logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss.item()} epsilon {epsilon_greedy.epsilon}")
             # Update the target q-network weights
 
-            # TODO:...  # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
+           # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
             if iteration % target_q_network_sync_period == 0:
                 target_q_network.load_state_dict(q_network.state_dict())
             iteration += 1
