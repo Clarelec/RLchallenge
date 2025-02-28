@@ -1,6 +1,6 @@
 import torch
 from math import pi
-from .render import RENDER_ENV
+from render import RENDER_ENV
 
 class Env :
     

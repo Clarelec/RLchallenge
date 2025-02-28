@@ -1,6 +1,11 @@
 import torch
 import time
 from env import Env
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "")))
+
 env = Env(64, dt = 0.1)
 
 def test_env():
