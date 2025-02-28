@@ -155,7 +155,7 @@ class Env :
         force = self.sail * torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True) * new_sail_normal
         
         #We project the force on the speed direction
-        force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
+        force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
         
         #we compute the drag 
         drag = -self.drag * new_speed
