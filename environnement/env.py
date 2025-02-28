@@ -13,7 +13,7 @@ class Env :
                  drag = 100,
                  sail = 5000,
                  wind = 100,
-                 dt = 1,
+                 dt = 0.1,
                  reactivity = pi/8,
                  max_steps = 200,
                  render_width = 800,
@@ -149,14 +149,15 @@ class Env :
         mask = dot_product2 < 0
         new_sail[mask] = reflected_sail[mask]
         
-        new_sail_normal = self.rotation(new_sail, torch.ones(self.batch_size)*(-pi/2))
+        angles = -pi/2 * (dot_product > 0) + pi/2 * (dot_product <= 0)
+        new_sail_normal = self.rotation(new_sail, angles)
         
         # We compute the force applied by the sail
-        force = self.sail * torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True) * new_sail_normal
+        force = self.sail * torch.max(torch.zeros(self.batch_size,1),torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True)) * new_sail_normal
         
         #We project the force on the speed direction
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
-        
+
         #we compute the drag 
         drag = -self.drag * new_speed
         

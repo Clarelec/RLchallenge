@@ -5,7 +5,7 @@ import os
 import numpy as np
 from typing import Tuple
 import collections
-
+from tqdm import tqdm
 
 LOG_ADRESS = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0]+'.log')
 logger = logging.getLogger(__name__)
@@ -258,7 +258,11 @@ class DDPGAgent:
         self.actor_optimizer.zero_grad()
         actor_loss.backward()
         self.actor_optimizer.step()
-        
+    
+    def update_target_networks(self):
+        """
+        Update the target networks.
+        """
         # Update target networks
         self.soft_update(self.actor, self.actor_target)
         self.soft_update(self.critic, self.critic_target)
@@ -301,22 +305,24 @@ def train_ddpg(ddpgAgent,
                env,
                global_steps = 1_000_000,
                log_frequency = 800,
-               learning_starts = 1000):
+               learning_starts = 1000,
+               target_update_frequency = 1000):
     """
     Train a DDPG agent.
     """
     state = env.reset()
     total_reward = 0
     total_episodes = 0
-    for step in range(global_steps):
+    for step in tqdm(range(global_steps)):
         action = ddpgAgent.act(state)
         state = state.to(device)
         action = action.to(device)
-        print(state,action)
         next_state, real_next_state, reward, terminated, truncated = env.step(state,action)
         ddpgAgent.add_to_buffer(state, action, reward, real_next_state, terminated)
         if step > learning_starts:
             ddpgAgent.update_agent()
+            if step % target_update_frequency == 0:
+                ddpgAgent.update_target_networks()
         state = next_state
         total_reward += reward.sum()
         total_episodes += terminated.sum() + truncated.sum()
