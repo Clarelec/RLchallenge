@@ -105,7 +105,7 @@ class Critic(torch.nn.Module):
             nn_l1 (int, optional): size of hidden layer 1. Defaults to 128.
             nn_l2 (int, optional): size of hidden layer 2. Defaults to 128.
         """
-        super(Actor, self).__init__()
+        super(Critic, self).__init__()
 
         self.layer1 = torch.nn.Linear(dim_observations+dim_actions, nn_l1)
         self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
@@ -199,25 +199,25 @@ class DDPGAgent:
         self.is_training = True
         self.action_noise = action_noise
     
-    def act(self, state: np.ndarray) -> np.ndarray:
+    def act(self, state : torch.Tensor) -> torch.Tensor:
         """
         Select an action for the given state.
 
         Parameters
         ----------
-        state : np.ndarray
+        state : torch.Tensor
             The current state.
-
         Returns
         -------
-        np.ndarray
+        torch.Tensor
             The selected action.
         """
         state = torch.FloatTensor(state).to(self.device)
         action = self.actor(state).cpu().data.numpy()
         if self.is_training:
             action += np.random.normal(0, self.action_noise, size=action.shape)
-        return action
+            action = np.clip(action, 0, 1)
+        return torch.Tensor(action)
     
     def update_agent(self):
         """
@@ -297,7 +297,37 @@ class DDPGAgent:
         """
         self.replay_buffer.add(state, action, reward, next_state, done)
 
-
+def train_ddpg(ddpgAgent,
+               env,
+               global_steps = 1_000_000,
+               log_frequency = 800,
+               learning_starts = 1000):
+    """
+    Train a DDPG agent.
+    """
+    state = env.reset()
+    total_reward = 0
+    total_episodes = 0
+    for step in range(global_steps):
+        action = ddpgAgent.act(state)
+        state = state.to(device)
+        action = action.to(device)
+        print(state,action)
+        next_state, real_next_state, reward, terminated, truncated = env.step(state,action)
+        ddpgAgent.add_to_buffer(state, action, reward, real_next_state, terminated)
+        if step > learning_starts:
+            ddpgAgent.update_agent()
+        state = next_state
+        total_reward += reward.sum()
+        total_episodes += terminated.sum() + truncated.sum()
+        if step % log_frequency == 0:
+            logger.info(f"Step: {step}, Episodic mean reward : {total_reward/total_episodes}")
+            print(f"Step: {step}, Episodic mean reward : {total_reward/total_episodes}")
+            total_reward = 0
+            total_episodes = 0
+            state = env.reset()
+        
+    
 
 class ReplayBuffer:
     """

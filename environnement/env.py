@@ -1,11 +1,11 @@
 import torch
 from math import pi
-from render import RENDER_ENV
+from .render import RENDER_ENV
 
 class Env :
     
     def __init__(self, 
-                 batch_size, 
+                 batch_size = 64, 
                  max_safran = pi/16, 
                  max_sail = pi/16, 
                  checkpoint_radius = 10,
@@ -87,6 +87,8 @@ class Env :
         assert state.shape[1] == self.state_dim
         assert state.shape[0] == action.shape[0]
         assert state.shape[0] == self.batch_size
+        assert state.ndim == 2
+        assert action.ndim == 2
         
         state = state.to(self.device)
         action = action.to(self.device)
@@ -139,7 +141,7 @@ class Env :
         reflected_sail = 2 * projection - new_sail
         
         # We check if a sail change is needed
-        dot_product = (v_relat * new_speed_normal).sum(dim=1)
+        dot_product = (v_relat * new_speed_normal).sum(dim=1, keepdim=True)
         wind_orientation = dot_product * new_speed_normal
         dot_product2 = (wind_orientation * new_sail).sum(dim=1)
         
@@ -150,10 +152,10 @@ class Env :
         new_sail_normal = self.rotation(new_sail, torch.ones(self.batch_size)*(-pi/2))
         
         # We compute the force applied by the sail
-        force = self.sail * torch.sum(new_sail_normal * v_relat, dim=1) * new_sail_normal
+        force = self.sail * torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True) * new_sail_normal
         
         #We project the force on the speed direction
-        force = torch.sum(force * new_speed, dim=1) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
+        force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed / (torch.norm(new_speed, dim=1).unsqueeze(1))**2
         
         #we compute the drag 
         drag = -self.drag * new_speed
@@ -224,7 +226,7 @@ class Env :
         reward = (dist < self.checkpoint_radius)*101 - 1
         reward = reward.to(self.device)
         if self.incentive:
-            reward = reward + self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
         return reward
     
     def rotation(self, vector, angle):
