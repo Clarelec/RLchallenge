@@ -5,7 +5,7 @@ import sys
 
 # Add parent directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-print(sys.path)
+
 
 
 
@@ -48,16 +48,10 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DQN2 agent")
     # Initialize environment
-    env = Env(batch_size=1, dt=0.1, max_steps=300, render_height=200, render_width=400, device=device)
+    env = Env(batch_size=1, dt=0.1, max_steps=300, device=device)
     logger.info("Environment initialized")
 
-    
-
-    # Number of epochs for training
-    
-
-    
-        
+ 
 
     # Initialize Q-Network and target Q-Network
     q_network = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128).to(device)
@@ -97,7 +91,7 @@ if __name__ == '__main__':
             loss_fn=loss_fn,
             replay_buffer=replay_buffer,
             epsilon_greedy=epsilon_greedy,
-            num_episodes=10,
+            num_episodes=200,
             gamma=0.9,
             batch_size=128,
             target_q_network_sync_period=30,

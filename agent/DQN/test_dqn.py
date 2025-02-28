@@ -63,7 +63,8 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
         action = torch.Tensor([[output//3, output%3]])/2
         
         
-        _, state,reward, done = env.step(state,action)
+        _, state,reward, truncated, terminated = env.step(state,action)
+        done = terminated or truncated
         time.sleep(0.1)
         env.render(state)
 
