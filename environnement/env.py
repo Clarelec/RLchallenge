@@ -132,7 +132,7 @@ class Env :
         
         #We compute the force applied by the wind
         v_relat = self.wind * wind - new_speed
-        new_speed_normal = self.rotation(new_speed, torch.ones(self.batch_size)*(pi/2))
+        new_speed_normal = self.rotation(new_speed, torch.ones(self.batch_size, device= self.device)*(pi/2))
         
         # The following lines change the sail direction if the wind is in the opposite direction
         # Result of the sail change is stored in the variable reflected_sail
@@ -153,7 +153,7 @@ class Env :
         new_sail_normal = self.rotation(new_sail, angles)
         
         # We compute the force applied by the sail
-        force = self.sail * torch.max(torch.zeros(self.batch_size,1),torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True)) * new_sail_normal
+        force = self.sail * torch.max(torch.zeros(self.batch_size,1, device=self.device),torch.sum(new_sail_normal * v_relat, dim=1, keepdim=True)) * new_sail_normal
         
         #We project the force on the speed direction
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
