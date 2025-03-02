@@ -14,7 +14,7 @@ class Env :
                  sail = 5000,
                  wind = 100,
                  dt = 0.1,
-                 reactivity = pi/8,
+                 reactivity = pi/2,
                  max_steps = 200,
                  render_width = 800,
                  render_height= 400,

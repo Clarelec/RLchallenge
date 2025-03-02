@@ -48,7 +48,7 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DDPG agent")
     # Initialize environment
-    env = Env(batch_size=1)
+    env = Env(batch_size=256)
     logger.info("Environment initialized")
 
     ddpgAgent = DDPGAgent(env.state_dim,env.action_dim)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
 
     # Save the trained Q-Network
-    #torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
-    #logger.info("Trained Q-Network saved")
+    torch.save(ddpgAgent.actor, os.path.join(MODEL_DIR, "ddpg_actor_network.pth"))
+    logger.info("Trained Actor saved")
 
 
