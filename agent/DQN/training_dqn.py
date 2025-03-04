@@ -33,7 +33,7 @@ from environnement.env import Env
 import pandas as pd
 import time
 from typing import List, Union
-
+import matplotlib.pyplot as plt
 
 
 
@@ -43,6 +43,39 @@ logger.info("Libraries imported")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 logger.info(f"Device: {device}")
 
+
+
+def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[float]:
+    """
+    Evaluate a DQN agent on the environment for multiple episodes.
+    
+    Args:
+        env (Env): The environment to evaluate the agent on.
+        qnetwork (QNetwork): The Q-Network to use for the agent.
+        num_episodes (int): The number of episodes to evaluate the agent.
+        
+    Returns:
+        List[float]: The total rewards for each episode.
+    """
+    qnetwork.eval()
+    rewards = []
+    for _ in tqdm(range(num_episodes), desc="Evaluating agent"):
+        state = env.reset()
+        done = False
+        final_reward = 0
+        while not done:
+            state.to(device)
+            output = torch.argmax(qnetwork(state))
+            action = torch.Tensor([[output//3, output%3]])/2
+            action = action.to(device)
+            state, _, reward, truncated, terminated = env.step(state, action)
+            done = terminated or truncated
+            final_reward = reward.item()
+        rewards.append(final_reward)
+    qnetwork.train()
+    return rewards
+
+
 if __name__ == '__main__':
     
     
@@ -51,25 +84,29 @@ if __name__ == '__main__':
     env = Env(batch_size=1, dt=0.1, max_steps=200, device=device, render_needed=False)
     logger.info("Environment initialized")
 
- 
+    
 
     # Initialize Q-Network and target Q-Network
-    q_network = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128).to(device)
+    q_network = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128  ).to(device)
     target_qnetwork = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128).to(device)
     target_qnetwork.load_state_dict(q_network.state_dict())
     logger.info("Q-Networks initialized and synchronized")
 
     # Initialize optimizer and learning rate scheduler
-    optimizer = torch.optim.AdamW(q_network.parameters(), lr=0.004, amsgrad=True)
-    lr_scheduler = MinimumExponentialLR(optimizer, lr_decay=0.97, min_lr=0.0001)
+    optimizer = torch.optim.AdamW(q_network.parameters(), lr=0.005, amsgrad=True)
+    lr_scheduler = MinimumExponentialLR(optimizer, lr_decay=0.99, min_lr=0.0001)
     loss_fn = torch.nn.MSELoss()
     logger.info("Optimizer, LR scheduler, and loss function initialized")
+    
+    
+    q_network.train()
+    target_qnetwork.train()
 
     # Initialize epsilon-greedy strategy
     epsilon_greedy = EpsilonGreedy(
         epsilon_start=0.82,
         epsilon_min=0.013,
-        epsilon_decay=0.9675,
+        epsilon_decay=0.9875,
         env=env,
         q_network=q_network,
     )
@@ -100,11 +137,23 @@ if __name__ == '__main__':
     training_time = time.time() - TRAINING_START
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
 
-       
+        reussite = len(np.array(episode_reward_list)[np.array(episode_reward_list) > 0])
+        print(f" training reussite : {reussite} / {len(episode_reward_list)}")
+        print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
+        
+        # Evaluate the trained DQN agent
+        logger.info("Evaluating trained DQN2 agent")
+        EVALUATION_START = time.time()
+        evaluation_rewards = eval_model(env, q_network, num_episodes=100)
+        evaluation_time = time.time() - EVALUATION_START
+        logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
+        reussite = len(np.array(evaluation_rewards)[np.array(evaluation_rewards) > 0])
+        print(f" evaluation reussite : {reussite} / {len(evaluation_rewards)}")
+        
+        # Save the trained Q-Network
+        torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
+        logger.info("Trained Q-Network saved")
 
-    print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
-    logger.info("Training results converted to DataFrame")
 
-    # Save the trained Q-Network
-    torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
-    logger.info("Trained Q-Network saved")
+
+   

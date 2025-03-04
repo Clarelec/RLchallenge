@@ -200,7 +200,12 @@ class Env :
         """
         
         #We generate random initial states
-        pos = torch.rand((self.batch_size, 2)) * 200 - 100
+        verif = True
+        while  verif:
+            pos = torch.rand((self.batch_size, 2)) * 200 - 100
+            verif = False
+            if torch.norm(pos, dim=1).min() < self.checkpoint_radius :
+                verif = True 
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
         speed = torch.rand((self.batch_size, 2)) * 10
         sail = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
