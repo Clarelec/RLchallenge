@@ -14,7 +14,7 @@ while not done :
     
     sail = float(input("Enter the sail action: "))
     safran= float(input("Enter the safran action: "))
-    action = torch.Tensor([[safran, sail]]).to(device)
+    action = torch.Tensor([[sail, safran]]).to(device)
     state, _,reward, truncated, terminated = env.step(state,action)
     done = terminated or truncated
     time.sleep(0.1)

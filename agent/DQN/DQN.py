@@ -65,11 +65,15 @@ class QNetwork(torch.nn.Module):
         """
         super(QNetwork, self).__init__()
 
-        self.layer1 = torch.nn.Linear(n_observations, nn_l1)
+        # Modified to account for xTx which will result in a single value per feature pair
+        # If n_observations is 10, xTx will result in 10*10 = 100 features
+        self.n_xtx_features = n_observations * n_observations + n_observations
+        
+        self.layer1 = torch.nn.Linear(self.n_xtx_features, nn_l1)
         self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
         self.layer3 = torch.nn.Linear(nn_l2, n_actions)
         
-        logger.info(f"QNetwork initialized with {n_observations} observations and {n_actions} actions")
+        logger.info(f"QNetwork initialized with {n_observations} observations ({self.n_xtx_features} after xTx) and {n_actions} actions")
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -85,10 +89,25 @@ class QNetwork(torch.nn.Module):
         torch.Tensor
             The output tensor (Q-values).
         """
-
-        x = torch.nn.functional.relu(self.layer1(x))
+        # Compute xTx: outer product of x with itself
+        # For each sample in batch (if any)
+        batch_size = x.size(0)
+        
+        # Reshape to handle batches properly
+        x_reshaped = x.view(batch_size, -1)
+        
+        # Compute outer product for each sample in batch
+        # x_transpose @ x results in a matrix of size (n_observations, n_observations)
+        xtx = torch.bmm(x_reshaped.unsqueeze(2), x_reshaped.unsqueeze(1))
+        
+        # Flatten the result to a vector for each sample
+        xtx_flat = xtx.view(batch_size, -1)
+        # Concatenate original features with the outer product
+        xtx_flat = torch.cat([xtx_flat, x_reshaped], dim=1)
+        # Pass through neural network
+        x = torch.nn.functional.relu(self.layer1(xtx_flat))
         x = torch.nn.functional.relu(self.layer2(x))
-        output_tensor= self.layer3(x)
+        output_tensor = self.layer3(x)
         
         
         return output_tensor
@@ -181,6 +200,7 @@ class EpsilonGreedy:
                 output = torch.argmax(q_values, dim=1).item()
                 # transform the output to the action space
                 action = torch.Tensor([[output//3, output%3]])/2
+                
                 
         return action
 
@@ -435,7 +455,9 @@ def train_dqn2_agent(
                    
                 
                     next_state_q_values = target_q_network(batch_next_states_tensor)
-                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=2).values * (1 - batch_dones_tensor)
+                    max_q_values = torch.max(next_state_q_values, dim=1).values.unsqueeze(1)
+                    
+                    targets = batch_rewards_tensor + gamma * max_q_values * (1 - batch_dones_tensor)
                 # Compute Q_value
                
                 q_values = q_network(batch_states_tensor).squeeze(1)
