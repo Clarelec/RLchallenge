@@ -552,7 +552,7 @@ def train_ddpg(ddpgAgent,
                global_steps = 24_000,
                log_frequency = 800,
                learning_starts = 1000,
-               target_update_frequency = 1000,
+               target_update_frequency = 1,
                epsilon_greedy = get_base_epsilon_greedy()):
     """
     Train a DDPG agent.

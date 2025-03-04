@@ -11,8 +11,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 
 # Set up logging
 import logging
-LOG_DIR = r".\logs"
-MODEL_DIR = r".\models"
+LOG_DIR = r"./logs"
+MODEL_DIR = r"./models"
 
 LOG_adress = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0] + '.log')
 print(LOG_adress)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DQN2 agent")
     # Initialize environment
-    env = Env(batch_size=1, dt=0.1, max_steps=300, device=device)
+    env = Env(batch_size=1, dt=0.1, max_steps=200, device=device, render_needed=False)
     logger.info("Environment initialized")
 
  
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     logger.info("Epsilon-greedy strategy initialized")
 
     # Initialize replay buffer
-    replay_buffer = ReplayBuffer(2000)
+    replay_buffer = ReplayBuffer(20000)
     logger.info("Replay buffer initialized")
 
     # Train the DQN agent
@@ -93,8 +93,8 @@ if __name__ == '__main__':
             epsilon_greedy=epsilon_greedy,
             num_episodes=200,
             gamma=0.9,
-            batch_size=128,
-            target_q_network_sync_period=30,
+            batch_size=2048,
+            target_q_network_sync_period=1,
             device=device
         )
     training_time = time.time() - TRAINING_START

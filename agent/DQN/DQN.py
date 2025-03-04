@@ -17,7 +17,7 @@ from typing import List, Tuple, Callable
 import itertools
 from tqdm.notebook import tqdm
 
-import collections
+from collections import namedtuple, deque
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 logger.info(f"device is {device}")
@@ -234,14 +234,17 @@ class MinimumExponentialLR(torch.optim.lr_scheduler.ExponentialLR):
             max(base_lr * self.gamma**self.last_epoch, self.min_lr)
             for base_lr in self.base_lrs
         ]
-        
+
+Transition = namedtuple('Transition',
+                        ('state', 'action', 'reward', 'next_state', 'done'))
+
 class ReplayBuffer:
     """
     A Replay Buffer.
 
     Attributes
     ----------
-    buffer : collections.deque
+    buffer : deque
         A double-ended queue where the transitions are stored.
 
     Methods
@@ -263,15 +266,10 @@ class ReplayBuffer:
         capacity : int
             The maximum number of transitions that can be stored in the buffer.
         """
-        self.buffer: collections.deque = collections.deque(maxlen=capacity)
+        self.buffer: deque = deque(maxlen=capacity)
 
     def add(
-        self,
-        state: np.ndarray,
-        action: np.int64,
-        reward: float,
-        next_state: np.ndarray,
-        done: bool,
+        self, *args
     ):
         """
         Add a new transition to the buffer.
@@ -289,8 +287,8 @@ class ReplayBuffer:
         done : bool
             The final state of the added transition.
         """
-        self.buffer.append((state, action, reward, next_state, done))
-
+        self.buffer.append(Transition(*args))
+        
     def sample(
         self, batch_size: int
     ) -> Tuple[np.ndarray, Tuple[int], Tuple[float], np.ndarray, Tuple[bool]]:
@@ -316,14 +314,21 @@ class ReplayBuffer:
         #
         # `states, actions, rewards, next_states, dones = zip(*random.sample(self.buffer, batch_size))`
         # generates 5 tuples `state`, `action`, `reward`, `next_state` and `done`, each having `batch_size` elements.
-        indices = np.random.choice(len(self.buffer), batch_size, replace=False)
-        batch = [self.buffer[i] for i in indices]
+        batch = Transition(*zip(*random.sample(self.buffer, batch_size)))
+        
+        states = torch.cat(batch.state)
+        actions = torch.cat(batch.action)
+        rewards = torch.cat(batch.reward)
+        next_states = torch.cat(batch.next_state)
+        dones = torch.cat(batch.done)
+        # indices = np.random.choice(len(self.buffer), batch_size, replace=False)
+        # batch = [self.buffer[i] for i in indices]
     
-        states = np.array([x[0].cpu().numpy() if isinstance(x[0], torch.Tensor) else x[0] for x in batch])
-        actions = np.array([x[1].cpu().numpy() if isinstance(x[1], torch.Tensor) else x[1] for x in batch])
-        rewards = np.array([x[2] for x in batch])
-        next_states = np.array([x[3].cpu().numpy() if isinstance(x[3], torch.Tensor) else x[3] for x in batch])
-        dones = np.array([x[4].cpu().numpy() if isinstance(x[4], torch.Tensor) else x[4] for x in batch])
+        # states = np.array([x[0].cpu().numpy() if isinstance(x[0], torch.Tensor) else x[0] for x in batch])
+        # actions = np.array([x[1].cpu().numpy() if isinstance(x[1], torch.Tensor) else x[1] for x in batch])
+        # rewards = np.array([x[2] for x in batch])
+        # next_states = np.array([x[3].cpu().numpy() if isinstance(x[3], torch.Tensor) else x[3] for x in batch])
+        # dones = np.array([x[4].cpu().numpy() if isinstance(x[4], torch.Tensor) else x[4] for x in batch])
     
         return states, actions, rewards, next_states, dones
 
@@ -340,8 +345,23 @@ class ReplayBuffer:
 
 
 
+def soft_update(local_model: torch.nn.Module, target_model: torch.nn.Module, tau:float):
+    """
+    Soft-update: param_target = tau*param_local + (1 - tau)*param_target
+    
+    Parameters
+    ----------
+    local_model : torch.nn.Module
+        The local model.
+    target_model : torch.nn.Module
+        The target model.
+        
+    """
+    for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
+        target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
-
+def convert_action(action):
+    return round(float(2*(3*action[0] + action[1])))
 
 def train_dqn2_agent(
     env: Env,
@@ -409,39 +429,41 @@ def train_dqn2_agent(
             state = state.to(device)
             action = action.to(device)
             
-            next_state,_, reward, truncated, terminated = env.step(state=state, action=action)
+            next_state, real_next_state, reward, truncated, terminated = env.step(state=state, action=action)
            
             done = (terminated | truncated).float().to(device)
-            replay_buffer.add(state, action, float(reward), next_state, done)
+            
+            converted_action = torch.tensor([convert_action(action.squeeze())], dtype=torch.long, device=device)
+            replay_buffer.add(state, converted_action, reward, real_next_state, done)
 
             episode_reward += float(reward)
 
             # Update the q_network weights with a batch of experiences from the buffer
             
             if len(replay_buffer) > batch_size:
-                batch_states, batch_actions, batch_rewards, batch_next_states, batch_dones = replay_buffer.sample(batch_size)
+                batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_dones_tensor = replay_buffer.sample(batch_size)
 
                 # Convert to PyTorch tensors
-                batch_states_tensor = torch.tensor(batch_states, dtype=torch.float32, device=device)
+                # batch_states_tensor = torch.tensor(batch_states, dtype=torch.float32, device=device)
 
-                batch_rewards_tensor = torch.tensor(batch_rewards, dtype=torch.float32, device=device).unsqueeze(1)
-                batch_next_states_tensor = torch.tensor(batch_next_states, dtype=torch.float32, device=device)
-                batch_dones_tensor = torch.tensor(batch_dones, dtype=torch.float32, device=device)
+                # batch_rewards_tensor = torch.tensor(batch_rewards, dtype=torch.float32, device=device).unsqueeze(1)
+                # batch_next_states_tensor = torch.tensor(batch_next_states, dtype=torch.float32, device=device)
+                # batch_dones_tensor = torch.tensor(batch_dones, dtype=torch.float32, device=device)
 
-                
-                batch_actions_tensor = torch.tensor([[batch_actions[i][0][0]*3*2 + batch_actions[i][0][1]*2] for i in range(batch_actions.shape[0])], dtype=torch.long, device=device)   
+                # batch_actions_tensor = torch.tensor([[round(batch_actions[i][0][0]*3*2 + batch_actions[i][0][1]*2)] for i in range(batch_actions.shape[0])], dtype=torch.long, device=device)   
+                # print(batch_actions[:10], batch_actions_tensor[:10])
                 # Compute the target Q values for the batch
-                with torch.no_grad():
-                   
                 
+                with torch.no_grad():
+                       
                     next_state_q_values = target_q_network(batch_next_states_tensor)
-                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=2).values * (1 - batch_dones_tensor)
+                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=1).values * (1 - batch_dones_tensor)
+
                 # Compute Q_value
                
-                q_values = q_network(batch_states_tensor).squeeze(1)
+                q_values = q_network(batch_states_tensor.squeeze(1))
                 
-                
-                current_q_values = torch.gather(q_values, 1, batch_actions_tensor)
+                current_q_values = torch.gather(q_values, 1, batch_actions_tensor.unsqueeze(1)).squeeze(1)
                 # Compute loss
                 try:
                     assert current_q_values.shape == targets.shape
@@ -457,11 +479,12 @@ def train_dqn2_agent(
 
                 lr_scheduler.step()
                 logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss.item()} epsilon {epsilon_greedy.epsilon}")
-            # Update the target q-network weights
+                # Update the target q-network weights
 
-           # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
+            # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
             if iteration % target_q_network_sync_period == 0:
-                target_q_network.load_state_dict(q_network.state_dict())
+                soft_update(local_model=q_network, target_model=target_q_network, tau=5e-3)
+                # target_q_network.load_state_dict(q_network.state_dict())
             iteration += 1
             
             # Check if the episode is terminated
@@ -473,6 +496,7 @@ def train_dqn2_agent(
 
         episode_reward_list.append(episode_reward)
         epsilon_greedy.decay_epsilon()
+        print(episode_reward)
 
     return episode_reward_list
 

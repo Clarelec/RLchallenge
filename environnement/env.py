@@ -21,6 +21,7 @@ class Env :
                  device = 'cpu',
                  incentive = True,
                  incentive_coeff = 0.01,
+                 render_needed = True
                  ):
         """
         Args:
@@ -58,12 +59,13 @@ class Env :
         self.checkpoint = torch.zeros((batch_size, 2)).to(self.device)
         
         self.steps = torch.zeros(batch_size).to(self.device)
- 
-        self._renderer = RENDER_ENV(
-            width=render_width, 
-            height=render_height,
-            checkpoint_radius=checkpoint_radius
-        )
+
+        if render_needed:
+            self._renderer = RENDER_ENV(
+                width=render_width, 
+                height=render_height,
+                checkpoint_radius=checkpoint_radius
+            )
     
     def step(self, state, action):
         """
