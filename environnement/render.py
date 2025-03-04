@@ -33,7 +33,8 @@ class RENDER_ENV:
         # Visualization factors for vectors
         self.speed_scale = 5.0      # enlargement of the speed vector
         self.vector_length = 30.0   # length of unit vectors (sail, rudder, wind)
-
+        self.vector_sail = 15.0    # length of the sail vector
+               
         self.root = tk.Tk()
         self.root.title("Sailboat Simulation")
         self.canvas = tk.Canvas(self.root, width=self.width, height=self.height, bg='lightblue')

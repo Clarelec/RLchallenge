@@ -11,10 +11,10 @@ class Env :
                  checkpoint_radius = 10,
                  mass = 1000,
                  drag = 100,
-                 sail = 5000,
+                 sail = 500,
                  wind = 100,
                  dt = 0.1,
-                 reactivity = pi/2,
+                 reactivity = pi/8,
                  max_steps = 200,
                  render_width = 800,
                  render_height= 400,
@@ -103,7 +103,7 @@ class Env :
         wind = state[:,8:10]
         
         #We update the change in angle of the boat (sail and safran turn with the boat)
-        w_boat = - self.reactivity * self.sin_angle(safran, speed)
+        w_boat = self.reactivity * self.sin_angle(safran, speed)
         new_speed = self.rotation(speed, self.dt*w_boat)
         new_safran = self.rotation(safran, self.dt*w_boat)
         new_sail = self.rotation(sail, self.dt*w_boat)
