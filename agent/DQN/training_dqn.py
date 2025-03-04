@@ -137,23 +137,22 @@ if __name__ == '__main__':
     training_time = time.time() - TRAINING_START
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
 
-        reussite = len(np.array(episode_reward_list)[np.array(episode_reward_list) > 0])
-        print(f" training reussite : {reussite} / {len(episode_reward_list)}")
-        print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
-        
-        # Evaluate the trained DQN agent
-        logger.info("Evaluating trained DQN2 agent")
-        EVALUATION_START = time.time()
-        evaluation_rewards = eval_model(env, q_network, num_episodes=100)
-        evaluation_time = time.time() - EVALUATION_START
-        logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
-        reussite = len(np.array(evaluation_rewards)[np.array(evaluation_rewards) > 0])
-        print(f" evaluation reussite : {reussite} / {len(evaluation_rewards)}")
-        
-        # Save the trained Q-Network
-        torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
-        logger.info("Trained Q-Network saved")
+    reussite = len(np.array(episode_reward_list)[np.array(episode_reward_list) > 0])
+    print(f" training reussite : {reussite} / {len(episode_reward_list)}")
+    print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
+    
+    # Evaluate the trained DQN agent
+    logger.info("Evaluating trained DQN2 agent")
+    EVALUATION_START = time.time()
+    evaluation_rewards = eval_model(env, q_network, num_episodes=100)
+    evaluation_time = time.time() - EVALUATION_START
+    logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
+    reussite = len(np.array(evaluation_rewards)[np.array(evaluation_rewards) > 0])
+    print(f" evaluation reussite : {reussite} / {len(evaluation_rewards)}")
+    
+    # Save the trained Q-Network
+    torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
+    logger.info("Trained Q-Network saved")
 
 
 
-   
