@@ -28,7 +28,7 @@ logging.basicConfig(
 # Importe libraries
 from tqdm.notebook import tqdm
 import numpy as np
-from agent.DQN.DQN import QNetwork, ReplayBuffer, MinimumExponentialLR, EpsilonGreedy, train_dqn2_agent
+from agent.DQN.DQN import QNetwork, ReplayBuffer, MinimumExponentialLR, EpsilonGreedy, train_dqn2_agent, transform_state
 from environnement.env import Env
 import pandas as pd
 import time
@@ -64,19 +64,21 @@ def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[fl
         done = False
         final_reward = 0
         while not done:
-            state.to(device)
-            output = torch.argmax(qnetwork(state))
-            action = torch.Tensor([[output//3, output%3]])/2
+            transformed_state = transform_state(state).to(device)
+            output = torch.argmax(qnetwork(transformed_state))
+            action = torch.Tensor([[output//5, output%5]])/2
             action = action.to(device)
+
             state, _, reward, truncated, terminated = env.step(state, action)
             done = terminated or truncated
-            final_reward = reward.item()
+            final_reward = reward
         rewards.append(final_reward)
     qnetwork.train()
     return rewards
 
 
 if __name__ == '__main__':
+    reload_q_network=False
     
     
     logger.info("Starting training of DQN2 agent")
@@ -87,13 +89,17 @@ if __name__ == '__main__':
     
 
     # Initialize Q-Network and target Q-Network
-    q_network = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128  ).to(device)
-    target_qnetwork = QNetwork(n_observations=env.state_dim, n_actions=9, nn_l1=128, nn_l2=128).to(device)
+    q_network = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128  ).to(device)
+    if reload_q_network:
+        q_network = torch.load(os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
+        q_network.to(device)
+    
+    target_qnetwork = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128).to(device)
     target_qnetwork.load_state_dict(q_network.state_dict())
     logger.info("Q-Networks initialized and synchronized")
 
     # Initialize optimizer and learning rate scheduler
-    optimizer = torch.optim.AdamW(q_network.parameters(), lr=0.005, amsgrad=True)
+    optimizer = torch.optim.AdamW(q_network.parameters(), lr=1e-3, amsgrad=True)
     lr_scheduler = MinimumExponentialLR(optimizer, lr_decay=0.99, min_lr=0.0001)
     loss_fn = torch.nn.MSELoss()
     logger.info("Optimizer, LR scheduler, and loss function initialized")
@@ -128,7 +134,7 @@ if __name__ == '__main__':
             loss_fn=loss_fn,
             replay_buffer=replay_buffer,
             epsilon_greedy=epsilon_greedy,
-            num_episodes=200,
+            num_episodes=500,
             gamma=0.9,
             batch_size=2048,
             target_q_network_sync_period=1,

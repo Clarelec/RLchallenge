@@ -70,7 +70,8 @@ class QNetwork(torch.nn.Module):
         
         
         self.layer1 = torch.nn.Linear(n_observations, nn_l1)
-        self.layer2 = torch.nn.Linear(nn_l1*nn_l1, nn_l2)
+        # self.layer2 = torch.nn.Linear(nn_l1*nn_l1, nn_l2)
+        self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
         self.layer3 = torch.nn.Linear(nn_l2, n_actions)
         
         logger.info(f"QNetwork initialized with {n_observations} observations  and {n_actions} actions")
@@ -89,27 +90,32 @@ class QNetwork(torch.nn.Module):
         torch.Tensor
             The output tensor (Q-values).
         """
-        # Compute xTx: outer product of x with itself
-        # For each sample in batch (if any)
-        batch_size = x.size(0)
+        ## OLD VERSION
+        
+        # # Compute xTx: outer product of x with itself
+        # # For each sample in batch (if any)
+        # batch_size = x.size(0)
+        # x = self.layer1(x)
+        # # Reshape to handle batches properly
+        # x_reshaped = x.view(batch_size, -1)
+        
+        # # Compute outer product for each sample in batch
+        # # x_transpose @ x results in a matrix of size (n_observations, n_observations)
+        # xtx = torch.bmm(x_reshaped.unsqueeze(2), x_reshaped.unsqueeze(1))
+        
+        # # Flatten the result to a vector for each sample
+        # xtx_flat = xtx.view(batch_size, -1)
+        # # Concatenate original features with the outer product
+        
+        
+        # x = torch.nn.functional.relu(self.layer2(xtx_flat))
+        
+        # output_tensor = self.layer3(x)
+        
         x = torch.nn.functional.relu(self.layer1(x))
-        # Reshape to handle batches properly
-        x_reshaped = x.view(batch_size, -1)
-        
-        # Compute outer product for each sample in batch
-        # x_transpose @ x results in a matrix of size (n_observations, n_observations)
-        xtx = torch.bmm(x_reshaped.unsqueeze(2), x_reshaped.unsqueeze(1))
-        
-        # Flatten the result to a vector for each sample
-        xtx_flat = xtx.view(batch_size, -1)
-        # Concatenate original features with the outer product
-        
-        
-        x = torch.nn.functional.relu(self.layer2(xtx_flat))
-        
+        x = torch.nn.functional.relu(self.layer2(x))
         output_tensor = self.layer3(x)
-        
-        
+
         return output_tensor
     
 class EpsilonGreedy:
@@ -199,7 +205,7 @@ class EpsilonGreedy:
                 
                 output = torch.argmax(q_values, dim=1).item()
                 # transform the output to the action space
-                action = torch.Tensor([[output//3, output%3]])/2
+                action = torch.Tensor([[output//5, output%5]])/2
                 
                 
         return action
@@ -256,7 +262,7 @@ class MinimumExponentialLR(torch.optim.lr_scheduler.ExponentialLR):
         ]
 
 Transition = namedtuple('Transition',
-                        ('state', 'action', 'reward', 'next_state', 'done'))
+                        ('state', 'action', 'reward', 'next_state', 'terminated'))
 
 class ReplayBuffer:
     """
@@ -340,7 +346,7 @@ class ReplayBuffer:
         actions = torch.cat(batch.action)
         rewards = torch.cat(batch.reward)
         next_states = torch.cat(batch.next_state)
-        dones = torch.cat(batch.done)
+        dones = torch.cat(batch.terminated)
         # indices = np.random.choice(len(self.buffer), batch_size, replace=False)
         # batch = [self.buffer[i] for i in indices]
     
@@ -381,9 +387,32 @@ def soft_update(local_model: torch.nn.Module, target_model: torch.nn.Module, tau
         target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
 def convert_action(action):
-    return round(float(2*(3*action[0] + action[1])))
+    return round(float(2*(5*action[0] + action[1])))
+
+def transform_state(state):
+    pos = state[:,:2]
+    speed = state[:,2:4]
+    sail = state[:,4:6]
+    safran = state[:,6:8]
+    wind = state[:,8:10]
+    
+    informations = [sail, pos, speed, safran, wind]
+    transformed = []
+    
+    for vect in informations:
+        transformed.append(torch.sqrt(torch.sum(vect)**2)) # norme de la vitesse, norme de la distance au prochain checkpoint, etc
+    
+    orientation_de_base = torch.atan2(sail[0, 1], sail[0, 0])
+    
+    for type in informations[1:]:
+        angle = torch.atan2(type[0, 1], type[0, 0]) - orientation_de_base
+        angle = (float(angle+np.pi) % (2*np.pi)) - np.pi
+        transformed.append(angle)
+    
+    return torch.tensor(transformed).unsqueeze(0)
 
 def train_dqn2_agent(
+    
     env: Env,
     q_network: torch.nn.Module,
     target_q_network: torch.nn.Module,
@@ -445,23 +474,25 @@ def train_dqn2_agent(
         for t in itertools.count():
             # Get action, next_state and reward
 
-            action = epsilon_greedy(state)
+            state_transmorfed = transform_state(state)
+            action = epsilon_greedy(state_transmorfed)
             state = state.to(device)
             action = action.to(device)
             
             next_state, real_next_state, reward, truncated, terminated = env.step(state=state, action=action)
-           
+
+            next_state_transmorfed = transform_state(real_next_state)
             done = (terminated | truncated).float().to(device)
             
             converted_action = torch.tensor([convert_action(action.squeeze())], dtype=torch.long, device=device)
-            replay_buffer.add(state, converted_action, reward, real_next_state, done)
+            replay_buffer.add(state_transmorfed, converted_action, reward, next_state_transmorfed, terminated.float().to(device))
 
             episode_reward += float(reward)
 
             # Update the q_network weights with a batch of experiences from the buffer
             
             if len(replay_buffer) > batch_size:
-                batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_dones_tensor = replay_buffer.sample(batch_size)
+                batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_terminated_tensor = replay_buffer.sample(batch_size)
 
                 # Convert to PyTorch tensors
                 # batch_states_tensor = torch.tensor(batch_states, dtype=torch.float32, device=device)
@@ -477,7 +508,7 @@ def train_dqn2_agent(
                 with torch.no_grad():
                        
                     next_state_q_values = target_q_network(batch_next_states_tensor)
-                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=1).values * (1 - batch_dones_tensor)
+                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=1).values * (1 - batch_terminated_tensor)
 
                 # Compute Q_value
                
@@ -497,7 +528,7 @@ def train_dqn2_agent(
                 loss.backward()
                 optimizer.step()
 
-                lr_scheduler.step()
+                # lr_scheduler.step()
                 logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss.item()} epsilon {epsilon_greedy.epsilon}")
                 # Update the target q-network weights
 
@@ -517,6 +548,7 @@ def train_dqn2_agent(
         episode_reward_list.append(episode_reward)
         epsilon_greedy.decay_epsilon()
         print(episode_reward)
+        torch.save(q_network, "./models/dqn2_q_network.pth")
 
     return episode_reward_list
 

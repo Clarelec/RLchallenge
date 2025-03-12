@@ -7,6 +7,7 @@ from typing import Tuple
 import collections
 from tqdm import tqdm
 import random
+import mlflow
 
 LOG_ADRESS = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0]+'.log')
 logger = logging.getLogger(__name__)
@@ -39,7 +40,7 @@ class Actor(torch.nn.Module):
         Define the forward pass of the Actor.
     """
 
-    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 64, nn_l2: int = 64):
+    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 256, nn_l2: int = 256):
         """
         Initialize a new Actor instance.
 
@@ -51,7 +52,7 @@ class Actor(torch.nn.Module):
         """
         super(Actor, self).__init__()
 
-        self.layer1 = torch.nn.Linear(dim_observations, nn_l1)
+        self.layer1 = torch.nn.Linear(dim_observations**2, nn_l1)
         self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
         self.layer3 = torch.nn.Linear(nn_l2, dim_actions)
         
@@ -71,6 +72,10 @@ class Actor(torch.nn.Module):
         torch.Tensor
             The output tensor (Q-values).
         """
+        x = x.unsqueeze(2)
+        x = torch.bmm(x, x.transpose(1,2))
+
+        x = x.view(x.size(0), -1)
 
         x = torch.nn.functional.relu(self.layer1(x))
         x = torch.nn.functional.relu(self.layer2(x))
@@ -96,7 +101,7 @@ class Critic(torch.nn.Module):
         Define the forward pass of the Actor.
     """
 
-    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 64, nn_l2: int = 64):
+    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 256, nn_l2: int = 256):
         """
         Initialize a new Actor instance.
 
@@ -242,6 +247,7 @@ class DDPGAgent:
         target_values = rewards + (1 - terminated.float()) * self.gamma * target_q_values
         predicted_values = self.critic(states, actions).squeeze()
         critic_loss = torch.nn.functional.mse_loss(predicted_values, target_values)
+
         
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
@@ -254,6 +260,10 @@ class DDPGAgent:
         self.actor_optimizer.zero_grad()
         actor_loss.backward()
         self.actor_optimizer.step()
+        
+        mlflow.log_metric("actor_loss", actor_loss)
+        mlflow.log_metric("critic_loss", critic_loss)
+        
     
     def update_target_networks(self):
         """
@@ -562,6 +572,7 @@ def train_ddpg(ddpgAgent,
     """
     Train a DDPG agent.
     """
+    mlflow.start_run()
     state = env.reset()
     total_reward = 0
     total_episodes = 0
