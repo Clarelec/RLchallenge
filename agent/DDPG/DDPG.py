@@ -213,7 +213,12 @@ class DDPGAgent:
         torch.Tensor
             The selected action.
         """
-        state = torch.FloatTensor(state).to(self.device)
+        # Vérifier si state est déjà un tensor
+        if not isinstance(state, torch.Tensor):
+            state = torch.FloatTensor(state).to(self.device)
+        else:
+        # Seulement déplacer vers le device si nécessaire
+            state = state.to(self.device)
         action = self.actor(state).cpu().data.numpy()
         if self.is_training:
             action += np.random.normal(0, self.action_noise, size=action.shape)
