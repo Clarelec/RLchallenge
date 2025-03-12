@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 import logging
-LOG_DIR = r".\logs"
+LOG_DIR = r"./logs"
 
 
 LOG_adress = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0] + '.log')
@@ -41,7 +41,7 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
             device (str): The device to run the model
         **kwargs: Additional parameters for QNetwork and Env.
     """
-    model_path = os.path.join(r".\models", model_name)
+    model_path = os.path.join(r"./models", model_name)
     
     
     env_params = kwargs.get('env_params', {})
@@ -58,7 +58,6 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
     
     done = False
     while not done:
-        
         output = torch.argmax( network(state), dim=1 ).item()
         action = torch.Tensor([[output//3, output%3]])/2
         

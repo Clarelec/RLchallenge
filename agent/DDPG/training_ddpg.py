@@ -11,8 +11,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 
 # Set up logging
 import logging
-LOG_DIR = r".\logs"
-MODEL_DIR = r".\models"
+LOG_DIR = r"./logs"
+MODEL_DIR = r"./models"
 
 LOG_adress = os.path.join(LOG_DIR, os.path.basename(__file__).split('.')[0] + '.log')
 print(LOG_adress)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DDPG agent")
     # Initialize environment
-    env = Env(batch_size=256)
+    env = Env(batch_size=256, render_needed=False)
     logger.info("Environment initialized")
 
     ddpgAgent = DDPGAgent(env.state_dim,env.action_dim)
