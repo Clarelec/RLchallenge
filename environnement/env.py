@@ -21,7 +21,8 @@ class Env :
                  device = 'cpu',
                  incentive = True,
                  incentive_coeff = 0.01,
-                 render_needed = True
+                 render_needed = True,
+                 spaun_size = 1000
                  ):
         """
         Args:
@@ -57,7 +58,7 @@ class Env :
         self.incentive_coeff = incentive_coeff
         #The checkpoint is placed at the origin
         self.checkpoint = torch.zeros((batch_size, 2)).to(self.device)
-        
+        self.spaun_size = spaun_size
         self.steps = torch.zeros(batch_size).to(self.device)
 
         if render_needed:
@@ -161,7 +162,7 @@ class Env :
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
 
         #we compute the drag 
-        drag = -self.drag * new_speed
+        drag = -self.drag * new_speed * speed_norm
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
@@ -202,7 +203,7 @@ class Env :
         #We generate random initial states
         verif = True
         while  verif:
-            pos = torch.rand((self.batch_size, 2)) * 200 - 100
+            pos = torch.rand((self.batch_size, 2)) * self.spaun_size - self.spaun_size/2
             verif = False
             if torch.norm(pos, dim=1).min() < self.checkpoint_radius :
                 verif = True 

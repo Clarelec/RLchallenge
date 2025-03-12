@@ -53,7 +53,7 @@ class QNetwork(torch.nn.Module):
         Define the forward pass of the QNetwork.
     """
 
-    def __init__(self, n_observations: int =10, n_actions: int= 9, nn_l1: int = 128, nn_l2: int = 128):
+    def __init__(self, n_observations: int =10, n_actions: int= 9, nn_l1: int = 16, nn_l2: int = 128):
         """
         Initialize a new QNetwork instance.
 
@@ -67,13 +67,13 @@ class QNetwork(torch.nn.Module):
 
         # Modified to account for xTx which will result in a single value per feature pair
         # If n_observations is 10, xTx will result in 10*10 = 100 features
-        self.n_xtx_features = n_observations * n_observations + n_observations
         
-        self.layer1 = torch.nn.Linear(self.n_xtx_features, nn_l1)
-        self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
+        
+        self.layer1 = torch.nn.Linear(n_observations, nn_l1)
+        self.layer2 = torch.nn.Linear(nn_l1*nn_l1, nn_l2)
         self.layer3 = torch.nn.Linear(nn_l2, n_actions)
         
-        logger.info(f"QNetwork initialized with {n_observations} observations ({self.n_xtx_features} after xTx) and {n_actions} actions")
+        logger.info(f"QNetwork initialized with {n_observations} observations  and {n_actions} actions")
         
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -92,7 +92,7 @@ class QNetwork(torch.nn.Module):
         # Compute xTx: outer product of x with itself
         # For each sample in batch (if any)
         batch_size = x.size(0)
-        
+        x = torch.nn.functional.relu(self.layer1(x))
         # Reshape to handle batches properly
         x_reshaped = x.view(batch_size, -1)
         
@@ -103,10 +103,10 @@ class QNetwork(torch.nn.Module):
         # Flatten the result to a vector for each sample
         xtx_flat = xtx.view(batch_size, -1)
         # Concatenate original features with the outer product
-        xtx_flat = torch.cat([xtx_flat, x_reshaped], dim=1)
-        # Pass through neural network
-        x = torch.nn.functional.relu(self.layer1(xtx_flat))
-        x = torch.nn.functional.relu(self.layer2(x))
+        
+        
+        x = torch.nn.functional.relu(self.layer2(xtx_flat))
+        
         output_tensor = self.layer3(x)
         
         
