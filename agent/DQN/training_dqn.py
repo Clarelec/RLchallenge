@@ -83,18 +83,19 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DQN2 agent")
     # Initialize environment
-    env = Env(batch_size=1, dt=0.1, max_steps=200, device=device, render_needed=False)
+    env = Env(batch_size=1, dt=0.1, max_steps=200, device=device, render_needed=False, checkpoint_radius=50)
+
     logger.info("Environment initialized")
 
     
 
     # Initialize Q-Network and target Q-Network
-    q_network = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128  ).to(device)
+    q_network = QNetwork(n_observations=9, n_actions=9, nn_l1=128, nn_l2=128  ).to(device)
     if reload_q_network:
         q_network = torch.load(os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
         q_network.to(device)
     
-    target_qnetwork = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128).to(device)
+    target_qnetwork = QNetwork(n_observations=9, n_actions=9, nn_l1=128, nn_l2=128).to(device)
     target_qnetwork.load_state_dict(q_network.state_dict())
     logger.info("Q-Networks initialized and synchronized")
 
@@ -125,7 +126,7 @@ if __name__ == '__main__':
     # Train the DQN agent
     logger.info("Training DQN2 agent")
     TRAINING_START = time.time()
-    episode_reward_list = train_dqn2_agent(
+    episode_reward_list, nb_success = train_dqn2_agent(
             env=env,
             q_network=q_network,
             target_q_network=target_qnetwork,
@@ -134,8 +135,8 @@ if __name__ == '__main__':
             loss_fn=loss_fn,
             replay_buffer=replay_buffer,
             epsilon_greedy=epsilon_greedy,
-            num_episodes=500,
-            gamma=0.9,
+            num_episodes= 200,
+            gamma=0.99,
             batch_size=2048,
             target_q_network_sync_period=1,
             device=device
@@ -143,19 +144,19 @@ if __name__ == '__main__':
     training_time = time.time() - TRAINING_START
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
 
-    reussite = len(np.array(episode_reward_list)[np.array(episode_reward_list) > 0])
-    print(f" training reussite : {reussite} / {len(episode_reward_list)}")
-    print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
     
+    print(f" training reussite : {nb_success} / {len(episode_reward_list)}")
+    print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
+    """
     # Evaluate the trained DQN agent
     logger.info("Evaluating trained DQN2 agent")
     EVALUATION_START = time.time()
     evaluation_rewards = eval_model(env, q_network, num_episodes=100)
     evaluation_time = time.time() - EVALUATION_START
     logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
-    reussite = len(np.array(evaluation_rewards)[np.array(evaluation_rewards) > 0])
-    print(f" evaluation reussite : {reussite} / {len(evaluation_rewards)}")
     
+    
+    """
     # Save the trained Q-Network
     torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
     logger.info("Trained Q-Network saved")

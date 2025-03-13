@@ -205,7 +205,7 @@ class EpsilonGreedy:
                 
                 output = torch.argmax(q_values, dim=1).item()
                 # transform the output to the action space
-                action = torch.Tensor([[output//5, output%5]])/2
+                action = torch.Tensor([[output//3, output%3]])/2
                 
                 
         return action
@@ -387,7 +387,7 @@ def soft_update(local_model: torch.nn.Module, target_model: torch.nn.Module, tau
         target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
 def convert_action(action):
-    return round(float(2*(5*action[0] + action[1])))
+    return round(float(2*(3*action[0] + action[1])))
 
 def transform_state(state):
     pos = state[:,:2]
@@ -466,7 +466,7 @@ def train_dqn2_agent(
     """
     iteration = 0
     episode_reward_list = []
-
+    nb_success = 0
     for episode_index in tqdm(range(1, num_episodes)):
         state= env.reset()
         episode_reward = 0.0
@@ -547,6 +547,8 @@ def train_dqn2_agent(
             # Check if the episode is terminated
             
             if done:
+                if terminated:
+                    nb_success += 1
                 break
 
             state = next_state
@@ -556,7 +558,7 @@ def train_dqn2_agent(
         print(episode_reward)
         torch.save(q_network, "./models/dqn2_q_network.pth")
 
-    return episode_reward_list
+    return episode_reward_list,nb_success
 
 
 
