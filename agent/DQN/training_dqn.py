@@ -59,6 +59,7 @@ def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[fl
     """
     qnetwork.eval()
     rewards = []
+    nb_success = 0
     for _ in tqdm(range(num_episodes), desc="Evaluating agent"):
         state = env.reset()
         done = False
@@ -66,15 +67,17 @@ def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[fl
         while not done:
             transformed_state = transform_state(state).to(device)
             output = torch.argmax(qnetwork(transformed_state))
-            action = torch.Tensor([[output//5, output%5]])/2
+            action = torch.Tensor([[output//3, output%3]])/2
             action = action.to(device)
 
             state, _, reward, truncated, terminated = env.step(state, action)
             done = terminated or truncated
             final_reward = reward
         rewards.append(final_reward)
+        if final_reward > 200:
+            nb_success +=1
     qnetwork.train()
-    return rewards
+    return rewards, nb_success
 
 
 if __name__ == '__main__':
@@ -143,20 +146,20 @@ if __name__ == '__main__':
         )
     training_time = time.time() - TRAINING_START
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
-
-    
+    print(len(np.array(episode_reward_list)[np.array(episode_reward_list)>200]))
+    print(nb_success)
     print(f" training reussite : {nb_success} / {len(episode_reward_list)}")
     print(f"DQN 2015, final episode reward : {episode_reward_list[-1]}, number of episodes : {len(episode_reward_list)}")
-    """
+   
     # Evaluate the trained DQN agent
     logger.info("Evaluating trained DQN2 agent")
     EVALUATION_START = time.time()
-    evaluation_rewards = eval_model(env, q_network, num_episodes=100)
+    evaluation_rewards, nb_success = eval_model(env, q_network, num_episodes=100)
     evaluation_time = time.time() - EVALUATION_START
     logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
     
+    print(nb_success)
     
-    """
     # Save the trained Q-Network
     torch.save(q_network, os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
     logger.info("Trained Q-Network saved")

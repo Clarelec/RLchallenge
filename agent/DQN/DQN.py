@@ -409,7 +409,7 @@ def transform_state(state):
         angle = (float(angle+np.pi) % (2*np.pi)) - np.pi
         transformed.append(angle)
     
-    return torch.tensor(transformed).unsqueeze(0)
+    return torch.tensor(transformed).unsqueeze(0).to(device)
 
 def train_dqn2_agent(
     
@@ -483,7 +483,7 @@ def train_dqn2_agent(
 
             next_state_transmorfed = transform_state(real_next_state)
             done = (terminated | truncated).float().to(device)
-            
+            reward = reward.to(device)
             converted_action = torch.tensor([convert_action(action.squeeze())], dtype=torch.long, device=device)
             replay_buffer.add(state_transmorfed, converted_action, reward, next_state_transmorfed, terminated.float().to(device))
 
@@ -556,7 +556,7 @@ def train_dqn2_agent(
         episode_reward_list.append(episode_reward)
         epsilon_greedy.decay_epsilon()
         print(episode_reward)
-        torch.save(q_network, "./models/dqn2_q_network.pth")
+        
 
     return episode_reward_list,nb_success
 

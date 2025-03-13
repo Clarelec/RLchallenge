@@ -163,7 +163,7 @@ class Env :
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
 
         #we compute the drag 
-        drag = -self.drag * new_speed * speed_norm
+        drag = -self.drag * new_speed * speed_norm**3
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
@@ -252,7 +252,7 @@ class Env :
         #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
         current_distance = torch.sqrt(torch.sum(self.state[:, 0:2]**2)).item()
         reward = (self.util_reward_last_distance_to_cp - current_distance)
-        return torch.tensor([reward])
+        return torch.tensor([reward]).to(self.device)
     
     def rotation(self, vector, angle):
         """
