@@ -493,7 +493,13 @@ def train_dqn2_agent(
             
             if len(replay_buffer) > batch_size:
                 batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_terminated_tensor = replay_buffer.sample(batch_size)
-
+                
+                batch_states_tensor = batch_next_states_tensor.to(device)
+                batch_actions_tensor = batch_actions_tensor.to(device)
+                batch_rewards_tensor = batch_rewards_tensor.to(device)
+                batch_next_states_tensor = batch_next_states_tensor.to(device)
+                batch_terminated_tensor = batch_terminated_tensor.to(device)
+                
                 # Convert to PyTorch tensors
                 # batch_states_tensor = torch.tensor(batch_states, dtype=torch.float32, device=device)
 
