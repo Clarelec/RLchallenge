@@ -11,7 +11,7 @@ class Env :
                  checkpoint_radius = 50,
                  mass = 1000,
                  drag = 100,
-                 sail = 500,
+                 sail = 100,
                  wind = 100,
                  dt = 0.1,
                  reactivity = pi/8,
@@ -22,7 +22,7 @@ class Env :
                  incentive = True,
                  incentive_coeff = 0.01,
                  render_needed = True,
-                 spaun_size = 1000
+                 spaun_size = 200
                  ):
         """
         Args:
@@ -193,8 +193,9 @@ class Env :
 
         #We compute the reward
         reward = self.reward(previous_distance, current_distance)
+        reward2 = self.reward2(state, action)
         
-        return new_state, real_new_state, reward, terminated, truncated
+        return new_state, real_new_state, reward2, terminated, truncated
         
     
     def reset(self):
@@ -216,7 +217,7 @@ class Env :
             if torch.norm(pos, dim=1).min() < self.checkpoint_radius :
                 verif = True 
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
-        speed = torch.rand((self.batch_size, 2)) * 10
+        speed = -pos.clone()/torch.norm(pos, dim=1).unsqueeze(1)
         sail = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         safran = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         
@@ -228,6 +229,15 @@ class Env :
                 
         return state
         
+    def reward2(self,state,action):
+        #Reward = 100 if the agent is in the checkpoint, -1 otherwise
+        origin = torch.zeros_like(state[:,:2])
+        dist = self.distance(state[:,:2],origin)
+        reward = (dist < self.checkpoint_radius)*1_001 - 1
+        reward = reward.to(self.device)
+        # if self.incentive:
+        #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+        return reward
     
     def reward(self, previous_distance, current_distance):
         """
