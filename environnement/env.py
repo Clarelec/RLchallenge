@@ -233,7 +233,7 @@ class Env :
         reward = (dist < self.checkpoint_radius)*1_001 - 1
         reward = reward.to(self.device)
         if self.incentive:
-            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1).to(self.device)
         return reward
     
     def reward(self, previous_distance, current_distance):
