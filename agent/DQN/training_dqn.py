@@ -115,8 +115,8 @@ if __name__ == '__main__':
 
     # Initialize epsilon-greedy strategy
     epsilon_greedy = EpsilonGreedy(
-        epsilon_start=0.9,
-        epsilon_min=0.1,
+        epsilon_start=0.6,
+        epsilon_min=0.02,
         epsilon_decay=0.99,
         env=env,
         q_network=q_network,
@@ -143,7 +143,7 @@ if __name__ == '__main__':
             replay_test_buffer=replay_test_buffer,
             epsilon_greedy=epsilon_greedy,
             num_episodes=500,
-            gamma=0.95,
+            gamma=0.8,
             batch_size=2048,
             target_q_network_sync_period=1,
             device=device, 
