@@ -52,7 +52,7 @@ class Actor(torch.nn.Module):
         """
         super(Actor, self).__init__()
 
-        self.layer1 = torch.nn.Linear(dim_observations**2, nn_l1)
+        self.layer1 = torch.nn.Linear(dim_observations, nn_l1)
         self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
         self.layer3 = torch.nn.Linear(nn_l2, dim_actions)
         
@@ -72,10 +72,6 @@ class Actor(torch.nn.Module):
         torch.Tensor
             The output tensor (Q-values).
         """
-        x = x.unsqueeze(2)
-        x = torch.bmm(x, x.transpose(1,2))
-
-        x = x.view(x.size(0), -1)
 
         x = torch.nn.functional.relu(self.layer1(x))
         x = torch.nn.functional.relu(self.layer2(x))
@@ -178,7 +174,7 @@ class DDPGAgent:
                  action_dim : int,
                  replay_buffer_size : int = 100000,
                  gamma = 0.99,
-                 tau = 0.005,
+                 tau = 0.1,
                  batch_size = 256,
                  device = device,
                  action_noise = 0.1,):
@@ -225,7 +221,7 @@ class DDPGAgent:
             action = np.clip(action, 0, 1)
         return torch.Tensor(action)
     
-    def update_agent(self):
+    def update_agent(self,step):
         """
         Update the agent using a batch of experiences from the replay buffer.
 
@@ -256,8 +252,8 @@ class DDPGAgent:
         actor_loss.backward()
         self.actor_optimizer.step()
         
-        mlflow.log_metric("actor_loss", actor_loss)
-        mlflow.log_metric("critic_loss", critic_loss)
+        mlflow.log_metric("actor_loss", actor_loss, step)
+        mlflow.log_metric("critic_loss", critic_loss, step)
         
     
     def update_target_networks(self):
@@ -580,7 +576,7 @@ def train_ddpg(ddpgAgent,
         next_state, real_next_state, reward, terminated, truncated = env.step(state,action)
         ddpgAgent.add_to_buffer(state, action, reward, real_next_state, terminated)
         if step > learning_starts:
-            ddpgAgent.update_agent()
+            ddpgAgent.update_agent(step = step)
             if step % target_update_frequency == 0:
                 ddpgAgent.update_target_networks()
         state = next_state

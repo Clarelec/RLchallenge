@@ -8,7 +8,7 @@ class Env :
                  batch_size = 64, 
                  max_safran = pi/16, 
                  max_sail = pi/16, 
-                 checkpoint_radius = 10,
+                 checkpoint_radius = 30,
                  mass = 1000,
                  drag = 100,
                  sail = 500,
