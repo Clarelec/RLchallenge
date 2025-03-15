@@ -244,9 +244,9 @@ class Env :
         # reward = reward.to(self.device)
         # if self.incentive:
         #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
-
-        return (previous_distance-current_distance)/100
+        reward = (previous_distance-current_distance)
     
+        return reward
     def rotation(self, vector, angle):
         """
         Args:
