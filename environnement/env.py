@@ -11,7 +11,7 @@ class Env :
                  checkpoint_radius = 50,
                  mass = 1000,
                  drag = 100,
-                 sail = 100,
+                 sail = 300,
                  wind = 100,
                  dt = 0.1,
                  reactivity = pi/8,
@@ -20,7 +20,7 @@ class Env :
                  render_height= 400,
                  device = 'cpu',
                  incentive = True,
-                 incentive_coeff = 0.01,
+                 incentive_coeff = 0.005,
                  render_needed = True,
                  spaun_size = 200
                  ):
@@ -210,12 +210,9 @@ class Env :
         """
         
         #We generate random initial states
-        verif = True
-        while  verif:
-            pos = torch.rand((self.batch_size, 2)) * self.spaun_size - self.spaun_size/2
-            verif = False
-            if torch.norm(pos, dim=1).min() < self.checkpoint_radius :
-                verif = True 
+
+        angles = torch.rand((self.batch_size,1)) * 2 * pi
+        pos = torch.cat([torch.cos(angles), torch.sin(angles)], dim = 1)*self.spaun_size
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
         speed = -pos.clone()/torch.norm(pos, dim=1).unsqueeze(1)
         sail = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
@@ -235,8 +232,8 @@ class Env :
         dist = self.distance(state[:,:2],origin)
         reward = (dist < self.checkpoint_radius)*1_001 - 1
         reward = reward.to(self.device)
-        # if self.incentive:
-        #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+        if self.incentive:
+            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
         return reward
     
     def reward(self, previous_distance, current_distance):
@@ -292,7 +289,7 @@ class Env :
         Outputs:
             sin_angle (tensor (batch_size) ) : sin of the angle between A and B
         """
-        cross_prod = torch.abs(A[:, 0] * B[:, 1] - A[:, 1] * B[:, 0])
+        cross_prod = A[:, 0] * B[:, 1] - A[:, 1] * B[:, 0]
         norm_A = torch.norm(A, dim=1)
         norm_B = torch.norm(B, dim=1)
         res =  cross_prod / (norm_A * norm_B)

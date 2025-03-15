@@ -556,7 +556,7 @@ class EpsilonGreedy:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 def get_base_epsilon_greedy():
-    return EpsilonGreedy(epsilon_start=1.0, epsilon_min=0.01, epsilon_decay=0.5)
+    return EpsilonGreedy(epsilon_start=1.0, epsilon_min=0.01, epsilon_decay=0.8)
 
 def train_ddpg(ddpgAgent,
                env,
