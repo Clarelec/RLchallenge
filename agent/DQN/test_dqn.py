@@ -51,7 +51,7 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
     env = Env(**env_params)
     
     # Load model state
-    network =torch.load(model_path).to(device)
+    network =torch.load(model_path, map_location=device).to(device)
     network.eval()
     
     state = env.reset()
