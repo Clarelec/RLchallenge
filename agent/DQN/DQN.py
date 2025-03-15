@@ -522,7 +522,7 @@ def train_dqn2_agent(
             state = state.to(device)
             action = action.to(device)
             
-            next_state, real_next_state, reward, truncated, terminated = env.step(state=state, action=action)
+            next_state, real_next_state, reward, terminated, truncated = env.step(state=state, action=action)
 
             next_state_transmorfed = transform_state(real_next_state)
             done = (terminated | truncated).float().to(device)
@@ -541,7 +541,7 @@ def train_dqn2_agent(
                 loss_totale += optimize(replay_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size)
                 loss_test_totale += optimize(replay_test_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size, test=True)
 
-
+            logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss_totale} epsilon {epsilon_greedy.epsilon}")
             # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
             if iteration % target_q_network_sync_period == 0:
                 soft_update(local_model=q_network, target_model=target_q_network, tau=5e-3)

@@ -70,7 +70,7 @@ def eval_model(env: Env, qnetwork: QNetwork, action_dims: tuple, num_episodes: i
             action = torch.Tensor([[output//action_dims[0], output%action_dims[1]]])/2
             action = action.to(device)
 
-            state, _, reward, truncated, terminated = env.step(state, action)
+            state, _, reward,terminated, truncated = env.step(state, action)
             done = terminated or truncated
             final_reward = reward
         rewards.append(final_reward)
