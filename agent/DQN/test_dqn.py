@@ -58,9 +58,9 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
     
     done = False
     while not done:
-        transformed_state = transform_state(state)
+        transformed_state = transform_state(state).to(device)
         output = torch.argmax( network(transformed_state), dim=1 ).item()
-        action = torch.Tensor([[output//5, output%5]])/2
+        action = torch.Tensor([[output//3, output%3]])/2
         
         
         _, state,reward, truncated, terminated = env.step(state,action)
@@ -75,7 +75,7 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
 if __name__ == '__main__':
     test_model('dqn2_q_network.pth', 
             
-            env_params={'batch_size': 1, 'dt': 0.1, 'max_steps': 300, 'render_height': 1000, 'render_width': 1000, 'device': device},
+            env_params={'batch_size': 1, 'dt': 0.1, 'max_steps': 200, 'render_height': 1000, 'render_width': 1000, 'device': device, 'checkpoint_radius': 50},
                 device=device
                 )
     

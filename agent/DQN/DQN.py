@@ -564,7 +564,7 @@ def train_dqn2_agent(
         print(f"episode {episode_index}, loss_moyenne: {loss_totale/t}, loss_test_moyenne: {loss_test_totale/t}, episode_reward: {episode_reward} / epsilon: {epsilon_greedy.epsilon} / lr: {lr_scheduler.get_last_lr()}")
         torch.save(q_network, "./models/dqn2_q_network.pth")
 
-    return episode_reward_list
+    return episode_reward_list, nb_success
 
 
 
