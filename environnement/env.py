@@ -94,9 +94,10 @@ class Env :
         assert state.ndim == 2
         assert action.ndim == 2
         
-        previous_distance = torch.sqrt(torch.sum(state[:, 0:2]**2, dim=1))
         state = state.to(self.device)
         action = action.to(self.device)
+        
+        previous_distance = torch.sqrt(torch.sum(state[:, 0:2]**2, dim=1))
         
         
         
@@ -174,15 +175,16 @@ class Env :
         
         
         #We check if the agent is terminated
-        terminated = torch.sqrt(torch.sum(new_pos**2))<self.checkpoint_radius
+        terminated = torch.sqrt(torch.sum(new_pos**2, dim=1))<self.checkpoint_radius
         truncated = self.steps > self.max_steps
-        
+                
         dones = (terminated | truncated).float().to(self.device)
         
         #We update the steps
         self.steps = (self.steps + 1)*(1-dones)
         
         #We reset if needed
+        dones=dones.unsqueeze(1)
         new_state = (1-dones)*real_new_state +dones* self.reset()
         new_state = new_state.to(self.device)
         
