@@ -505,7 +505,7 @@ def train_dqn2_agent(
     """
     iteration = 0
     episode_reward_list = []
-
+    nb_success = 0
     for episode_index in tqdm(range(1, num_episodes)):
         state= env.reset()
         episode_reward = 0.0
@@ -551,6 +551,8 @@ def train_dqn2_agent(
             # Check if the episode is terminated
             
             if done:
+                if terminated:
+                    nb_success += 1
                 break
 
             state = next_state
