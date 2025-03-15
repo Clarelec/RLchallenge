@@ -72,7 +72,8 @@ class QNetwork(torch.nn.Module):
         self.layer1 = torch.nn.Linear(n_observations, nn_l1)
         # self.layer2 = torch.nn.Linear(nn_l1*nn_l1, nn_l2)
         self.layer2 = torch.nn.Linear(nn_l1, nn_l2)
-        self.layer3 = torch.nn.Linear(nn_l2, n_actions)
+        self.layer3 = torch.nn.Linear(nn_l2, nn_l2)
+        self.layer4= torch.nn.Linear(nn_l2, n_actions)
         
         logger.info(f"QNetwork initialized with {n_observations} observations  and {n_actions} actions")
         
@@ -114,7 +115,8 @@ class QNetwork(torch.nn.Module):
         
         x = torch.nn.functional.relu(self.layer1(x))
         x = torch.nn.functional.relu(self.layer2(x))
-        output_tensor = self.layer3(x)
+        x = torch.nn.functional.relu(self.layer3(x))
+        output_tensor = self.layer4(x)
 
         return output_tensor
     
@@ -506,6 +508,8 @@ def train_dqn2_agent(
     iteration = 0
     episode_reward_list = []
     nb_success = 0
+    overfitting=False
+
     for episode_index in tqdm(range(1, num_episodes)):
         state= env.reset()
         episode_reward = 0.0
@@ -537,7 +541,7 @@ def train_dqn2_agent(
 
             # Update the q_network weights with a batch of experiences from the buffer
             
-            if len(replay_buffer) > batch_size and len(replay_test_buffer) > batch_size:
+            if len(replay_buffer) > batch_size and len(replay_test_buffer) > batch_size and t%10==0: # and not overfitting:
                 loss_totale += optimize(replay_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size)
                 loss_test_totale += optimize(replay_test_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size, test=True)
 
@@ -558,7 +562,12 @@ def train_dqn2_agent(
             state = next_state
         
         lr_scheduler.step()
-
+        
+        # overfitting = (overfitting and random.random()<.8) or abs(loss_totale/t-loss_test_totale/t)>1
+        # # if (overfitting and random.random()<.8) or abs(loss_totale/t-loss_test_totale/t)>1:
+        # #     overfitting=True
+        # # else:
+        # #     overfitting=False
         episode_reward_list.append(episode_reward)
         epsilon_greedy.decay_epsilon()
         print(f"episode {episode_index}, loss_moyenne: {loss_totale/t}, loss_test_moyenne: {loss_test_totale/t}, episode_reward: {episode_reward} / epsilon: {epsilon_greedy.epsilon} / lr: {lr_scheduler.get_last_lr()}")
