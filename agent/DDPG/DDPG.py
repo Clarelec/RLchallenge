@@ -561,7 +561,7 @@ def get_base_epsilon_greedy():
 def train_ddpg(ddpgAgent,
                env,
                global_steps = 24_000,
-               log_frequency = 800,
+               log_frequency = 400,
                learning_starts = 1000,
                target_update_frequency = 1,
                epsilon_greedy = get_base_epsilon_greedy()):
