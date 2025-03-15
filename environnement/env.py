@@ -8,7 +8,7 @@ class Env :
                  batch_size = 64, 
                  max_safran = pi/16, 
                  max_sail = pi/16, 
-                 checkpoint_radius = 30,
+                 checkpoint_radius = 50,
                  mass = 1000,
                  drag = 100,
                  sail = 500,
@@ -59,14 +59,15 @@ class Env :
         #The checkpoint is placed at the origin
         self.checkpoint = torch.zeros((batch_size, 2)).to(self.device)
         self.spaun_size = spaun_size
-        self.steps = torch.zeros(batch_size).to(self.device)
-
+        self.steps = torch.zeros(batch_size).to(self.device)     
         if render_needed:
             self._renderer = RENDER_ENV(
                 width=render_width, 
                 height=render_height,
                 checkpoint_radius=checkpoint_radius
             )
+            
+        self.reset() # pour initialiser d'autres attributs
     
     def step(self, state, action):
         """
@@ -162,7 +163,7 @@ class Env :
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
 
         #we compute the drag 
-        drag = -self.drag * new_speed * speed_norm
+        drag = -self.drag * new_speed * speed_norm**3
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
@@ -170,11 +171,9 @@ class Env :
         #We concatenate all the features
         real_new_state = torch.cat((new_pos, new_speed, new_sail, new_safran, wind), dim=1).to(self.device)
         
-        #We compute the reward
-        reward = self.reward(state, action)
         
         #We check if the agent is terminated
-        terminated = reward > 0
+        terminated = torch.sqrt(torch.sum(new_pos**2))<self.checkpoint_radius
         truncated = self.steps > self.max_steps
         
         dones = (terminated | truncated).float().to(self.device)
@@ -183,8 +182,20 @@ class Env :
         self.steps = (self.steps + 1)*(1-dones)
         
         #We reset if needed
-        new_state = real_new_state * (1-dones).unsqueeze(1) + self.reset() * dones.unsqueeze(1)
+        if not dones:
+            new_state = real_new_state
+        else: 
+            new_state = self.reset()
         new_state = new_state.to(self.device)
+        
+        self.util_reward_last_distance_to_cp = torch.sqrt(torch.sum(self.state[:, 0:2]**2)).item()
+        self.state = new_state
+
+        #We compute the reward
+        if not terminated:
+            reward = self.reward(state, action)
+        else: 
+            reward = torch.tensor([300.0], dtype=torch.float32)
         
         return new_state, real_new_state, reward, terminated, truncated
         
@@ -218,6 +229,9 @@ class Env :
         #We concatenate all the features
         state = torch.cat((pos, speed, sail, safran, wind), dim=1).to(self.device)
         
+        self.util_reward_last_distance_to_cp = torch.sqrt(torch.sum(pos**2)).item()
+        self.state = state
+        
         return state
         
     
@@ -231,12 +245,14 @@ class Env :
             reward (tensor (batch_size) ) : reward at this step
         """
         #Reward = 100 if the agent is in the checkpoint, -1 otherwise
-        dist = self.distance(state[:,:2], state[:,8:10])
-        reward = (dist < self.checkpoint_radius)*101 - 1
-        reward = reward.to(self.device)
-        if self.incentive:
-            reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
-        return reward
+        # dist = self.distance(state[:,:2], state[:,8:10])
+        # reward = (dist < self.checkpoint_radius)*101 - 1
+        # reward = reward.to(self.device)
+        # if self.incentive:
+        #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
+        current_distance = torch.sqrt(torch.sum(self.state[:, 0:2]**2)).item()
+        reward = (self.util_reward_last_distance_to_cp - current_distance)
+        return torch.tensor([reward]).to(self.device)
     
     def rotation(self, vector, angle):
         """
