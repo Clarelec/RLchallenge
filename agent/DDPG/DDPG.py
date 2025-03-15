@@ -40,7 +40,7 @@ class Actor(torch.nn.Module):
         Define the forward pass of the Actor.
     """
 
-    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 256, nn_l2: int = 256):
+    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 512, nn_l2: int = 512):
         """
         Initialize a new Actor instance.
 
@@ -97,7 +97,7 @@ class Critic(torch.nn.Module):
         Define the forward pass of the Actor.
     """
 
-    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 256, nn_l2: int = 256):
+    def __init__(self, dim_observations: int =10, dim_actions: int= 2, nn_l1: int = 512, nn_l2: int = 512):
         """
         Initialize a new Actor instance.
 
@@ -177,7 +177,7 @@ class DDPGAgent:
                  tau = 0.1,
                  batch_size = 256,
                  device = device,
-                 action_noise = 0.1,):
+                 action_noise = 0.05,):
         """
         Initialize a new DDPG Agent.
         """
@@ -556,7 +556,7 @@ class EpsilonGreedy:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 def get_base_epsilon_greedy():
-    return EpsilonGreedy(epsilon_start=1.0, epsilon_min=0.01, epsilon_decay=0.9)
+    return EpsilonGreedy(epsilon_start=1.0, epsilon_min=0.01, epsilon_decay=0.5)
 
 def train_ddpg(ddpgAgent,
                env,
@@ -593,6 +593,9 @@ def train_ddpg(ddpgAgent,
             logger.info(f"Step: {step}, Episodic mean reward : {total_reward/total_episodes}, Epsilon: {epsilon_greedy.epsilon}")
             logger.info(f"Win rate: {total_terminations/total_episodes}")
             print(f"Step: {step}, Episodic mean reward : {total_reward/total_episodes}")
+            print(epsilon_greedy.epsilon)
+            mlflow.log_metric("Win rate",total_terminations/total_episodes, step = step )
+            mlflow.log_metric("Episodic mean reward",total_reward/total_episodes, step = step )
             total_reward = 0
             total_episodes = 0
             total_terminations = 0
