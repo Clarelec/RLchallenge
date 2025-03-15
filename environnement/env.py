@@ -94,6 +94,7 @@ class Env :
         assert state.ndim == 2
         assert action.ndim == 2
         
+        previous_distance = torch.sqrt(torch.sum(state[:, 0:2]**2, dim=1))
         state = state.to(self.device)
         action = action.to(self.device)
         
@@ -163,7 +164,7 @@ class Env :
         force = torch.sum(force * new_speed, dim=1, keepdim=True) * new_speed /(1e-3+(torch.norm(new_speed, dim=1).unsqueeze(1))**2)
 
         #we compute the drag 
-        drag = -self.drag * new_speed * speed_norm
+        drag = -self.drag * new_speed
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
@@ -182,20 +183,14 @@ class Env :
         self.steps = (self.steps + 1)*(1-dones)
         
         #We reset if needed
-        if not dones:
-            new_state = real_new_state
-        else: 
-            new_state = self.reset()
+        new_state = (1-dones)*real_new_state +dones* self.reset()
         new_state = new_state.to(self.device)
         
-        self.util_reward_last_distance_to_cp = torch.sqrt(torch.sum(self.state[:, 0:2]**2)).item()
-        self.state = new_state
+        current_distance = torch.sqrt(torch.sum(real_new_state[:, 0:2]**2, dim=1))
+
 
         #We compute the reward
-        if not terminated:
-            reward = self.reward(state, action)
-        else: 
-            reward = torch.tensor([300.0], dtype=torch.float32)
+        reward = self.reward(previous_distance, current_distance)
         
         return new_state, real_new_state, reward, terminated, truncated
         
@@ -228,14 +223,11 @@ class Env :
         
         #We concatenate all the features
         state = torch.cat((pos, speed, sail, safran, wind), dim=1).to(self.device)
-        
-        self.util_reward_last_distance_to_cp = torch.sqrt(torch.sum(pos**2)).item()
-        self.state = state
-        
+                
         return state
         
     
-    def reward(self, state, action):
+    def reward(self, previous_distance, current_distance):
         """
         Args:
             state (tensor (batch_size,state_dim) ): state of the agent
@@ -250,9 +242,8 @@ class Env :
         # reward = reward.to(self.device)
         # if self.incentive:
         #     reward = reward - self.incentive_coeff * torch.norm(state[:,:2], dim=1)
-        current_distance = torch.sqrt(torch.sum(self.state[:, 0:2]**2)).item()
-        reward = (self.util_reward_last_distance_to_cp - current_distance)
-        return torch.tensor([reward])
+
+        return (previous_distance-current_distance)/100
     
     def rotation(self, vector, angle):
         """

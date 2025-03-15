@@ -150,6 +150,7 @@ class EpsilonGreedy:
         epsilon_decay: float,
         env: Env,
         q_network: torch.nn.Module,
+        action_dims: tuple, 
     ):
         """
         Initialize a new instance of EpsilonGreedy.
@@ -172,6 +173,7 @@ class EpsilonGreedy:
         self.epsilon_decay = epsilon_decay
         self.env = env
         self.q_network = q_network
+        self.action_dims = action_dims # tuple
 
     def __call__(self, state: torch.Tensor) -> np.int64:
         """
@@ -193,7 +195,7 @@ class EpsilonGreedy:
 
         if random.random() < self.epsilon:
             # action = TODO... # Select a random action
-            action = torch.Tensor([[random.randint(0, 2), random.randint(0, 2)]])/2
+            action = torch.Tensor([[random.randint(0, self.action_dims[0]-1), random.randint(0, self.action_dims[1]-1)]])/2
             action.to(device)
             
         else:
@@ -205,7 +207,7 @@ class EpsilonGreedy:
                 
                 output = torch.argmax(q_values, dim=1).item()
                 # transform the output to the action space
-                action = torch.Tensor([[output//5, output%5]])/2
+                action = torch.Tensor([[output//self.action_dims[0], output%self.action_dims[1]]])/2
                 
                 
         return action
@@ -386,8 +388,8 @@ def soft_update(local_model: torch.nn.Module, target_model: torch.nn.Module, tau
     for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
         target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
-def convert_action(action):
-    return round(float(2*(5*action[0] + action[1])))
+def convert_action(action, action_dims):
+    return round(float(2*(action_dims[0]*action[0] + action[1])))
 
 def transform_state(state):
     pos = state[:,:2]
@@ -411,6 +413,41 @@ def transform_state(state):
     
     return torch.tensor(transformed).unsqueeze(0)
 
+def optimize(replay_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size, test=False):
+    
+    batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_terminated_tensor = replay_buffer.sample(batch_size)
+    
+    batch_states_tensor = batch_next_states_tensor.to(device)
+    batch_actions_tensor = batch_actions_tensor.to(device)
+    batch_rewards_tensor = batch_rewards_tensor.to(device)
+    batch_next_states_tensor = batch_next_states_tensor.to(device)
+    batch_terminated_tensor = batch_terminated_tensor.to(device)
+    
+    with torch.no_grad():
+            
+        next_state_q_values = target_q_network(batch_next_states_tensor)
+        targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=1).values * (1 - batch_terminated_tensor)
+
+    # Compute Q_value
+    
+    q_values = q_network(batch_states_tensor.squeeze(1))
+    
+    current_q_values = torch.gather(q_values, 1, batch_actions_tensor.unsqueeze(1)).squeeze(1)
+    # Compute loss
+
+    loss = loss_fn(current_q_values, targets)
+
+    # Optimize the model
+    if not test:
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    
+    return loss.item()
+
+    # logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss.item()} epsilon {epsilon_greedy.epsilon}")
+
+
 def train_dqn2_agent(
     
     env: Env,
@@ -425,7 +462,9 @@ def train_dqn2_agent(
     gamma: float,
     batch_size: int,
     replay_buffer: ReplayBuffer,
+    replay_test_buffer: ReplayBuffer,
     target_q_network_sync_period: int,
+    action_dims: tuple, 
 ) -> List[float]:
     """
     Train the Q-network on the given environment.
@@ -470,6 +509,10 @@ def train_dqn2_agent(
     for episode_index in tqdm(range(1, num_episodes)):
         state= env.reset()
         episode_reward = 0.0
+        loss_totale = 0
+        loss_test_totale=0
+        
+        to_test = random.random()<.8
 
         for t in itertools.count():
             # Get action, next_state and reward
@@ -484,59 +527,20 @@ def train_dqn2_agent(
             next_state_transmorfed = transform_state(real_next_state)
             done = (terminated | truncated).float().to(device)
             
-            converted_action = torch.tensor([convert_action(action.squeeze())], dtype=torch.long, device=device)
-            replay_buffer.add(state_transmorfed, converted_action, reward, next_state_transmorfed, terminated.float().to(device))
+            converted_action = torch.tensor([convert_action(action.squeeze(), action_dims=action_dims)], dtype=torch.long, device=device)
+            if to_test:
+                replay_buffer.add(state_transmorfed, converted_action, reward, next_state_transmorfed, terminated.float().to(device))
+            else:
+                replay_test_buffer.add(state_transmorfed, converted_action, reward, next_state_transmorfed, terminated.float().to(device))
 
             episode_reward += float(reward)
 
             # Update the q_network weights with a batch of experiences from the buffer
             
-            if len(replay_buffer) > batch_size:
-                batch_states_tensor, batch_actions_tensor, batch_rewards_tensor, batch_next_states_tensor, batch_terminated_tensor = replay_buffer.sample(batch_size)
-                
-                batch_states_tensor = batch_next_states_tensor.to(device)
-                batch_actions_tensor = batch_actions_tensor.to(device)
-                batch_rewards_tensor = batch_rewards_tensor.to(device)
-                batch_next_states_tensor = batch_next_states_tensor.to(device)
-                batch_terminated_tensor = batch_terminated_tensor.to(device)
-                
-                # Convert to PyTorch tensors
-                # batch_states_tensor = torch.tensor(batch_states, dtype=torch.float32, device=device)
+            if len(replay_buffer) > batch_size and len(replay_test_buffer) > batch_size:
+                loss_totale += optimize(replay_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size)
+                loss_test_totale += optimize(replay_test_buffer, q_network, target_q_network, gamma, optimizer, loss_fn, batch_size, test=True)
 
-                # batch_rewards_tensor = torch.tensor(batch_rewards, dtype=torch.float32, device=device).unsqueeze(1)
-                # batch_next_states_tensor = torch.tensor(batch_next_states, dtype=torch.float32, device=device)
-                # batch_dones_tensor = torch.tensor(batch_dones, dtype=torch.float32, device=device)
-
-                # batch_actions_tensor = torch.tensor([[round(batch_actions[i][0][0]*3*2 + batch_actions[i][0][1]*2)] for i in range(batch_actions.shape[0])], dtype=torch.long, device=device)   
-                # print(batch_actions[:10], batch_actions_tensor[:10])
-                # Compute the target Q values for the batch
-                
-                with torch.no_grad():
-                       
-                    next_state_q_values = target_q_network(batch_next_states_tensor)
-                    targets = batch_rewards_tensor + gamma * torch.max(next_state_q_values, dim=1).values * (1 - batch_terminated_tensor)
-
-                # Compute Q_value
-               
-                q_values = q_network(batch_states_tensor.squeeze(1))
-                
-                current_q_values = torch.gather(q_values, 1, batch_actions_tensor.unsqueeze(1)).squeeze(1)
-                # Compute loss
-                try:
-                    assert current_q_values.shape == targets.shape
-                except AssertionError:
-                    logger.error(f"Shape mismatch: current_q_values.shape={current_q_values.shape}, targets.shape={targets.shape}")
-                    raise
-                loss = loss_fn(current_q_values, targets)
-
-                # Optimize the model
-                optimizer.zero_grad()
-                loss.backward()
-                optimizer.step()
-
-                # lr_scheduler.step()
-                logger.info(f"episode {episode_index} step {t} reward {reward} loss {loss.item()} epsilon {epsilon_greedy.epsilon}")
-                # Update the target q-network weights
 
             # Every episodes (e.g., every `target_q_network_sync_period` episodes), the weights of the target network are updated with the weights of the Q-network
             if iteration % target_q_network_sync_period == 0:
@@ -550,10 +554,12 @@ def train_dqn2_agent(
                 break
 
             state = next_state
+        
+        lr_scheduler.step()
 
         episode_reward_list.append(episode_reward)
         epsilon_greedy.decay_epsilon()
-        print(episode_reward)
+        print(f"episode {episode_index}, loss_moyenne: {loss_totale/t}, loss_test_moyenne: {loss_test_totale/t}, episode_reward: {episode_reward} / epsilon: {epsilon_greedy.epsilon} / lr: {lr_scheduler.get_last_lr()}")
         torch.save(q_network, "./models/dqn2_q_network.pth")
 
     return episode_reward_list

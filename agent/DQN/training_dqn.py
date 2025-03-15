@@ -45,7 +45,7 @@ logger.info(f"Device: {device}")
 
 
 
-def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[float]:
+def eval_model(env: Env, qnetwork: QNetwork, action_dims: tuple, num_episodes: int = 100) -> List[float]:
     """
     Evaluate a DQN agent on the environment for multiple episodes.
     
@@ -66,7 +66,7 @@ def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[fl
         while not done:
             transformed_state = transform_state(state).to(device)
             output = torch.argmax(qnetwork(transformed_state))
-            action = torch.Tensor([[output//5, output%5]])/2
+            action = torch.Tensor([[output//action_dims[0], output%action_dims[1]]])/2
             action = action.to(device)
 
             state, _, reward, truncated, terminated = env.step(state, action)
@@ -79,6 +79,7 @@ def eval_model(env: Env, qnetwork: QNetwork, num_episodes: int = 100) -> List[fl
 
 if __name__ == '__main__':
     reload_q_network=False
+    action_dims = 5, 5
     
     
     logger.info("Starting training of DQN2 agent")
@@ -89,12 +90,12 @@ if __name__ == '__main__':
     
 
     # Initialize Q-Network and target Q-Network
-    q_network = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128  ).to(device)
+    q_network = QNetwork(n_observations=9, n_actions=action_dims[0]*action_dims[1], nn_l1=128, nn_l2=128  ).to(device)
     if reload_q_network:
         q_network = torch.load(os.path.join(MODEL_DIR, "dqn2_q_network.pth"))
         q_network.to(device)
     
-    target_qnetwork = QNetwork(n_observations=9, n_actions=5*5, nn_l1=128, nn_l2=128).to(device)
+    target_qnetwork = QNetwork(n_observations=9, n_actions=action_dims[0]*action_dims[1], nn_l1=128, nn_l2=128).to(device)
     target_qnetwork.load_state_dict(q_network.state_dict())
     logger.info("Q-Networks initialized and synchronized")
 
@@ -110,16 +111,18 @@ if __name__ == '__main__':
 
     # Initialize epsilon-greedy strategy
     epsilon_greedy = EpsilonGreedy(
-        epsilon_start=0.82,
-        epsilon_min=0.013,
-        epsilon_decay=0.9875,
+        epsilon_start=0.9,
+        epsilon_min=0.1,
+        epsilon_decay=0.99,
         env=env,
         q_network=q_network,
+        action_dims=action_dims
     )
     logger.info("Epsilon-greedy strategy initialized")
 
     # Initialize replay buffer
     replay_buffer = ReplayBuffer(20000)
+    replay_test_buffer = ReplayBuffer(20000)
     logger.info("Replay buffer initialized")
 
     # Train the DQN agent
@@ -133,12 +136,14 @@ if __name__ == '__main__':
             lr_scheduler=lr_scheduler,
             loss_fn=loss_fn,
             replay_buffer=replay_buffer,
+            replay_test_buffer=replay_test_buffer,
             epsilon_greedy=epsilon_greedy,
             num_episodes=500,
-            gamma=0.9,
+            gamma=0.95,
             batch_size=2048,
             target_q_network_sync_period=1,
-            device=device
+            device=device, 
+            action_dims=action_dims
         )
     training_time = time.time() - TRAINING_START
     logger.info(f"Training finished , training time: {training_time:.2f} seconds")
@@ -150,7 +155,7 @@ if __name__ == '__main__':
     # Evaluate the trained DQN agent
     logger.info("Evaluating trained DQN2 agent")
     EVALUATION_START = time.time()
-    evaluation_rewards = eval_model(env, q_network, num_episodes=100)
+    evaluation_rewards = eval_model(env, q_network, action_dims, num_episodes=100)
     evaluation_time = time.time() - EVALUATION_START
     logger.info(f"Evaluation finished, evaluation time: {evaluation_time:.2f} seconds")
     reussite = len(np.array(evaluation_rewards)[np.array(evaluation_rewards) > 0])
