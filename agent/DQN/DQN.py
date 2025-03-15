@@ -195,7 +195,7 @@ class EpsilonGreedy:
 
         if random.random() < self.epsilon:
             # action = TODO... # Select a random action
-            action = torch.Tensor([[random.randint(0, self.action_dims[0]-1), random.randint(0, self.action_dims[1]-1)]])/2
+            action = torch.Tensor([[random.randint(0, self.action_dims[0]-1) / (self.action_dims[0]-1), random.randint(0, self.action_dims[1]-1)/(self.action_dims[1]-1)]])
             action.to(device)
             
         else:
@@ -207,7 +207,7 @@ class EpsilonGreedy:
                 
                 output = torch.argmax(q_values, dim=1).item()
                 # transform the output to the action space
-                action = torch.Tensor([[output//self.action_dims[0], output%self.action_dims[1]]])/2
+                action = torch.Tensor([[(output//self.action_dims[0]) / (self.action_dims[0]-1), (output%self.action_dims[1])/ (self.action_dims[1]-1)]])
                 
                 
         return action
@@ -389,7 +389,8 @@ def soft_update(local_model: torch.nn.Module, target_model: torch.nn.Module, tau
         target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
 def convert_action(action, action_dims):
-    return round(float(2*(action_dims[0]*action[0] + action[1])))
+    converted = round(float((action_dims[1] * (action_dims[0]-1)*action[0] + (action_dims[1]-1)*action[1])))
+    return converted
 
 def transform_state(state):
     pos = state[:,:2]
@@ -434,7 +435,6 @@ def optimize(replay_buffer, q_network, target_q_network, gamma, optimizer, loss_
     
     current_q_values = torch.gather(q_values, 1, batch_actions_tensor.unsqueeze(1)).squeeze(1)
     # Compute loss
-
     loss = loss_fn(current_q_values, targets)
 
     # Optimize the model
