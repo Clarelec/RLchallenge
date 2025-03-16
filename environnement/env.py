@@ -13,7 +13,7 @@ class Env :
                  drag = 400,
                  sail = 500,
                  wind = 100,
-                 dt = 0.1,
+                 dt = 1,
                  reactivity = pi/8,
                  max_steps = 200,
                  render_width = 800,
@@ -218,7 +218,7 @@ class Env :
         angles = torch.rand((self.batch_size,1)) * 2 * pi
         pos = torch.cat([torch.cos(angles), torch.sin(angles)], dim = 1)*self.spaun_size
         wind = torch.rand((self.batch_size, 1)) * 2 * pi - pi
-        speed = -pos.clone()/torch.norm(pos, dim=1).unsqueeze(1)
+        speed = -30*pos.clone()/torch.norm(pos, dim=1).unsqueeze(1)
         sail = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         safran = -speed.clone()/torch.norm(speed, dim=1).unsqueeze(1)
         
