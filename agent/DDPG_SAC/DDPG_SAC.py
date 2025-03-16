@@ -233,8 +233,8 @@ class DDPGAgent:
         sigma = torch.exp(log_sigma)
         distrib_action = torch.distributions.Normal(mu, sigma)
         sampled_action = distrib_action.rsample()
-        action = (torch.tanh(sampled_action)+1)/2 * 1.04 -.02 # transforme en une action dans [-.02, 1.02] de manière smooth
-        return action, sampled_action, distrib_action
+        transformed_action = (torch.tanh(sampled_action)+1)/2 * 1.04 -.02 # transforme en une action dans [-.02, 1.02] de manière smooth
+        return transformed_action, sampled_action, distrib_action
     
     def update_agent(self,step):
         """
@@ -247,9 +247,21 @@ class DDPGAgent:
         """
         states, actions, rewards, next_states, terminated = self.replay_buffer.sample(self.batch_size)
         
+        # Update the actor
+        mu, log_sigma = self.actor(states)
+        transformed_action, sampled_action, action_distribution = self.actor_params_to_action(mu, log_sigma)
+        log_prob = action_distribution.log_prob(sampled_action).sum(dim=-1)
+        log_prob -= (2 * (np.log(2) - sampled_action - torch.nn.functional.softplus(-2 * sampled_action))).sum(dim=-1)
+
+        q_value = self.critic(states, transformed_action).mean()
+        actor_loss = (self.alpha*log_prob - q_value).mean()
+        
+        self.actor_optimizer.zero_grad()
+        actor_loss.backward()
+        self.actor_optimizer.step()
+        
         # Update the critic
-        next_actions = self.actor_target(next_states)
-        target_q_values = self.critic_target(next_states, next_actions).detach().squeeze()
+        target_q_values = self.critic_target(next_states, transformed_action).detach().squeeze()
         target_values = rewards + (1 - terminated.float()) * self.gamma * target_q_values
         predicted_values = self.critic(states, actions).squeeze()
         critic_loss = torch.nn.functional.mse_loss(predicted_values, target_values)
@@ -259,18 +271,6 @@ class DDPGAgent:
         critic_loss.backward()
         self.critic_optimizer.step()
         
-        # Update the actor
-        mu, log_sigma = self.actor(states)
-        predicted_actions, sampled_action, action_distribution = self.actor_params_to_action(mu, log_sigma)
-        log_prob = action_distribution.log_prob(sampled_action).sum(dim=-1)
-        log_prob -= (2 * (np.log(2) - sampled_action - torch.nn.functional.softplus(-2 * sampled_action))).sum(dim=-1)
-
-        q_value = self.critic(states, predicted_actions).mean()
-        actor_loss = (self.alpha*log_prob - q_value).mean()
-        
-        self.actor_optimizer.zero_grad()
-        actor_loss.backward()
-        self.actor_optimizer.step()
         
         mlflow.log_metric("actor_loss", actor_loss, step)
         mlflow.log_metric("critic_loss", critic_loss, step)
