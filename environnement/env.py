@@ -169,7 +169,11 @@ class Env :
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
+        new_speed_norm = torch.nn.functional.normalize(new_speed, dim=1)
+        new_speed_norm_clipped = torch.clip(new_speed_norm, min=0.1, max=500)
+        new_speed = new_speed * new_speed_norm_clipped / new_speed_norm
         
+
         #We concatenate all the features
         real_new_state = torch.cat((new_pos, new_speed, new_sail, new_safran, wind), dim=1).to(self.device)
         
