@@ -169,7 +169,7 @@ class Env :
         
         #We compute the new speed
         new_speed = new_speed + (force + drag) / self.mass * self.dt
-        new_speed_norm = torch.nn.functional.normalize(new_speed, dim=1)
+        new_speed_norm = torch.norm(new_speed, dim=1).unsqueeze(1)
         new_speed_norm_clipped = torch.clip(new_speed_norm, min=0.1, max=500)
         new_speed = new_speed * new_speed_norm_clipped / new_speed_norm
         
