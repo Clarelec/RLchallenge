@@ -138,7 +138,7 @@ class Critic(torch.nn.Module):
         
         return value
 
-class DDPGAgent:
+class TD3Agent:
     """
     A DDPG Agent.
     
@@ -187,10 +187,15 @@ class DDPGAgent:
         self.actor_target.load_state_dict(self.actor.state_dict())
         self.actor_optimizer = torch.optim.Adam(self.actor.parameters(), lr=1e-3)
         
-        self.critic = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
-        self.critic_target = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
-        self.critic_target.load_state_dict(self.critic.state_dict())
-        self.critic_optimizer = torch.optim.Adam(self.critic.parameters(), lr=1e-3)
+        self.critic1 = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
+        self.critic1_target = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
+        self.critic1_target.load_state_dict(self.critic1.state_dict())
+        self.critic1_optimizer = torch.optim.Adam(self.critic1.parameters(), lr=1e-3)
+        
+        self.critic2 = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
+        self.critic2_target = Critic(dim_observations=state_dim, dim_actions=action_dim).to(device)
+        self.critic2_target.load_state_dict(self.critic2.state_dict())
+        self.critic2_optimizer = torch.optim.Adam(self.critic2.parameters(), lr=1e-3)
         
         # Initialize the hyperparameters
         self.gamma = gamma
@@ -239,27 +244,32 @@ class DDPGAgent:
         
         # Update the critic
         next_actions = self.actor_target(next_states)
-        target_q_values = self.critic_target(next_states, next_actions).detach().squeeze()
+        target_q_values =torch.minimum(self.critic1_target(next_states, next_actions).detach().squeeze(),self.critic1_target(next_states, next_actions).detach().squeeze())
         target_values = rewards + (1 - terminated.float()) * self.gamma * target_q_values
-        predicted_values = self.critic(states, actions).squeeze()
-        critic_loss = torch.nn.functional.mse_loss(predicted_values, target_values)
-
+        predicted_values1 = self.critic1(states, actions).squeeze()
+        predicted_values2 = self.critic2(states, actions).squeeze()
         
-        self.critic_optimizer.zero_grad()
-        critic_loss.backward()
-        self.critic_optimizer.step()
+        critic1_loss = torch.nn.functional.mse_loss(predicted_values1, target_values)
+        self.critic1_optimizer.zero_grad()
+        critic1_loss.backward()
+        self.critic1_optimizer.step()
+        
+        critic2_loss = torch.nn.functional.mse_loss(predicted_values2, target_values)
+        self.critic2_optimizer.zero_grad()
+        critic2_loss.backward()
+        self.critic2_optimizer.step()
         
         # Update the actor
         predicted_actions = self.actor(states)
-        actor_loss = -self.critic(states, predicted_actions).mean()
+        actor_loss = -self.critic1(states, predicted_actions).mean()
         
         self.actor_optimizer.zero_grad()
         actor_loss.backward()
         self.actor_optimizer.step()
         
         mlflow.log_metric("actor_loss", actor_loss, step)
-        mlflow.log_metric("critic_loss", critic_loss, step)
-        
+        mlflow.log_metric("critic1_loss", critic1_loss, step)
+        mlflow.log_metric("critic2_loss", critic1_loss, step)
     
     def update_target_networks(self):
         """
@@ -267,8 +277,9 @@ class DDPGAgent:
         """
         # Update target networks
         self.soft_update(self.actor, self.actor_target)
-        self.soft_update(self.critic, self.critic_target)
-
+        self.soft_update(self.critic1, self.critic1_target)
+        self.soft_update(self.critic2, self.critic2_target)
+        
     def soft_update(self, local_model: torch.nn.Module, target_model: torch.nn.Module):
         """
         Soft-update: param_target = tau*param_local + (1 - tau)*param_target
@@ -558,7 +569,7 @@ class EpsilonGreedy:
 def get_base_epsilon_greedy():
     return EpsilonGreedy(epsilon_start=1.0, epsilon_min=0.01, epsilon_decay=0.8)
 
-def train_ddpg(ddpgAgent,
+def train_TD3(TD3Agent,
                env,
                global_steps = 24_000,
                log_frequency = 400,
@@ -574,16 +585,16 @@ def train_ddpg(ddpgAgent,
     total_episodes = 0
     total_terminations = 0
     for step in tqdm(range(global_steps)):
-        action = ddpgAgent.act(state)
+        action = TD3Agent.act(state)
         action = epsilon_greedy(action)
         state = state.to(device)
         action = action.to(device)
         next_state, real_next_state, reward, terminated, truncated = env.step(state,action)
-        ddpgAgent.add_to_buffer(state, action, reward, real_next_state, terminated)
+        TD3Agent.add_to_buffer(state, action, reward, real_next_state, terminated)
         if step > learning_starts:
-            ddpgAgent.update_agent(step = step)
+            TD3Agent.update_agent(step = step)
             if step % target_update_frequency == 0:
-                ddpgAgent.update_target_networks()
+                TD3Agent.update_target_networks()
         state = next_state
         total_reward += reward.sum()
         total_episodes += terminated.sum() + truncated.sum()
