@@ -261,7 +261,10 @@ class DDPGAgent:
         self.actor_optimizer.step()
         
         # Update the critic
-        target_q_values = self.critic_target(next_states, transformed_action).detach().squeeze()
+        mu, log_sigma = self.actor(next_states)
+        transformed_action_next_state, _, _ = self.actor_params_to_action(mu, log_sigma)
+        
+        target_q_values = self.critic_target(next_states, transformed_action_next_state).detach().squeeze()
         target_values = rewards + (1 - terminated.float()) * self.gamma * target_q_values
         predicted_values = self.critic(states, actions).squeeze()
         critic_loss = torch.nn.functional.mse_loss(predicted_values, target_values)
