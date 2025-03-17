@@ -12,14 +12,14 @@ class Env :
                  mass = 1000,
                  drag = 400,
                  sail = 500,
-                 wind = 100,
+                 wind = 20,
                  dt = 1,
                  reactivity = pi/8,
                  max_steps = 200,
                  render_width = 800,
                  render_height= 400,
                  device = 'cpu',
-                 incentive = True,
+                 incentive = False,
                  incentive_coeff = 0.005,
                  render_needed = True,
                  spaun_size = 200
@@ -197,7 +197,7 @@ class Env :
 
         #We compute the reward
         reward = self.reward(previous_distance, current_distance)
-        reward2 = self.reward2(state, action)
+        reward2 = self.reward2(real_new_state, action)
         
         return new_state, real_new_state, reward2, terminated, truncated
         
