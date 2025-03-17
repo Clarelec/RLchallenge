@@ -87,7 +87,7 @@ if __name__ == '__main__':
     
     logger.info("Starting training of DQN2 agent")
     # Initialize environment
-    env = Env(batch_size=1, dt=0.1, max_steps=200, device=device, render_needed=False, checkpoint_radius=50)
+    env = Env(batch_size=1, dt=1, max_steps=200, device=device, render_needed=False, checkpoint_radius=300, spaun_size=1000)
 
     logger.info("Environment initialized")
 
@@ -143,8 +143,8 @@ if __name__ == '__main__':
             replay_test_buffer=replay_test_buffer,
             epsilon_greedy=epsilon_greedy,
             num_episodes=500,
-            gamma=0.99,
-            batch_size=2048,
+            gamma=0.95,
+            batch_size=128,
             target_q_network_sync_period=1,
             device=device, 
             action_dims=action_dims
