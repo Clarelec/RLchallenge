@@ -197,7 +197,6 @@ class Env :
 
         #We compute the reward
         reward = self.reward(previous_distance, current_distance)
-
         reward2 = self.reward2(real_new_state, action)
         
         return new_state, real_new_state, reward2, terminated, truncated
