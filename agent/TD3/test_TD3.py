@@ -75,7 +75,7 @@ def test_model(model_name: str, device: str = 'cpu', **kwargs):
     
     
 if __name__ == '__main__':
-    test_model('ddpg_actor_network.pth', 
+    test_model('TD3_actor_network.pth', 
             
             env_params={'batch_size': 1, 'dt': 1, 'max_steps': 200, 'render_height': 1000, 'render_width': 1000, 'device': device, 'checkpoint_radius': 50},
                 device=device

@@ -58,7 +58,7 @@ training_time = time.time() - TRAINING_START
 logger.info(f"Training finished , training time: {training_time:.2f} seconds")
 
 # Save the trained Q-Network
-torch.save(ddpgAgent.actor, os.path.join(MODEL_DIR, "ddpg_actor_network.pth"))
+torch.save(ddpgAgent.actor, os.path.join(MODEL_DIR, "TD3_actor_network.pth"))
 logger.info("Trained Actor saved")
 
 

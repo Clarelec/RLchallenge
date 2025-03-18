@@ -12,12 +12,18 @@ import torch
 import time
 
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 env = Env(64, dt = 0.1)
 agent = DDPGAgent(env.state_dim,env.action_dim)
 
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-agent.actor.load_state_dict(torch.load('models/ddpg_actor_network.pth', map_location=device))
+
+network =torch.load('models/SAC_actor_network.pth', map_location=device).to(device)
+network.eval()
+
+agent = DDPGAgent(env.state_dim,env.action_dim)
+agent.actor = network
+agent.is_training = False
 agent.actor.to(device)
 
 def test_env():
