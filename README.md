@@ -92,6 +92,47 @@ The DDPG agent uses a continuous action space with:
 - Soft target updates
 - Exploration noise
 
+
+
+## TD3 Agent
+
+The project also implements a Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm, which is an improvement over the standard DDPG approach. The TD3 agent:
+- Uses two critic networks to reduce overestimation bias
+- Adds noise to target actions to smooth the policy
+- Updates the policy less frequently than the critic networks
+
+### Training a TD3 Agent
+
+```bash
+python agent/TD3/training_TD3.py
+```
+
+### Testing a Trained TD3 Agent
+
+```bash
+python agent/TD3/test_TD3.py
+```
+## SAC Agent
+
+The Soft Actor-Critic (SAC) agent implements a state-of-the-art model-free reinforcement learning algorithm. Key features include:
+- Maximum entropy framework that balances exploration and exploitation
+- Actor-critic architecture with a stochastic policy
+- Twin Q-networks to mitigate overestimation bias
+- Automatic entropy coefficient adjustment
+- Experience replay for sample-efficient learning
+
+### Training a SAC Agent
+
+```bash
+python agent/DDPG_SAC/training_SAC.py
+```
+
+### Testing a Trained SAC Agent
+
+```bash
+python agent/DDPG_SAC/test_SAC.py
+```
+
 ### Visualization
 
 The environment includes a rendering system that visualizes:
@@ -100,10 +141,3 @@ The environment includes a rendering system that visualizes:
 - Wind direction
 - Target checkpoint
 
-## Results
-
-Both algorithms successfully learn to navigate the sailboat to the checkpoint. The DDPG agent tends to learn more efficient sailing strategies due to its continuous action space.
-
-## License
-
-This project is provided for educational purposes.
