@@ -261,19 +261,23 @@ class DDPGAgent:
         self.actor_optimizer.step()
         
         # Update the critic
-        mu, log_sigma = self.actor(next_states)
-        transformed_action_next_state, _, _ = self.actor_params_to_action(mu, log_sigma)
-        
-        target_q_values = self.critic_target(next_states, transformed_action_next_state).detach().squeeze()
-        target_values = rewards + (1 - terminated.float()) * self.gamma * target_q_values
+        with torch.no_grad():
+            mu_next, log_sigma_next = self.actor(next_states)
+            transformed_action_next_state, _, action_distribution_next = self.actor_params_to_action(mu_next, log_sigma_next)
+
+            next_log_prob = action_distribution_next.log_prob(transformed_action_next_state).sum(dim=-1)
+            next_log_prob -= (2 * (np.log(2) - transformed_action_next_state - torch.nn.functional.softplus(-2 * transformed_action_next_state))).sum(dim=-1)
+
+            target_q_values = self.critic_target(next_states, transformed_action_next_state).squeeze()
+            target_values = rewards + (1 - terminated.float()) * self.gamma * (target_q_values - self.alpha * next_log_prob)
+
         predicted_values = self.critic(states, actions).squeeze()
         critic_loss = torch.nn.functional.mse_loss(predicted_values, target_values)
 
-        
         self.critic_optimizer.zero_grad()
         critic_loss.backward()
         self.critic_optimizer.step()
-        
+                
         
         mlflow.log_metric("actor_loss", actor_loss, step)
         mlflow.log_metric("critic_loss", critic_loss, step)
